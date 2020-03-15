@@ -1,0 +1,79 @@
+\documentclass[a4paper]{report}
+
+\usepackage[top=25mm,bottom=25mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+
+\title{Dispense essenziali di Fisica 1}
+\author{Matteo Bitussi \\ Laurea in Informatica, Unitn}
+\date{Anno accademico 2019-2020}
+
+\begin{document}
+  \maketitle
+
+  \tableofcontents
+
+  \section*{Introduzione}
+  Questa dispensa è pensata per raccogliere le informazioni essenziali necessarie per lo svolgimento degli esercizi durante l'anno e/o per l'esame finale. Per questo motivo non saranno approfondite e non potranno sostituire quelle fornite dal professore.
+
+  \chapter{Cinematica del punto}
+  \section{Moto rettilineo}
+  \subsection{Velocità media}
+  La velocità media $v_m$ del punto è il rapporto tra spostamento e tempo:
+  \[ v_m = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1} \]
+  Essa coincide con la definizione matematica di valor medio di una funzione in un dato intervallo
+  \[ v_m = \frac{1}{t-t_0} \int_{t_0}^t v(t) dt \]
+  \subsection{Velocità istantanea}
+  La velocità istantanea  rappresenta la rapidità di variazione temporale della posizione nell'istante $t$ considerato. è data dalla derivata dello spazio rispetto al tempo
+  \[ v = \frac{dx}{dt} \]
+  \subsection{Leggi orarie}
+  è la relazione generale che permette il calcolo dello spazio percorso nel moto rettilineo, qualunque sia il tipo di moto
+  \[ x(t) = x_0 + \int_{t_0}^t v(t) dt \]
+  $x_0$ rappresenta la posizione iniziale del punto, occupata nell'istante $t_0$
+  \\
+    Data l'accelerazione $a(t)$ si può ottenere la velocità $v(t)$ cioè vale la relazione
+  \[ v(t) = v_0 + \int_{t_0}^t a(t) dt\]
+
+  \subsection{Moto Rettilineo Uniforme}
+  Nel MRU la velocità $v$ è costante
+  \[ x(t) = x_0 + v(t-t_0)\]
+
+  \subsection{Accellerazione media}
+  Se tra gli istanti di tempo $t_1$ e $t_2$ la velocità varia da $v_1$ a $v_2$, si definisce \textbf{accellerazione media} del punto, il rapporto tra la variazione di velocità e l'intervallo di tempo
+  \[ a_m = \frac{v_2-v_1}{t_2-t_1} = \frac{\Delta v}{\Delta t} \]
+
+  \subsection{Accellerazione istantanea}
+  \[ a = \frac{dv}{dt} = \frac{d^2x}{dt^2} \]
+
+  \subsection{Moto rettilineo uniformemente accellerato}
+  Se l'accellerazione di un moto è costante, questo si dice uniformemente accellerato, e la dipenmdenza della velocità dal tempo è lineare
+
+  \[ v(t) = v_0 + a(t-t_0) \]
+  \[ x(t) = x_0 + v_0(t-t_0) + \frac{1}{2} a(t-t_0)^2  \]
+
+  \subsection{Moto armonico semplice}
+  Un punto segue un moto armonico semplice quando la legge oraria è definita dalla relazione
+  \[ x(t) = A sen(\omega t + \phi) \]
+    Dove $A, \omega, \phi$ sono grandezze costanti: $A$ è detta \textbf{ampiezza del moto}, $\omega t + \phi$ \textbf{fase del moto}, $\phi$ \textbf{fase iniziale}, $\omega$ \textbf{pulsazione}.
+
+    Il MAS è quindi un moto vario, dove tutte le grandezze cinematiche che lo descrivono $(x(t), v(t), a(t))$ variano nel tempo.
+    Il periodo $T$ è
+    \[ T = \frac{2\pi}{\omega} \]
+
+    Si definisce \textbf{frequenza} $\nu$ del moto, il numero di oscillazioni in un secondo
+    \[ \nu = \frac{1}{T}=\frac{\omega}{2\pi} \]
+  \subsubsection{Velocità nel MAS}
+  La velocità del punto che si muove con moto armonico si ottiene derivando $x(t)$:
+  \[ v(t)=\frac{dx}{dt} = \omega A cos(\omega t + \phi) \]
+
+
+
+
+\end{document}
