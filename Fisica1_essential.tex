@@ -73,6 +73,83 @@
   La velocità del punto che si muove con moto armonico si ottiene derivando $x(t)$:
   \[ v(t)=\frac{dx}{dt} = \omega A cos(\omega t + \phi) \]
 
+  \subsection{Quantità di moto}
+  Si definisce quantità di moto di un punto materiale il vettore:
+  \[ \vec{p} = m \vec{v} \]
+  \[ [\vec{p}] = \frac{m}{s} kg \]
+
+  \chapter{Sistemi di riferimento}
+  \subsection{Sistema di riferimento Inerziale}
+  è un sistema di riferimento dove vale la prima legge della dinamica
+  \subsection{Sistema di riferimento non Inerziale}
+  La prima legge di Newton assume la forma
+  \[ \vec{F} = m(\vec{a^1} + \vec{a_t} + \vec{a_c}) \]
+  è presente una accellerazione di un corpo anche senza forze esercitate su di esso
+  \subsection{Forze vere e forze apparenti}
+  Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale
+
+  \chapter{Dinamica del punto}
+
+  \section{Risultante delle forze}
+  La risultante delle forze è definita come la somma di tutte le forze applicate su un dato punto
+  \[ \vec{R} = F_1 + F_2 + ... + F_n = \sum_{i} \vec{F_i} \]
+
+  \subsection{Equilibrio statico}
+  Se $R = 0$ (e il punto ha inizialmente velocità nulla) esso rimane in stato di quiete: sono realizzate le condizioni di \textbf{equilibrio statico} del punto.\\
+  Devono quindi essere nulle le componenti della risultante, ovvero:
+  \[ R = 0 \Rightarrow R_x = R_y = R_z = 0 \]
+
+  \subsection{Reazione vincolare}
+  Data la definizione di \textbf{equilibrio statico}, se un corpo soggetto all'azione di una forza, o della risultante non nulla di un insieme di forze, rimane fermo, dobbiamo dedurre che l'azione della forza provoca una reazione dell'ambiente circostante, detta \textbf{reazione vincolare}, che si esprime tramite una \textbf{eguale e contraria} alla forza, o alla risultante delle forze agenti.
+
+  \section{Forza Peso}
+  \[ P = mg \]
+
+  \section{Impulso}
+  \subsection{Impulso della forza}
+  Si definisce impulso $ \vec{J} $ l'integrale della forza nel tempo:
+  \[ \vec{J} = \int_0^t \vec{F} dt \]
+  \[ [J] = N  s \]
+
+  \subsection{Teorema dell'impulso}
+  \[ \vec{J} = \int_0^t \vec{F} dt \int_{\vec{p}_0}^{\vec{p}} d\vec{p} = \vec{p} - \vec{p_0} = \Delta \vec{p} \]
+  Se la massa $m$ è costante:
+  \[ \vec{J} = \Delta \vec{p} = m \Delta v \]
+  Se la forza $F$ è costante:
+  \[ \vec{J} = \vec{F} \cdot t = \Delta p  \]
+
+  \section{Lavoro}
+  Il lavoro è pari all'integrale da $a$ a $b$ delle forze totali agenti sul corpo scalare lo spostamento $ds$
+  \[ W = \int_{a}^{b} \vec{F_{tot}} \cdot \vec{ds} \]
+
+  \section{Attrito}
+  \subsection{Forza di attrito radente}
+  E uguale a:
+  \[ F_a = \mu_s \cdot N\]
+  Dove $\mu_s$ è il coefficiente di attrito statico, e $N$ è la normale del corpo sul piano. $N$ si può anche esprimere come la componente ortogonale al piano della risultante delle forze che agiscono sul punto materiale che stiamo analizzando.
+  \\Si ha una situazione di quiete quando la forza applicata $F$ è:
+  \[ F \leq \mu_s N \]
+  e una condizione di moto quando
+  \[ F > \mu_s N \]
+
+  \chapter{Termodinamica}
+  \section{Trasformazioni cicliche}
+  \subsection{Ciclo di Carnot}
+  è un ciclo reversibile, la macchina è costituita da un gas \textbf{ideale}, trasformazione può essere espansione isoterma reversibile, espansione adiabatica reversibile, compressione isoterma reversibile, compressione adiabatica reversibile. Può essere rappresentato con solo due sorgenti. Si ha che per il rendimento in un ciclo di Carnot si ha
+  \[ \eta = 1 - \frac{T_1}{T_2}\]
+  Il risultato è vero anche per sistemi diversi dai gas ideali \\
+  Vale inoltre
+  \[ T_1 < T_2 \Rightarrow \eta < 1 \]
+  e anche $Q_c$ calore assorbito, $Q_a$ calore ceduto,
+  \[ |Q_c| = Q_1 < Q_2 = Q_a \]
+
+  \section{Rendimento}
+  \subsection{Macchine Termiche}
+  \subparagraph{Macchine Frigorifere}
+
+
+
+
 
 
 
