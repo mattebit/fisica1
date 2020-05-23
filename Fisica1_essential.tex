@@ -1,4 +1,4 @@
-\documentclass[a4paper]{report}
+ \documentclass[a4paper]{report}
 
 \usepackage[top=25mm,bottom=25mm]{geometry}
 \usepackage[utf8]{inputenc}
@@ -116,41 +116,6 @@
   La forza peso è proporzionale alla massa
   \[ \vec{P} = m\vec{g} \]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   \subsection{Quantità di moto}
   Si definisce quantità di moto di un punto materiale il vettore:
   \[ \vec{p} = m \vec{v} \]
@@ -210,7 +175,29 @@
   e una condizione di moto quando
   \[ F > \mu_s N \]
 
+
+
   \chapter{Termodinamica}
+  Il \textbf{tempo} non riveste un ruolo importante come in meccanica. La durata delle trasformazione non è essenziale alla descrizione
+
+  \section{Const}
+  \begin{itemize}
+    \item $T_0 = 273,16 K$ Punto triplo $H_2O$
+    \item $t(^\circ C)= T(K) - 273,16$
+    \item $t(^\circ F)= \frac{9}{5} t(^\circ C) + 32$
+  \end{itemize}
+
+  \section{Equilibrio Termodinamico}
+  Quando sussiste un equilibrio \textbf{meccanico}, un equilibrio \textbf{dinamico} e un equilibrio \textbf{termico}\\
+
+  \section{Primo principio della Termodinamica}
+  \[ \Delta U = Q - W \]
+  Dove, $\Delta U$ è la variazione di energia interna al sistema, $Q$ è il calore ($>0$ assorbito, $<0$ ceduto), e $W$ è il lavoro, ($>0$ è compiuto, $<0$ è "ricevuto".\\
+  Il lavoro $W$ e il calore $Q$ dipendono dal percorso, $\Delta U$ no.
+
+  \section{Trasformazioni quasi-statiche}
+  Sono passaggi da uno stado d'equilibrio, a un altro stato di equilibrio tramite uno stato di equilibrio.
+
   \section{Trasformazioni cicliche}
   \subsection{Ciclo di Carnot}
   è un ciclo reversibile, la macchina è costituita da un gas \textbf{ideale}, trasformazione può essere espansione isoterma reversibile, espansione adiabatica reversibile, compressione isoterma reversibile, compressione adiabatica reversibile. Può essere rappresentato con solo due sorgenti. Si ha che per il rendimento in un ciclo di Carnot si ha
@@ -221,12 +208,349 @@
   e anche $Q_c$ calore assorbito, $Q_a$ calore ceduto,
   \[ |Q_c| = Q_1 < Q_2 = Q_a \]
 
+  \subsection{Cicli irreversibile}
+  Ciclo è irreversibile quando almeno un tratto del ciclo è irreversibile
+
+  \subsection{Trasformazione reversibile}
+  Se è possibile riportare allo stato iniziale sia il sistema, che l'ambiente esterno.
+  \begin{itemize}
+    \item Trasformazione quasi-statica
+    \item Non cisono dissipazioni
+  \end{itemize}
+
+  \section{Calore specifico}
+  \[ Q = cm(T_f - T_i) \]
+  Segue, c è il calore specifico del corpo
+  \[ c = \frac{1}{m} \cdot \frac{dQ}{dT} \]
+  Più precisamente, lungo il percorso $\gamma$
+  \[ c_\gamma = \frac{1}{m} [\frac{dQ}{dT}]_\gamma \]
+  \[ udm[c] = \frac{J}{kg\cdot K} \]
+  è una grandezza \textbf{intensiva} (dipende dalla massa)\\
+  Dove $c$ è una costante che dipende dal materiale, $m$ è la massa del materiale, e $T_f - T_i$ la differenza di temperatura
+  \subsubsection{nota}
+  Il calore specifico di un corpo è utile solo se $dT \neq 0$
+  \subsubsection{nota 2}
+  \[ Q = \int_{a}^b dQ = \int_a^b m c_\gamma[T] dT \]
+  \subsection{Capacità termica}
+  \[ Q = C(T_f-T_i) \]
+  Dove $C = mc_\gamma$, quindi
+  \[ C_\lambda = [\frac{dQ}{dT}]_\gamma \]
+  è una grandezza \textbf{estensiva}.
+  \subsection{Calore specifico a volume costante}
+  \begin{itemize}
+    \item Per i gas \textbf{monoatomici} (ideali):  $c_V = \frac{3}{2}R$ dove $3$ sono i gradi di libertà della molecola
+    \item (alcuni) gas \textbf{biatomici} (ideali):  $c_V = \frac{5}{2}R$
+  \end{itemize}
+  \subsection{Calore specifico a pressione costante}
+  \[ c_p = R + c_V \]
+
+  \section{Cambi di fase}
+  Gli stati di aggregazione della materia Sono
+  \begin{itemize}
+    \item Solido: ha volume e forma propri
+    \item Liquido: ha volume proprio, ma non ha forma propria
+    \item Gassoso: non ha volume proprio e neanche forma propria
+  \end{itemize}
+  I passaggi sono:
+  \begin{itemize}
+    \item solido $\rightarrow$ liquido = liquefazione
+    \item liquido $\rightarrow$ solido = solidificazione
+    \item liquido $\rightarrow$ gassoso = evaporazione
+    \item gassoso $\rightarrow$ liquido = condensazione
+    \item solido $\iff$ gassoso = sublimazione
+  \end{itemize}
+  \subsubsection{Punto triplo}
+  Chiamiamo punto triplo per una data sostanza, il punto di intersezione delle tre linee di cambio di fase, dove le tre fasi possono coesistere.
+  \subsubsection{Punto critico}
+  è un punto che demarca la fine della linea di separazione delle fasi liquide e gassose, oltre questo punto non è più possibile distinguere la fase liquida da quella gassosa.
+  \subsection{Calore latente}
+  Nel cambio di fase fusione e evaporazione
+  \[ Q = \lambda m\]
+  dove $\lambda$ è il calore latente.\\
+  Per l'acqua
+  \[ \lambda_{fusione}^{H_2O} = 3,3 \cdot 10^5 \frac{J}{Kg} \quad @ 273,16 K \]
+  \[ \lambda_{fusione}^{H_2O} = 22,6 \cdot 10^5 \frac{J}{Kg} \quad @ 373,16K \]
+
+  \section{Trasmissione del calore}
+  I modi di trasmissione del calore sono
+  \begin{itemize}
+    \item conduzione
+    \item convezione
+    \item irraggiamento
+  \end{itemize}
+  \subsection{Conduzione}
+  \[ dQ = -K \frac{dT}{dZ} ds dt \]
+  dove $K$ esprime la conducibilità del materiale
+  \[ udm[K] = \frac{J}{m\cdot sK} \]
+  \subsection{Convezione}
+  Il calore si trasmette mediante lo spostamento delle parti calde del sistema (esempio: acqua)
+  \subsection{Irraggiamento}
+  Un sistema emette e assorbe onde elettromagnetiche, la legge che lega l'energia che viene emessa tramite onde elettromagnetiche e la temperatura del corpo è la legge di Stefan-Boltzmann
+  \subsubsection{Legge di Stefan-Boltzmann}
+  Dice che
+  \[\epsilon = \sigma e T^4\]
+  \[ udm[\epsilon] = [\frac{E}{L^2T}] \]
+  Dove $\epsilon$ è il potere emissivo del corpo, $e$ l'emissività del corpo (la capacità di un corpo di emettere onde) e $\sigma$ è la costante di Stefan-Boltzmann
+  \[ \sigma = 5,67 \cdot 10^{-8} \frac{J}{m^2sK^4} \]
+  \subsubsection{nota}
+  è improprio considerare l'irraggiamento uno scambio di calore
+  \subsection{Vaso DEWAR}
+  Ottimo recipiente isolante
+
+  \section{Equazione di stato di Gas Ideali}
+  \[ pV = nRT \]
+  \subsection{Isocora}
+  Definita da Gay-Lussac, il volume $V$ è costante,
+  \[ p = p_0(1 + \beta t) \]
+  \subsection{Isobara}
+  Definita da Gay-Lussac, la pressione $p$ è costante,
+  \[ V = V_0(1 + \alpha t) \]
+  \subsection{Isoterma}
+  Definita da Boyle, la temperatura $t$ è costante,
+  \[ p_i V_i = p_f V_f = cost\]
+  \subsection{Lavoro nei Gas}
+  \[ W = \int_i^f p(V)dV \]
+  \subsection{Energia interna nei Gas ideali}
+  Sperimentalmente, per  un gas ideale,
+  \[ U = U(T) \]
+  \subsection{Equazione di stato dei gas non ideali}
+  Van der Wals
+  \[ f(p,V,T) = 0 \]
+
+  \section{Trasformazioni dei gas ideali}
+  Per gas ideali vale sempre
+  \[ dU = n c_V dT \]
+  \begin{center}
+  \begin{tabular}{ |c|c|c|c|c| }
+   \hline
+    & Isocora & Isobara & Isoterma & Adiabatica \\
+    & $\Delta V = 0$ & $\Delta p = 0$ & $\Delta T = 0$ & -\\
+   \hline
+   $\Delta U$ & $n c_V \Delta T$ & $n c_V \Delta T$ & $n c_V \Delta T = 0$ & $n c_V \Delta T$ \\
+   $Q$ & $n c_V \Delta T$ & $n c_p \Delta T$ & $nR T ln(\frac{v_f}{v_i})$ & $0$\\
+   $W$ & $0$ & $p_B(\Delta V)$ & $nR T ln(\frac{v_f}{v_i})$ & $-n c_V \Delta T$ \\
+   \hline
+  \end{tabular}
+  \end{center}
+  \subsection{Trasformazione Isocora}
+  Siccome il volume $V$ è costante, il lavoro $W = 0$, quindi
+  \[ dU=dQ \]
+  \[ dQ = nc_vdT = dU\]
+  Dove $c_v$ è il calore specifico a volume costante
+  \subsection{Trasformazione Isobara}
+  \[ dU = dQ-dW \]
+  \[ n c_V dT = n c_p dT - nR dT \Rightarrow \quad c_p -c_V = R \]
+  che è la relazione di Mayer. dove c $c_p$ è il calore specifico a pressione costante
+  \subsection{Trasformazione Isoterma}
+  \[ \Delta U = 0 \quad \Rightarrow \quad Q-W =0 \]
+  Quindi
+  \[ Q = W = n R T ln(\frac{V_f}{V_i}) \]
+  \subsection{Trasformazione Adiabatica}
+  \[ p V^{\gamma} = cost \]
+  con $\lambda$ che varia in base al tipo di gas
+  \subsection{Trasformazione Generica}
+  \[ dQ = nc_V dT + dW \]
+
+  \section{Trasformazioni cicliche}
+  Lo stato iniziale $A$ coincide con lo stato finale $B$
+  \[ \Delta U = \int_A^B dU = \oint dU = U_B - U_A = 0 \]
+  \[ Q = \int_A^B dQ = \oint_{A \rightarrow B} dQ = Q \]
+  \[ W = \int_A^B dW = \oint dW = W \]
+  \[ \Delta U = 0 \Rightarrow Q = W \]
+  \[ Q = Q_C + Q_A,  \quad Q_C < 0, \quad Q_A > 0 \]
+  Dove $Q_C$ è il calore ceduto, $Q_A$ quello assorbito.\\
+  Stessa cosa per il lavoro,
+  \[ W = W_F + W_S, \quad W_F > 0  \quad W_S < 0 \]
+  Dove $W_F$ è il lavoro fatto, e $W_S$ quello subito
+  \subsection{Macchine termiche}
+  il lavoro $W$ compiuto è $>0$,
+  \[ W>0 \quad \Rightarrow \quad Q > 0 \]
+  \subsection{Macchien Frigorifere}
+  \[ W<0 \quad \Rightarrow \quad Q < 0 \]
+
   \section{Rendimento}
+  \[ \eta=\frac{W}{Q_A} \quad = 1- \frac{|Q_C|}{Q_A}\]
   \subsection{Macchine Termiche}
-  \subparagraph{Macchine Frigorifere}
+  Rendimento sempre compreso tra
+  \[0 \leq \eta < 1\]
+  e quindi
+  \[0 \leq W < Q_A \]
+  e quindi
+  \[ 0 < |Q_C| < Q_A \]
+  \subsection {Macchine Frigorifere}
+  L'efficienza, o \textbf{Coefficiente di prestazione}
+  \[ \xi = \frac{Q_A}{|W_S|}  \]
+
+  \section{Legge di Avogadro}
+  Volumi uguali, di gas diversi, alla stessa pressione e temperatura, contengono lo stesso numero di molecole $N$
+  \[ N = \frac{1}{K_B} \frac{pV}{T} \]
+  Il numero di \textbf{moli} $n$ è definito come
+  \[ n = \frac{N}{N_A} \]
+  Cioè si prende il numero di molecole $N$, e lo si divide per il numero di avogadro $N_A$,
+  \[ n = 1 \quad \Rightarrow \quad N = N_A = 6,022 \cdot 10^{23}\]
+  La legge di Avogadro espressa con le moli risulta
+  \[ n = \frac{1}{R} \frac{pV}{T} \]
+
+  Dove $K_B$ è la costante di $Boltzman$,
+  \[ K_B = 1,38 \cdot 10^{-23} \frac{J}{K}\]
+  \[ R = K_B N_A = 8,314 \frac{J}{K \cdot mol} \]
+
+
+  \section{Secondo principio della Termodinamica}
+  Il calore non fluisce \textbf{mai} spontaneamente da un corpo ad uno più caldo.
+  Mette dei limiti alle possibili trasformazioni di calore in lavoro\\
+  \subsection{Enunciato kelvin-Planck}
+  è \textbf{impossibile} realizzare un processo il cui unico risultato sia la trasformazione di calore in lavoro
+  \subsection{Enunciato di Clausius}
+  è \textbf{impossibile} realizzare un processo il cui unico risultato sia il passaggio di calore da un corpo a uno a temperatura maggiore
+
+  \section{Teorema di Carnot}
+  Due macchine termiche, che lavorano a contatto con due sorgenti, $T_1$ e $T_2 > T_1$, una macchia \textbf{generica} $x$ estrae il calore $Q_2$ dalla sorgente $T_2$, restituisce il calore $Q_1$ a $T_1$, e produce del lavoro $W$. \\
+  L'altra macchina $r$ è reversibile, ed estrae calore $Q_2'$ da $T_2$, restituisce calore $Q_1'$ a $T_1$ , il lavoro che essa compie è $W$\\
+  Allora,
+  \[ \eta_{x(T_1, T_2)}  \leq \eta_{r(T_1, t_2)} \]
+  Cioè il rendimento di una macchina termica qualsiasi che lavori tra la temperatura $T_1$ e $T_2$ è $\leq$ del rendimento di una macchina reversibile qualsiasi che lavori tra le medesime temperature.
+  \subsubsection{Altra formazione}
+  \[ \frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0 \]
+
+  \subsubsection{Corollario}
+  Tutte le macchine reversibili, che lavorano tra le stesse temperature hanno lo stesso rendimento
+  \[ \eta_{R_1(T_1, T_2)} = \eta_{R_2(T_1, T_2)} \]
+  \subsubsection{Osservazioni}
+  Il rendimento massimo coincide con quello della macchina reversibile
+  \[ \eta_{MAX(T_1,T_2)} = \eta_{R(T_1,T_2)} = 1-\frac{T_1}{T_2} \]
+
+  \section{Teorema di Clausius}
+  Estende il Teorema di Carnot alle trasformazioni generiche
+  \[ \sum_{j=1}^N \frac{Q_j}{T_j} \leq 0 \]
+  Tutti gli scambi di calore con le $N$ sorgenti con cui il sistema è in contatto sommati, devono essere $\leq 0$. è $=0$ se il ciclo (la macchina) è reversibile
+
+  \[ \oint \frac{dQ}{T} \leq 0 \]
 
 
 
+
+  \section{Entropia}
+  Data una trasformazione ciclica da $A$ a $B$ nel tratto 1 e da $B$ a $A$ nel tratto 2, se il ciclo è reversibile si ha
+  \[ \oint \frac{dQ}{T} = \int_A^B (\frac{dQ}{T})_1 + \int_B^A (\frac{dQ}{T})_2 = 0\]
+  ma, visto che il ciclo è reversibile vale anche
+  \[ \int_A^B (\frac{dQ}{T})_1 - \int_A^B (\frac{dQ}{T})_2 = 0\]
+  Quindi non dipende dal percorso scelto. Abbiamo quindi questa funzione, che si chiama $entropia$
+  \[ \int_A^B (\frac{dQ}{T})_{rev} = S(B) -S(A) \]
+  La variazione di entropia è una funzione di stato:
+  \[ \Delta S_{A \rightarrow B} = \int_A^B (\frac{dQ}{T})_{rev. qualsiasi} \]
+  \subsubsection{nota 1}
+  Dati un sistema 1 e un sistema 2, il sistema 3 è $= sys1 \cup sys2$, l'entropia
+  \[ S_3 = S_1 + S_2 \]
+  \subsubsection{nota 2}
+  L'entropia è una grandezza estensiva
+  \subsubsection{nota 3}
+  Per il calcolo, occorre scegliere la reversibile più conveniente
+  \subsection{Variazioni di Entropia per Tr. notevoli di Gas Ideali}
+  \subsubsection{Isoterma}
+  \[ v_i \rightarrow v_f\]
+  \[ dQ = \frac{nRT}{V} dV \Rightarrow dS = \frac{dQ}{T} = nR\frac{dV}{V} \]
+  \[ \Delta S = nR ln(\frac{V_f}{V_i}) \]
+
+  \subsubsection{Isocora}
+  \[ dS = nC_v\frac{dT}{T} \]
+  \[ \Delta S = \int_i^f dS = nC_v ln(\frac{T_f}{T_i}) \]
+
+  \subsubsection{Isobara}
+  \[ dS = nc_p\frac{dT}{T} \]
+  \[ \Delta S = \int_i^f dS = n c_p ln(\frac{T_f}{T_i})\]
+
+  \subsubsection{Adiabatica}
+  \[ \Delta S = 0 \]
+
+  \subsubsection{Cambi di fase}
+  \[ dS = \frac{\lambda}{T} dm\]
+  \[ \Delta S = \frac{\lambda m}{T} \]
+
+  \subsection{Diagrammi T-S}
+  $T$ e $S$ sono variabili termo dinamiche, quanto lo sono $p$ e $v$
+  \subsection{Teorema dell'entropia}
+  Se il sistema è isolato
+  \[ dQ = 0 \quad \Rightarrow \quad \int_A^B(\frac{dQ}{T})_X = 0\]
+  Segue che
+  \[ S_B \geq S_A \]
+  \[ \Delta S \geq 0 \]
+  e l'$=$ vale solo se la trasf. è reversibile
+
+  \chapter{Elettricità}
+  Conduttori: materiali che non si elettrizzano \\
+  Isolanti: si elettrizzano, gli isolanti che possono essere:
+  \begin{itemize}
+    \item Vetri e affini (carica $+$)
+    \item Plastiche (carica $-$ )
+  \end{itemize}
+  Forza di attrazione tra due materiali (uno vetro e uno plastica) "strofinati"
+  \[ F = K\frac{q_1 q_2}{r_{12}^2} \]
+  Dove $q$ è la carica elettrica, e $r_{12}$ la distanza tra i due oggetti. La forza agisce sempre lungo la congiungente delle due cariche
+  \[u.d.m[q] = [I\cdot T] = 1C (culomb)\]
+  oppure
+  \[ K = \frac{1}{4 \pi \epsilon_0} \quad \Rightarrow \quad \epsilon_0 = 8,85\cdot 10^{-12} \frac{C^2}{N\cdot m^2}\]
+  Dove $\epsilon_0$ è la \textbf{costante dielettrica del vuoto}\\
+  \subsubsection{La carica elementare}
+  è $e = 1,602 \cdot 10^{-19} C$
+  \begin{itemize}
+    \item la carica $q$ dell'\textbf{elettrone} è $-e$, la sua massa $m_{el} = 0,91 \cdot 10^{-30} kg$
+    \item la carica $q$ del \textbf{protone} è $+e$, la sua massa $m_{pr} = 1,67 \cdot 10^{-27} Kg$
+    \item la carica $q$ del \textbf{neutrone} è $0$, la sua massa è circa uguale a quella del protone
+  \end{itemize}
+
+  \section{Principio di sovrapposizione}
+  Date $n$ cariche, che interagiscono su una carica, l'effetto totale sulla carica di prova, è dato dalla sovrapposizione degli effetti delle singole cariche
+
+  \section{Campo elettrico o elettrostatico}
+  \[\vec{E} = \frac{\vec{F}}{q_0} = \frac{K Q}{r^2} \hat{r}\]
+  Dove $\vec{E}$ è il campo elettrico, $\vec{F}$ è la forza subita dalla carica, e $q_0$ la carica\\
+  Il campo elettrico è \textbf{uscente} se la carica che lo genera $Q$ è $>0$\\
+  Il campo elettrico è \textbf{entrante} se la carica che lo genera è $Q<0$
+
+  \begin{itemize}
+    \item Campo elettrostatico: è generato da altre cariche elettriche ferme
+    \item Elettromotore
+  \end{itemize}
+
+  \subsection{lavoro di un campo elettrico}
+  \[ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot d\vec{s} = \int_a^b q \vec{E} \cdot d\vec{s} = q \int_a^b \vec{E}\cdot d\vec{s} \]
+
+  \subsection{Circuitazione del campo elettrico}
+  \[\oint \vec{E} \cdot d\vec{s} = f.e.m.\]
+  dove $f.e.m$ è la forza \textbf{elettromotrice}, cioè è uguale alla forza che sta portando la carica dal punto a al punto b (stesso)
+
+  \subsection{caso Elettrostatico}
+  \[ W_{AB} = - \Delta U_{AB}\]
+  \[ U_{AB} = \frac{KQ}{r} + const \]
+  Vale per la carica puntiforme. La circuitazione del campo elettrostatico è $=0$
+  \[ \oint \vec{E} \cdot d\vec{s} = 0 \]
+  \[ \Delta U \longrightarrow \Delta V = \frac{\Delta U}{q} \]
+  Il potenziale elettrostatico si definisce come:
+  \[ V_A = \frac{KQ}{r_A} + const^' \]
+  Dove $constì$ è una costante arbitraria
+
+  \section{Linee di forza}
+  Dato un campo vettoriale $\vec{v}$, può essere rappresentato graficamente tramite le linee di forza. In ogni punto le linee di forza hanno una tangente, che coincide con la direzione del vettore $\vec{v}$ nel punto $P$
+  \begin{itemize}
+    \item direzione($\vec{v_P}$) = tangente alle linee di forza nel punto $P$
+    \item Verso($\vec{v_P}$) = verso di percorrenza delle linee nel punto $P$
+    \item Modulo($\vec{v_P}$) si rappresenta con la densità delle linee
+  \end{itemize}
+
+  \section{Flusso di un campo vettoriale}
+  Data una grandezza vettoriale $\vec{v}$,  definiamo come flusso della grandezza vettoriale in questione, attraverso una superficie infinitesima $d \Sigma$\\
+  Il flusso $d \Phi$ è
+  \[ d \Phi = \vec{v}\cdot \hat{n} d \Sigma \]
+  dove $\cap{n}$ è il vettore normale alla superficie.\\
+  Più in generale per una superficie non infinitesima, si ha la somma di tante superfici infinitesime
+  \[ \Phi = \int_\Sigma d\Phi = \int_\Sigma \vec{v} \cdot \hat{n} d\Sigma \]
+
+
+  \section{teorema di Gauss}
+
+
+L 143
 
 
 
