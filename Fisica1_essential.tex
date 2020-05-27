@@ -546,13 +546,188 @@
   Più in generale per una superficie non infinitesima, si ha la somma di tante superfici infinitesime
   \[ \Phi = \int_\Sigma d\Phi = \int_\Sigma \vec{v} \cdot \hat{n} d\Sigma \]
 
+  \section{Angolo solido}
+  Area della calotta sferica, normalizzata al quadrato del raggio della sfera, l'angolo solido è
+  \[ \omega = \frac{S}{R^2} \]
+  dove $S$ è la superficie "di taglio" sempre ortogonale
 
   \section{teorema di Gauss}
+  Il flusso del campo elettrico attraverso una superficie chiuse è uguale alla somma delle cariche interne a tale superficie diviso $\epsilon_0$
+  \[ \Phi_{\Sigma} = \sum_i \frac{q_i}{\epsilon_0} \]
+
+  \section{Conduttori}
+  I conduttori si definiscono tali, perchè al loro interno contengono cariche libere. Una carica si definisce libera, quando, sotto l'azione di un campo elettromagnetico esterno essa si muove più o meno liberamente
+  \begin{itemize}
+    \item Soluzioni elettrolitiche
+      \item gas ionizzati
+    \item metalli
+  \end{itemize}
+
+  \subsection{Conduttore in Equilibrio}
+  Un conduttore si dice in equilibrio quando tutte le cariche al suo interno sono in equilibrio\\
+  Cioè $\forall$ carica $q_i$
+  \[\vec{v_i} = \vec{0} \Rightarrow \vec{F_i} = \vec{0} \Rightarrow \vec{E_i} = \vec{0}\]
+  Definizione "media". Il campo elettrico è nullo (perchè le cariche non si muovono)\\
+
+  \subsubsection{Primo corollario}
+  Per un conduttore in equilibrio vale $q_{intern} =0$. Se c'è una carica, si distribuisce sulla superficie del conduttore
+  \subsubsection{Secondo corollario}
+  Dati due punti $A, B$ all'interno del conduttore, la differenza di potenziale tra $A$ e $B$
+  \[V_A - V_B = \int_A^B \vec{E}\cdot d\vec{s}=0 \]
+  $\forall A,B$ interni al conduttore, $A=B$. Cioè tutti i punti di un conduttore in equilibrio sono allo stesso potenziale
+  \subsubsection{terzo corollario}
+  \( \vec{E} \neq \vec{0} \) solo appena fuori dalla superficie
+  \[ \vec{E}(\vec{r}) = \frac{\sigma(\vec{r})}{\epsilon_0} \hat{n} \]
+  QUindi, il campo elettrico appena fuori dalla superficie di un conduttore, in una posizione $r$ è uguale alla densità di carica nella data posizione $r$ diviso $\epsilon_0$, e diretto normalmente alla superficie
+
+  \subsection{Schermo elettrostatico}
+  Immaginando un conduttore cavo\\
+  Una perturbazione esterna che redistribuisce $q_{EF}$ non sarà percepibile all'interno del conduttore e quindi su tutti i conduttori interni.\\
+  Ogni perturbazione interna non sarà misurabile all'esterno
+
+  \section{Condensatori}
+  Quando due conduttori sono ininduzione completa, si chiamano condensatore
+
+  \[ \Delta V = Kq (\frac{1}{R_1} - \frac{1}{R_2}) \]
+
+  La capacità di un condensatore
+  \[ C= \frac{q}{\Delta V} = 4 \pi \epsilon_0 \frac{R_1 R_2}{R_2 - R_1} \]
+
+  Se le superfici delle armature sono abbastanza vicine, la capacità è
+  \[C = \epsilon_0 \frac{4 \pi R_1^2}{h} = \epsilon_0 \frac{S}{h}\]
+  Dove $S$ è la superficie, $h$ è pari a $R_2 = R_1 + h$ con $h<<R_1$
+
+  \subsection{Induzione Completa}
+  Quando, tutte le linee di campo elettrico nascono da un conduttore e muoiono nell'altro conduttore. Cioè non esiste una linea di campo elettrico che parte da un conduttore che non vada a finire nell'altro.
+
+  \subsection{Condensatore piano}
+  Due armature piane, parallele, con carica $+q$ e $-q$.
+  Il campo elettrico è pari a \( E = \frac{\sigma}{2\epsilon_0} \)
+  La somma dei vettori dei due campi elettrici è pari a $0$ all'esterno delle due armature, mentre all'interno è pari a $E$
+  \[ C = \epsilon_0 \frac{S}{h} \]
+  \subsubsection{Effetti di bordo}
+  Al limite delle armature ci sono delle linee che saranno curvate, trascurate per la debole intensità.
+  \subsection{Sistemi di condensatori}
+  Dati due condensatori, $C_1$ e $C_2$ collegati a una differenza di potenziale $\Delta V$,
+  \[ \Delta V = \Delta V_1 + \Delta V_2 \]
+  \[ C_1 = \frac{q_1}{\Delta V_1} \]
+  \[ C_2 = \frac{q_2}{\Delta V_2} \]
+
+  \subsubsection{In serie}
+  Il condensatore "risultante" sarà
+  \[ \frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2} \]
+
+  \subsubsection{In parallelo}
+  \[ C = C_1 + C_2 \]
+
+  \subsection{Energia nel condensatore}
+  L'energia elettrostatica all'interno del condensatore è
+  \[ \Delta U_{el} = \frac{1}{2} \epsilon_0 E^2 \tau \]
+  La densità volumica di energia è
+  \[ u = \frac{\Delta U_{el}}{h} = \frac{1}{2} \epsilon_0 E^2 \]
+
+  \subsection{Forza tra le armature}
+  La forza tra le due armature del condensatore è definita come
+  \[ F = -\frac{dU}{dS} \]
+
+  \subsection{Pressione elettrostatica}
+  Indipendente dal fatto che il condensatore sia isolato o connesso a un generatore, non dipende dalla geometria del condensatore è un equazione valida in "generale", coincide con la definizione di densità elettrostatica associata al campo elettrico
+  \[ \frac{1}{2} \epsilon_0 E^2 \]
+
+  \subsubsection{Condensatore isolato}
+  La pressione elettrostatica tra due armature di un condensatore coincide con la densità volumica di energia
+  \[ P_{el} = \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 \]
+
+  \subsubsection{Condensatore e generatore}
+  \[ d(\Delta U_{el}) = -\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S dh \]
+  \[ d(\Delta U_{gen}) = \epsilon_0 (\frac{\Delta V}{h})^2 S dh \]
+  e quindi, la variazione totale sarà
+  \[ d(\Delta U) =\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S dh \]
+  \[ F = \frac{-d(\Delta U)}{dh} = -\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S \]
+  \[ P = \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 \]
+
+
+
+
+
+
+
+  \section{Conduzione elettrica}
+  Per esempio, il rame $Cu$ ha 1 elettrone "libero" per atomo. Calcoliamo quanti elettroni sono liberi per unità di volume
+  \[ n = \frac{N_A \rho}{ A} = 8,49 \cdot 10^{28} \frac{e^-}{m^3} \]
+  Elettroni a metro cubo. la velocità media degli elettroni (per un volume abbastanza grande) è
+  \[\vec{v_m} = \vec{0}\]
+  Se il conduttore è sottoposto ad un campo elettrico esterno, la velocità media degli elettroni passa a quella di "drift":
+  \[ \vec{v_m} = \vec{0} \longrightarrow \vec{v_m} = \vec{v_d} \]
+  Vettore densità di corrente elettrica, pari alla densità di cariche libere, per velocità di drift (o deriva), - la stessa cosa per le cariche negative
+  \[ \vec{J_e} = n_+ e \vec{v_{d+}} - n_- e \vec{v_{d-}}\]
+
+  \subsection{Corrente elettrica}
+  Si definisce come l'integrale verso la sezione del vostro filo
+  \[ i = \int_S n e \vec{v} \cdot \hat{n} dS = \frac{dq}{qt}\]
+  \[ u.d.m[i]=\frac{1C}{1s}= 1A \]
+
+  \subsection{Principio di conservazione della carica elettrica}
+  Data una superficie chiusa, la carica totale che passa attraverso questa superficie, è uguale alla variazione delle cariche nella superficie nel tempo. (tanta corrente entri nel volume tanta ne esce)
+  \[ i_{tot} = \oint \vec{J} \cdot \hat{n} dS = -\frac{dq_{int}}{dt} \]
+
+  \subsection{Legge di OHM}
+  La velocità di deriva, è proporzionale al campo elettrico
+  \[ \vec{v_d} = \alpha \vec{E} \]
+  Anche scritta
+  \[ \vec{J} = \frac{1}{\rho} \vec{E} \]
+  La costante $\rho$ si chiama resistività, è una costante intensiva, e dipende dal materiale che stiamo utilizzando.
+  La resistività cresce in proporzione alla temperatura
+  \[ \rho(t) = \rho{20}(1 + \alpha \Delta t) \]
+  Dove $\rho{20}$ è la resistività misurata a 20 gradi celsius\\
+  Cioè la legge di OHM lega il campo elettrico alla corrente tramite la costante di resistività $\rho$
+  \[ \vec{E} = \rho \cdot \vec{J} \]
+
+
+  \[ i = \frac{ES}{\rho} = Eh \frac{S}{\rho h} = \Delta V \frac{1}{R} \]
+  $R$ Si chiama resistenza elettrica,
+  \[ R = \rho \frac{h}{S} \]
+  Dove $h$ è la lunghezza, e $S$ la sezione\\
+
+  La legge di OHM per i conduttori metallici sarà quindi
+  \[ i = \frac{\Delta V}{R} \]
+  \[ u.d.m[R] = \frac{1V}{1A} = 1 \Omega \]
+
+  \subsection{Effetto Joule}
+  La potenza, $P$
+  \[ P=\frac{dW}{dt} = \frac{dq\Delta V}{dt} = \Delta V \cdot i\]
+
+  \subsection{Resistenze in serie}
+  Consideriamo $R_1$ e $R_2$ in serie, la corrente $i$ che le attraversa è la stessa, quindi
+  \[ i R_1 = \Delta V_1 \]
+  \[ i R_2 = \Delta V_2 \]
+  Dove $\Delta V_1$ è la differenza di potenziale ai capi di $R_1$, stessa cosa per $\Delta V_2$\\
+  Quindi,
+  \[ i R^* = \Delta V \Rightarrow R^* = R_1 +R_2 \]
+
+  \subsection{Resistenze in parallelo}
+  Consideriamo $R_1$ e $R_2$ in parallelo, la corrente $i$ si divide nei due capi in $i_1$ e $i_2$. In questo caso, $\Delta V = \Delta V_1 = \Delta V_2$ quindi
+  \[ i_1 R_1 = \Delta V \]
+  \[ i_2 R_2 = \Delta V \]
+  Quindi,
+  \[ \frac{1}{R*} = \frac{1}{R_1} + \frac{1}{R_2} \]
+
+  \section{Forza Elettro Motrice}
+  \[ f.e.m. = \oint \vec{E} \cdot d\vec{s} = R_T i \Rightarrow i \neq 0 \iff f.e.m. \neq 0\]
+  $R_T$ resistenza totale circuito\\
+  Deve quindi esistere una resistenza interna al generatore tale che
+  \[ f.e.m. = R_T i = (R_{load} + r)i \]
+  \[ V_A - V_B = f.e.m. -ri \]
+  Dove $R_{load}$ è la resistenza del "circuito" senza il generatore, e $r$ è la resistenza del generatore
+
+
+
+
+
+
+
+
 
 
 L 143
-
-
-
-
 \end{document}
