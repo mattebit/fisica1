@@ -23,6 +23,12 @@
   \section*{Introduzione}
   Questa dispensa è pensata per raccogliere le informazioni essenziali necessarie per lo svolgimento degli esercizi durante l'anno e/o per l'esame finale. Per questo motivo non saranno approfondite e non potranno sostituire quelle fornite dal professore.
 
+  \section*{General}
+  \subsection{Prodotto tra vettori}
+  \[ \vec{a} \times \vec{b} = \vec{c} \]
+  \[ |\vec{c}| = |\vec{a}||vec{b}| sin \teta_{ab} \]
+  Il vettore risultante ha direzione e verso dati dalla regola della mano destra, col pollice sul primo vettore a e indice sul secondo vettore b.
+
   \chapter{Cinematica del punto}
   \section{Moto rettilineo}
   \subsection{Velocità media}
@@ -85,7 +91,22 @@
   Legge oraria
   \[ x(t) = \frac{v_0}{k} (1-e^{-kt}) \]
 
+  \chapter{Sistemi di riferimento}
+  \subsection{Sistema di riferimento Inerziale}
+  è un sistema di riferimento dove vale la prima legge della dinamica
+  \subsection{Sistema di riferimento non Inerziale}
+  La prima legge di Newton assume la forma
+  \[ \vec{F} = m(\vec{a^1} + \vec{a_t} + \vec{a_c}) \]
+  è presente una accellerazione di un corpo anche senza forze esercitate su di esso
+  \subsection{Forze vere e forze apparenti}
+  Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale
+
   \chapter{Dinamica del punto}
+  \section{Const}
+  \begin{itemize}
+    \item Accelerazione gravitazionale $g = 9,80665 \frac{m}{s^2}$
+  \end{itemize}
+
   \section{Leggi di Newton}
   \subsection{Prima legge di Newton o Legge di inerzia}
   Il legame tra la forza e lo stato del moto è data dalla \textbf{legge di Newton}
@@ -121,18 +142,6 @@
   \[ \vec{p} = m \vec{v} \]
   \[ [\vec{p}] = \frac{m}{s} kg \]
 
-  \chapter{Sistemi di riferimento}
-  \subsection{Sistema di riferimento Inerziale}
-  è un sistema di riferimento dove vale la prima legge della dinamica
-  \subsection{Sistema di riferimento non Inerziale}
-  La prima legge di Newton assume la forma
-  \[ \vec{F} = m(\vec{a^1} + \vec{a_t} + \vec{a_c}) \]
-  è presente una accellerazione di un corpo anche senza forze esercitate su di esso
-  \subsection{Forze vere e forze apparenti}
-  Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale
-
-  \chapter{Dinamica del punto}
-
   \section{Risultante delle forze}
   La risultante delle forze è definita come la somma di tutte le forze applicate su un dato punto
   \[ \vec{R} = F_1 + F_2 + ... + F_n = \sum_{i} \vec{F_i} \]
@@ -164,6 +173,25 @@
   \section{Lavoro}
   Il lavoro è pari all'integrale da $a$ a $b$ delle forze totali agenti sul corpo scalare lo spostamento $ds$
   \[ W = \int_{a}^{b} \vec{F_{tot}} \cdot \vec{ds} \]
+  Anche definito come:
+  \[ W_{TOT} = E_{Kf} - E_{Ki} \]
+  cioè il lavoro dal punto $i$ iniziale, al punto $f$ finale è definito come la differenza dell'energia cinetica nel punto $f$ meno quella nel punto $i$. Vale solo se il lavoro è \textbf{totale}, cioè se comprende tutte le forze agenti nel sistema
+  \subsection{Lavoro Totale}
+  \[ W_{TOT} = \sum_K W_K = \sum_K \int_i^f \vec{F}\cdot d\vec{s} \]
+
+
+  \section{Potenza}
+  Mette in relazione il lavoro e il tempo durante il quale questo viene erogato
+  \[ P = \frac{dW}{dt} = \vec{F} \cdot \vec{v} \]
+  è la potenza istantanea
+  \[ u.d.m.[p] = 1 \frac{J}{s} = 1W \]
+  Dove $1W$ significa 1 Watt\\
+  La potenza media, invece:
+  \[ \overbar{p} = \frac{W}{\Delta t} =  \]
+
+  \subsection{Forza conservativa}
+  Una forza $\vec{F}$ è conservativa, se il lavoro compiuto da un punto $a$ a un punto $b$ è nullo, indipendentemente dal percorso scelto
+  \[ \oint \vec{F} \cdot \vec{ds} = 0 \]
 
   \section{Attrito}
   \subsection{Forza di attrito radente}
@@ -175,7 +203,21 @@
   e una condizione di moto quando
   \[ F > \mu_s N \]
 
+  \section{Energia}
+  \subsection{Energia Cinetica}
+  è definita come
+  \[ E_K = \frac{1}{2}m v^2 \]
+  \[ dW = d[\frac{1}{2}m v^2] \]
+  l'energia cinetica è sempre positiva, dipende solo dalla velocità dell'oggetto (e quindi dal sistema di riferimento che stiamo usando)
+  \[ u.d.m.[E_K]= 1J = 1N\cdot M = 1 Kg \frac{m^2}{s^2}\]
 
+  \subsection{Energia potenziale}
+   l'energia potenziale di un oggetto è l'energia che esso possiede a causa della sua posizione o del suo orientamento rispetto ad un campo di forze.
+  \subsubsection{Nel caso di forze conservative}
+  Nel caso il campo di forze sia conservativo, il lavoro non dipende dal percorso scelto, ma solo dagli estremi del cammino. Il differenziale $dW$ è un diff. perfetto, quindi si ha:
+  \[W = \oint_a^b F \cdot dx = -[U(a) - U(b)] = -\Delta U\]
+  Nel caso più semplice, in cui il moto si svolge in una sola direzione:
+  \[ F(x) = -\frac{d}{dx}U(x) \]
 
   \chapter{Termodinamica}
   Il \textbf{tempo} non riveste un ruolo importante come in meccanica. La durata delle trasformazione non è essenziale alla descrizione
@@ -185,10 +227,11 @@
     \item $T_0 = 273,16 K$ Punto triplo $H_2O$
     \item $t(^\circ C)= T(K) - 273,16$
     \item $t(^\circ F)= \frac{9}{5} t(^\circ C) + 32$
+    \item $R = 8,314 \frac{J}{K \cdot mol}$
   \end{itemize}
 
   \section{Equilibrio Termodinamico}
-  Quando sussiste un equilibrio \textbf{meccanico}, un equilibrio \textbf{dinamico} e un equilibrio \textbf{termico}\\
+  Quando sussiste un equilibrio \textbf{meccanico}, un equilibrio \textbf{dinamico} e un equilibrio \textbf{termico}
 
   \section{Primo principio della Termodinamica}
   \[ \Delta U = Q - W \]
@@ -392,8 +435,6 @@
   Rendimento
   \[ \xi = \frac{T_1}{T_1 - T_2} \]
 
-
-
   \section{Rendimento}
   \[ \eta=\frac{W}{Q_A} \quad = 1- \frac{|Q_C|}{Q_A}\]
   \subsection{Macchine Termiche}
@@ -421,10 +462,9 @@
   \[ K_B = 1,38 \cdot 10^{-23} \frac{J}{K}\]
   \[ R = K_B N_A = 8,314 \frac{J}{K \cdot mol} \]
 
-
   \section{Secondo principio della Termodinamica}
   Il calore non fluisce \textbf{mai} spontaneamente da un corpo ad uno più caldo.
-  Mette dei limiti alle possibili trasformazioni di calore in lavoro\\
+  Mette dei limiti alle possibili trasformazioni di calore in lavoro
   \subsection{Enunciato kelvin-Planck}
   è \textbf{impossibile} realizzare un processo il cui unico risultato sia la trasformazione di calore in lavoro
   \subsection{Enunciato di Clausius}
@@ -452,9 +492,6 @@
   Tutti gli scambi di calore con le $N$ sorgenti con cui il sistema è in contatto sommati, devono essere $\leq 0$. è $=0$ se il ciclo (la macchina) è reversibile
 
   \[ \oint \frac{dQ}{T} \leq 0 \]
-
-
-
 
   \section{Entropia}
   Data una trasformazione ciclica da $A$ a $B$ nel tratto 1 e da $B$ a $A$ nel tratto 2, se il ciclo è reversibile si ha
@@ -504,6 +541,12 @@
   e l'$=$ vale solo se la trasf. è reversibile
 
   \chapter{Elettricità}
+  \section{Const}
+  \begin{itemize}
+    \item Costante magnetica $K_m = 10^{-7} T\cdot m = \frac{\mu_0}{4\pi}$
+  \end{itemize}
+
+
   Conduttori: materiali che non si elettrizzano \\
   Isolanti: si elettrizzano, gli isolanti che possono essere:
   \begin{itemize}
@@ -516,7 +559,7 @@
   \[u.d.m[q] = [I\cdot T] = 1C (culomb)\]
   oppure
   \[ K = \frac{1}{4 \pi \epsilon_0} \quad \Rightarrow \quad \epsilon_0 = 8,85\cdot 10^{-12} \frac{C^2}{N\cdot m^2}\]
-  Dove $\epsilon_0$ è la \textbf{costante dielettrica del vuoto}\\
+  Dove $\epsilon_0$ è la \textbf{costante dielettrica del vuoto}
   \subsubsection{La carica elementare}
   è $e = 1,602 \cdot 10^{-19} C$
   \begin{itemize}
@@ -553,8 +596,8 @@
   \[ \oint \vec{E} \cdot d\vec{s} = 0 \]
   \[ \Delta U \longrightarrow \Delta V = \frac{\Delta U}{q} \]
   Il potenziale elettrostatico si definisce come:
-  \[ V_A = \frac{KQ}{r_A} + const^' \]
-  Dove $constì$ è una costante arbitraria
+  \[ V_A = \frac{KQ}{r_A} + const^{'}\]
+  Dove $const'$ è una costante arbitraria
 
   \section{Linee di forza}
   Dato un campo vettoriale $\vec{v}$, può essere rappresentato graficamente tramite le linee di forza. In ogni punto le linee di forza hanno una tangente, che coincide con la direzione del vettore $\vec{v}$ nel punto $P$
@@ -593,7 +636,7 @@
   Un conduttore si dice in equilibrio quando tutte le cariche al suo interno sono in equilibrio\\
   Cioè $\forall$ carica $q_i$
   \[\vec{v_i} = \vec{0} \Rightarrow \vec{F_i} = \vec{0} \Rightarrow \vec{E_i} = \vec{0}\]
-  Definizione "media". Il campo elettrico è nullo (perchè le cariche non si muovono)\\
+  Definizione "media". Il campo elettrico è nullo (perchè le cariche non si muovono)
 
   \subsubsection{Primo corollario}
   Per un conduttore in equilibrio vale $q_{intern} =0$. Se c'è una carica, si distribuisce sulla superficie del conduttore
@@ -672,12 +715,6 @@
   \[ F = \frac{-d(\Delta U)}{dh} = -\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S \]
   \[ P = \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 \]
 
-
-
-
-
-
-
   \section{Conduzione elettrica}
   Per esempio, il rame $Cu$ ha 1 elettrone "libero" per atomo. Calcoliamo quanti elettroni sono liberi per unità di volume
   \[ n = \frac{N_A \rho}{ A} = 8,49 \cdot 10^{28} \frac{e^-}{m^3} \]
@@ -713,7 +750,7 @@
   \[ i = \frac{ES}{\rho} = Eh \frac{S}{\rho h} = \Delta V \frac{1}{R} \]
   $R$ Si chiama resistenza elettrica,
   \[ R = \rho \frac{h}{S} \]
-  Dove $h$ è la lunghezza, e $S$ la sezione\\
+  Dove $h$ è la lunghezza, e $S$ la sezione
 
   La legge di OHM per i conduttori metallici sarà quindi
   \[ i = \frac{\Delta V}{R} \]
@@ -746,13 +783,76 @@
   \[ V_A - V_B = f.e.m. -ri \]
   Dove $R_{load}$ è la resistenza del "circuito" senza il generatore, e $r$ è la resistenza del generatore
 
+  \section{Interazione elettromagnetica}
+  Magnetite $F_eO \cdot Fe_2O_3$. I \textbf{poli magnetici} sono le estremità di un oggetto (in magnetite)\\
+  Esistono due tipi di "carica" magnetica: positive e negative.\\
+  Ciascun magnete contiene sempre due poli opposti\\
+  La magnetizzazione: si possono produrre magneti artificiali (calamite) tramite contatto coi magneti naturali.\\
+  Il geomagnetismo: lasciato libero di muoversi, si orienta lungo direzioni secondo il meridiano terrestre locale. il polo che punta verso il nord è chiamato polo nord con carica positiva. il polo sud viceversa.\\
+  \[F = K_m \frac{q_{m1}q_{m2}}{r^2}\]
+  Magnete spezzato: se spezziamo un magnete, non ottengo due oggetti con cariche opposte, ma ottengo due nuovi magneti. Questo fenomeno è valido per qualsiasi scala. Non esiste il monopolo magnetico\\
+  Le correnti generano campi elettromagnetici
+  \subsection{Induzione magnetica}
+  $\vec{B}$ è l'induzione magnetica $udm[B] = 1T$ (un Tesla)
+  \subsection{Campo magnetico}
+  \[ \oint_S \vec{B}\cdot \hat{n} d\Sigma = 0 \]
+  Campo magnetico solenoidale. (solenoidale quando il flusso del campo attraverso una qualsiasi superficie chiusa è uguale a 0)
 
+  \section{Forza di Lorentz}
+  è la forza che sperimenta una carica $q$, in moto con velocità $\vec{v}$, quando essa entra in una regione con campo magnetico $\vec{B}$
+  \[ \vec{F_L} = q\vec{v} \times \vec{B} \]
+  \[ |\vec{F}| = F_L = qvB sin\teta_{vB} \]
+  \[ [B] = [\frac{F}{Q\frac{L}{T}}] = [\frac{F\cdot L}{I\cdot L^2}] = [\frac{E}{I\cdot L^2}] \]
 
+  \section{Forze che agiscono su una carica}
+  \[ \vec{F} = q(\vec{E} + \vec{v} \times \vec{B}) \]
 
+  \section{Forza su un tratto di filo percorso da cariche}
+  \[ dF = -e dN \vec{v_d} \times \vec{B}\]
+  dove $dN$ è il numero di elettroni. $dN = nd\tau$ che è la densità volumica\\
+  La riedizione della forza di Lorentz, invece che per una carica puntiforme per un tratto di filo infinitesimo
+  \[ d\vec{F} = i d\vec{S} \times \vec{B} \]+++
+  che è anche chiamata seconda legge elementare di Laplace
 
+  \section{Principio di equivalenza di Ampere}
+  Principio che pone l'equivalenza tra spire attraversate da corrente e magneti:
+  \[ \vec{m} = i \Sigma \hat{n} \]
+  è il momento magnetico della spira. Permette di pensare alla spira come ad un bipolo magnetico.\\
+  Versione infinitesimale, che è anche il principio di equivalenza di ampere:
+  \[ d\vec{m} = id\Sigma \hat{n} \]
 
+  \section{Prima legge elementare di Laplace}
+  Le correnti possono generare campi magnetici.
+  Si ha $id\vec{s}$ un tratto lungo un filo, mi interessa sapere qual'è il campo magnetico esercitato dal piccolo segmento $id\vec{s}$ nel punto $P$ generico. Si ha anche la congiungente $\hat{u}_r=\hat{r}$ dal punto di sorgente del campo magnetico al punto $P$.
+  \[ d\vec{B} = K_m \frac{id\vec{s} \times \hat{u}_r}{r^2} \]
+  \subparagraph{Nota}
+  La prima legge elementare di Laplace è uno strumento matematico, non ha senso fisico: è impossibile misurare il contributo di $id\vec{s}$ senza misurare il contributo di tutto il "circuito" in quanto la corrente non si può spezzare in più parti.
+  \paragraph{Forma generale con conduttore filiforme}
+  \[ \vec{B}(P) = \oint_C d\vec{B} = \oint_C \frac{\mu_0}{4\pi} \frac{id\vec{s} \times \hat{u_r}}{r^2}\]
+  Dove $C$ è il filo
+  \paragraph{Forma generale con conduttore non filiforme}
+  \[ \vec{B}(P) = \frac{\mu_0}{4\pi} \int_V \vec{J}\frac{\hat{u_\tau} \times \hat{u_r}}{r^2} d\tau \]
 
+  \section{Legge di Biot-Savart}
+  Il campo magnetico $\vec{B}$ generato a distanza $R$, da un filo indefinito percorso dalla corrente $i$ è
+  \[ \vec{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{Teta} \]
+  Dove $\hat{Teta}$ è il versore del campo magnetico
 
+  \section{Legge di Ampere}
+  \[ \Tau_C (\vec{B}) = \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C \]
+  Dove $i_C$ sono le correnti concatenate (interne) al circuito
+
+  \subsection{Equazioni di Maxwell}
+  Per campi elettrici e magnetici statici (che non variano nel tempo)
+  \[ \oint_S \vec{E}\cdot \hat{n} dS = \frac{q_{int}}{\epsilon_0} \]
+  \[ \oint_S \vec{B}\cdot \hat{n} dS = 0 \]
+  \[ \oint_C \vec{E}\cdot d\vec{l} = 0 \]
+  \[ \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C \]
+
+  \section{Legge di Faraday-Neumann-Lenz}
+  Ogni variazione del flusso nel tempo genera una f.e.m.
+  \[f.e.m = \quad -\frac{d\Phi(\vec{B})}{dt} \]
+  \[ i = -\frac{f.e.m.}{R} \]
 
 
 L 143
