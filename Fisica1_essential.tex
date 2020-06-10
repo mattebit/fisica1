@@ -26,7 +26,7 @@
   \section*{General}
   \subsection{Prodotto tra vettori}
   \[ \vec{a} \times \vec{b} = \vec{c} \]
-  \[ |\vec{c}| = |\vec{a}||vec{b}| sin \teta_{ab} \]
+  \[ |\vec{c}| = |\vec{a}||vec{b}| sin \theta_{ab} \]
   Il vettore risultante ha direzione e verso dati dalla regola della mano destra, col pollice sul primo vettore a e indice sul secondo vettore b.
 
   \chapter{Cinematica del punto}
@@ -64,7 +64,7 @@
   \[ v(t) = v_0 + a(t-t_0) \]
   \[ x(t) = x_0 + v_0(t-t_0) + \frac{1}{2} a(t-t_0)^2  \]
 
-  \subsection{Moto armonico semplice}
+  \section{Moto armonico semplice}
   Un punto segue un moto armonico semplice quando la legge oraria è definita dalla relazione
   \[ x(t) = A sen(\omega t + \phi) \]
     Dove $A, \omega, \phi$ sono grandezze costanti: $A$ è detta \textbf{ampiezza del moto}, $\omega t + \phi$ \textbf{fase del moto}, $\phi$ \textbf{fase iniziale}, $\omega$ \textbf{pulsazione}.
@@ -83,13 +83,36 @@
   \[ a(t)=\frac{dv}{dt}=\frac{d^2 x}{dt^2} = -\omega^2 A sin(\omega t + \phi) = -\omega^2 x(t). \]
   \subsubsection{Eq. Differenziale del moto armonico}
   La condizione necessaria e sufficiente perchè un moto sia armonico è data dall'equazione
-  \[ \frac{d^2 x(t)}{dx^2} + \omega^2 x(t) = 0 \]
+  \[ \frac{d^2 x(t)}{dt^2} + \omega^2 x(t) = 0 \]
 
   \section{Moto Rettilineo Smorzato Esponenzialmente}
   Velocità del punto
   \[ v(t) = v_0 e^{-kt} \]
   Legge oraria
   \[ x(t) = \frac{v_0}{k} (1-e^{-kt}) \]
+
+  \section{Moto Circolare}
+  \subsection{Moto Circolare Uniforme}
+  La velocità angolare istantanea, che è il rapporto tra la differenza dell'angolo e la differenza di tempo, è
+  \[ \omega = \frac{d\theta}{dt} \]
+  \[ \omega = \frac{v}{R} \]
+  Nel MCU essa è costante. Le leggi orarie per il MCU sono:
+  \[ x(t) =x_0 + vt\]
+  \[ \theta(t) = \theta_0 \]
+  Il MCU è un moto accellerato con accelerazione costane, \textbf{ortogonale alla traiettoria}
+  \[ a= a_N = \frac{v^2}{R} = \omega^2 R \]
+  Si tratta in oltre di un \textbf{moto periodico}, con periodo
+  \[ T=\frac{2\pi R}{v} = \frac{2\pi}{\omega} \]
+
+  \subsection{Moto Circolare non Uniforme}
+  La velocità angolare istantanea è
+  \[ \alpha = \frac{d\omega}{dt} = \frac{a_T}{R} \]
+  dove $a_T$ è l'accelerazione tangenziale\\
+  Le leggi orarie diventano:
+  \[ w(t) = w_0 + \int_{t_0}^t \alpha(t) dt \]
+  \[ \theta(t) = \theta_0 + \int_{t_0}^t \omega(t) dt \]
+
+
 
   \chapter{Sistemi di riferimento}
   \subsection{Sistema di riferimento Inerziale}
@@ -101,6 +124,10 @@
   \subsection{Forze vere e forze apparenti}
   Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale
 
+
+
+
+
   \chapter{Dinamica del punto}
   \section{Const}
   \begin{itemize}
@@ -109,12 +136,13 @@
 
   \section{Leggi di Newton}
   \subsection{Prima legge di Newton o Legge di inerzia}
-  Il legame tra la forza e lo stato del moto è data dalla \textbf{legge di Newton}
-  \[ \vec{F} = m\vec{a} \]
+  La prima legge di Newton (o legge di Inerzia) afferma che un corpo permane nel suo stato di quiete, o di moto rettilineo uniforme a meno che non intervenga una forza esterna a modificarne tale stato.
+
 
   \subsection{Seconda legge di Newton}
   Esprime la legge fondamentale della dinamica del punto
-  \[ \vec{F} = m\vec{a} = m\frac{d\vec{v}}{dt} = \frac{d^2\vec{x}}{dt^2} \]
+  \[ \vec{F} = m\vec{a} \]
+  \[ u.d.m.[F] = u.d.m[M \frac{L}{T^2}] = 1Kg \frac{m}{s^2} = 1N\]
 
   \subsection{Terza legge di Newton}
   Anche chiamato principio di azione e reazione delle forze
@@ -123,6 +151,7 @@
   \subsection{Quantità di moto}
   Si definisce quantità di moto di un punto materiale il vettore
   \[ \vec{p} = m\vec{v} \]
+  Che è il prodotto tra massa e velocità
 
   \subsection{Risultante delle forze}
   \[ \vec{R} = \vec{F}_1 + \vec{F}_2 + ... +\vec{F}_n = \sum_i \vec{F}_i \]
@@ -131,13 +160,16 @@
   Se un corpo è in \textbf{equilibrio statico} la sua risultante $\vec{R} = 0$
 
   \subsection{Reazioni vincolari}
-  Sono reazioni dell'ambiente circostante
+  Sono reazioni dell'ambiente circostante.\\
+  Prendiamo il caso di una massa appoggiata su di un piano, ferma, allora esiste una forza vincolare
+  \[ \vec{N} \]
+  normale alla superficie di appoggio, che bilancia la forza peso agente sulla massa.
 
   \subsection{Forza Peso}
   La forza peso è proporzionale alla massa
   \[ \vec{P} = m\vec{g} \]
 
-  \subsection{Quantità di moto}
+  \section{Quantità di moto}
   Si definisce quantità di moto di un punto materiale il vettore:
   \[ \vec{p} = m \vec{v} \]
   \[ [\vec{p}] = \frac{m}{s} kg \]
@@ -146,12 +178,12 @@
   La risultante delle forze è definita come la somma di tutte le forze applicate su un dato punto
   \[ \vec{R} = F_1 + F_2 + ... + F_n = \sum_{i} \vec{F_i} \]
 
-  \subsection{Equilibrio statico}
+  \section{Equilibrio statico}
   Se $R = 0$ (e il punto ha inizialmente velocità nulla) esso rimane in stato di quiete: sono realizzate le condizioni di \textbf{equilibrio statico} del punto.\\
   Devono quindi essere nulle le componenti della risultante, ovvero:
   \[ R = 0 \Rightarrow R_x = R_y = R_z = 0 \]
 
-  \subsection{Reazione vincolare}
+  \section{Reazione vincolare}
   Data la definizione di \textbf{equilibrio statico}, se un corpo soggetto all'azione di una forza, o della risultante non nulla di un insieme di forze, rimane fermo, dobbiamo dedurre che l'azione della forza provoca una reazione dell'ambiente circostante, detta \textbf{reazione vincolare}, che si esprime tramite una \textbf{eguale e contraria} alla forza, o alla risultante delle forze agenti.
 
   \section{Forza Peso}
@@ -162,6 +194,8 @@
   Si definisce impulso $ \vec{J} $ l'integrale della forza nel tempo:
   \[ \vec{J} = \int_0^t \vec{F} dt \]
   \[ [J] = N  s \]
+  Può anche essere scritto come differenza di quantità di moto:
+  \[\vec{P} = \vec{p_1} - \vec{p_0} = \int_{t_0}^t \vec{F} dt \]
 
   \subsection{Teorema dell'impulso}
   \[ \vec{J} = \int_0^t \vec{F} dt \int_{\vec{p}_0}^{\vec{p}} d\vec{p} = \vec{p} - \vec{p_0} = \Delta \vec{p} \]
@@ -189,7 +223,7 @@
   \[ \overbar{p} = \frac{W}{\Delta t} =  \]
 
 
-  \subsection{Forza conservativa}
+  \section{Forza conservativa}
   Una forza $\vec{F}$ è conservativa, se il lavoro compiuto da un punto $a$ a un punto $b$ è nullo, indipendentemente dal percorso scelto
   \[ \oint \vec{F} \cdot \vec{ds} = 0 \]
 
@@ -197,11 +231,15 @@
   \subsection{Forza di attrito radente}
   E uguale a:
   \[ F_a = \mu_s \cdot N\]
-  Dove $\mu_s$ è il coefficiente di attrito statico, e $N$ è la normale del corpo sul piano. $N$ si può anche esprimere come la componente ortogonale al piano della risultante delle forze che agiscono sul punto materiale che stiamo analizzando.
+  Dove $\mu_s$ è il \textbf{coefficiente di attrito statico}, e $N$ è la normale del corpo sul piano. $N$ si può anche esprimere come la componente ortogonale al piano della risultante delle forze che agiscono sul punto materiale che stiamo analizzando.
   \\Si ha una situazione di quiete quando la forza applicata $F$ è:
   \[ F \leq \mu_s N \]
   e una condizione di moto quando
   \[ F > \mu_s N \]
+  \paragraph{Coefficiente di attrito dinamico}
+  Una volta "battuto" l'attrito statico, il moto continua ad essere rallentato dall'attrito radente, ma con un coefficiente di attrito diverso chiamato dinamico
+  \[ \mu_d \]
+
 
   \section{Energia}
   \subsection{Energia Cinetica}
@@ -801,7 +839,7 @@
   \section{Forza di Lorentz}
   è la forza che sperimenta una carica $q$, in moto con velocità $\vec{v}$, quando essa entra in una regione con campo magnetico $\vec{B}$
   \[ \vec{F_L} = q\vec{v} \times \vec{B} \]
-  \[ |\vec{F}| = F_L = qvB sin\teta_{vB} \]
+  \[ |\vec{F}| = F_L = qvB sin\theta_{vB} \]
   \[ [B] = [\frac{F}{Q\frac{L}{T}}] = [\frac{F\cdot L}{I\cdot L^2}] = [\frac{E}{I\cdot L^2}] \]
 
   \section{Forze che agiscono su una carica}
@@ -835,8 +873,8 @@
 
   \section{Legge di Biot-Savart}
   Il campo magnetico $\vec{B}$ generato a distanza $R$, da un filo indefinito percorso dalla corrente $i$ è
-  \[ \vec{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{Teta} \]
-  Dove $\hat{Teta}$ è il versore del campo magnetico
+  \[ \vec{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{theta} \]
+  Dove $\hat{theta}$ è il versore del campo magnetico
 
   \section{Legge di Ampere}
   \[ \Tau_C (\vec{B}) = \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C \]
@@ -854,6 +892,6 @@
   \[f.e.m = \quad -\frac{d\Phi(\vec{B})}{dt} \]
   \[ i = -\frac{f.e.m.}{R} \]
 
-
+  L62
 L 143
 \end{document}
