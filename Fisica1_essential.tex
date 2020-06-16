@@ -92,17 +92,20 @@
   \[ x(t) = \frac{v_0}{k} (1-e^{-kt}) \]
 
   \section{Moto Circolare}
+
   \subsection{Moto Circolare Uniforme}
-  La velocità angolare istantanea, che è il rapporto tra la differenza dell'angolo e la differenza di tempo, è
+  La \textbf{velocità angolare istantanea}, che è il rapporto tra la differenza dell'angolo e la differenza di tempo, è
   \[ \omega = \frac{d\theta}{dt} \]
   \[ \omega = \frac{v}{R} \]
   Nel MCU essa è costante. Le leggi orarie per il MCU sono:
   \[ x(t) =x_0 + vt\]
-  \[ \theta(t) = \theta_0 \]
+  \[ \theta(t) = \theta_0 + \omega t\]
   Il MCU è un moto accellerato con accelerazione costane, \textbf{ortogonale alla traiettoria}
   \[ a= a_N = \frac{v^2}{R} = \omega^2 R \]
   Si tratta in oltre di un \textbf{moto periodico}, con periodo
   \[ T=\frac{2\pi R}{v} = \frac{2\pi}{\omega} \]
+  La velocità tangenziale ha Modulo
+  \[ v(t) = R \cdot \omega \]
 
   \subsection{Moto Circolare non Uniforme}
   La velocità angolare istantanea è
@@ -111,6 +114,18 @@
   Le leggi orarie diventano:
   \[ w(t) = w_0 + \int_{t_0}^t \alpha(t) dt \]
   \[ \theta(t) = \theta_0 + \int_{t_0}^t \omega(t) dt \]
+
+  \subsection{Forza (accelerazione) centripeta}
+  Una forza è centripeta, se è ortogonale alla traiettoria descritta dal corpo su cui è applicata, ovvero se è ortogonale (normale) al vettore velocità
+  \[ \vec{a_n} = -\omega^2 R \cdot \hat{n} = -\frac{v_T^2}{R} \cdot \hat{n} \]
+  di conseguenza, la Forza
+  \[ \vec{F_c} = ma_C =  -m\frac{v_T^2}{R} \cdot \hat{n}\]
+
+  \subsection{Forza Centrifuga}
+
+  \[ F_{centrif} = - F_{centripeta} \]
+
+
 
 
 
@@ -122,7 +137,9 @@
   \[ \vec{F} = m(\vec{a^1} + \vec{a_t} + \vec{a_c}) \]
   è presente una accellerazione di un corpo anche senza forze esercitate su di esso
   \subsection{Forze vere e forze apparenti}
-  Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale
+  Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale. \\
+  Le \textbf{forze vere} sono riconducibili alle interazioni fondamentali.\\
+  Le \textbf{forze apparenti} sono una conseguenza del sistema di riferimento (relativo) scelto
 
 
 
@@ -133,6 +150,12 @@
   \begin{itemize}
     \item Accelerazione gravitazionale $g = 9,80665 \frac{m}{s^2}$
   \end{itemize}
+
+  \section{Legge di gravitazione universale}
+  Due punti materiali si attraggono con una forza di intensità direttamente proporzionale al prodotto delle masse dei singoli corpi e inversamente proporzionale al quadrato della loro distanza:
+  \[ F = G \frac{m_1 m_2}{r^2} \]
+  Dove G è la costante di gravitazione universale
+
 
   \section{Leggi di Newton}
   \subsection{Prima legge di Newton o Legge di inerzia}
@@ -212,6 +235,9 @@
   cioè il lavoro dal punto $i$ iniziale, al punto $f$ finale è definito come la differenza dell'energia cinetica nel punto $f$ meno quella nel punto $i$. Vale solo se il lavoro è \textbf{totale}, cioè se comprende tutte le forze agenti nel sistema
   \subsection{Lavoro Totale}
   \[ W_{TOT} = \sum_K W_K = \sum_K \int_i^f \vec{F}\cdot d\vec{s} \]
+  \subsection{Per forze non conservative}
+  \[ W = \Delta E_K + \Delta E_P = \Delta E_m \]
+
 
   \section{Potenza}
   Mette in relazione il lavoro e il tempo durante il quale questo viene erogato
@@ -224,8 +250,19 @@
 
 
   \section{Forza conservativa}
-  Una forza $\vec{F}$ è conservativa, se il lavoro compiuto da un punto $a$ a un punto $b$ è nullo, indipendentemente dal percorso scelto
-  \[ \oint \vec{F} \cdot \vec{ds} = 0 \]
+  Una forza $\vec{F}$ è conservativa, se il lavoro compiuto lungo un percorso chiuso è nullo, indipendentemente dal percorso scelto
+  \[ W_{chius} = 0 \quad \oint \vec{F} \cdot \vec{ds} = 0 \]
+  \paragraph{Corollario}
+  \[ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot \vec{ds} \]
+  non dipende dal percorso scelto
+
+  \section{Legge della conservazione della quantità di moto}
+  Stabilisce che la quantità di moto di un sistema isolato è costante nel tempo (si conserva)
+  \[ p = m_1v_1 + m2_v2 ... + m_iv_i \]
+  oppure
+  \[ \frac{dp}{dt} = 0 \]
+
+
 
   \section{Attrito}
   \subsection{Forza di attrito radente}
@@ -250,12 +287,50 @@
   \[ u.d.m.[E_K]= 1J = 1N\cdot M = 1 Kg \frac{m^2}{s^2}\]
 
   \subsection{Energia potenziale}
-   l'energia potenziale di un oggetto è l'energia che esso possiede a causa della sua posizione o del suo orientamento rispetto ad un campo di forze.
-  \subsubsection{Nel caso di forze conservative}
+   l'energia potenziale di un oggetto è l'energia che esso possiede a causa della sua posizione.
+   Se la forza è conservativa, si può sempre definire una funzione della posizione che si chiama energia potenziale.
+   Possiamo, quindi, scrivere il lavoro compe
+  \[ W_{AB} = -(U_B - U_A) \]
+  \paragraph{Definizione}
+  \[ U(\vec{x_P}) = - \int_o^P \vec{F}\cdot \vec{ds} \]
+  \paragraph{Lavoro e energia potenziale}
+  \[ W_{a\rigrarrow b} = -\Delta U \]
+
+
+
+  \subsubsection{Energia potenziale (spiegazione2)}
   Nel caso il campo di forze sia conservativo, il lavoro non dipende dal percorso scelto, ma solo dagli estremi del cammino. Il differenziale $dW$ è un diff. perfetto, quindi si ha:
   \[W = \oint_a^b F \cdot dx = -[U(a) - U(b)] = -\Delta U\]
   Nel caso più semplice, in cui il moto si svolge in una sola direzione:
   \[ F(x) = -\frac{d}{dx}U(x) \]
+  \begin{itemize}
+    \item E.p. Elastica = \( U(x) = \frac{1}{2} K (x-x_0 )^2 \)
+  \end{itemize}
+
+  \subsection{Energia meccanica}
+  è la somma di energia cinetica ed energia potenziale attinenti dallo stesso sistema.\\
+  Per \textbf{forze conservative} è sempre la stessa durante l'evoluzione del moto
+  \[ E_m = E_K + E_P \]
+  Si definisce \textbf{Conservazione dell'energia meccanica}
+  \paragraph{Lavoro di forze non conservative}
+  Per forze non conservative
+  \[ W_{n.c.} = \Delta E_K + \Delta E_P = \Delta E_m \]
+
+  \section{Forza apparente}
+  In meccanica classica, un'interazione apparente, detta anche interazione fittizia o inerziale, è una forza, o un momento, che, anche se non vi viene applicata direttamente, agisce su un corpo al pari delle forze e dei momenti reali, o effettivi
+
+  \section{Urti}
+  Un urto è l'interazione dinamica tra due masse, vengono in contatto tra di loro e modificano il loro stato di moto.
+  L'urto trasferisce quantità di moto da una massa all'altra
+  \subsection{Urto perfettamente anelastico}
+  Due oggetti (masse)$m_1, m_2$ si scontrano, e ne risulta un unica particella $m_3$\\
+  Dalla conservazione della quantità di moto abbiamo
+  \[ \vec{P_i} = \vec{P_f} \]
+  e quindi
+  \[ \vec{P_{1,i}} + \vec{P_{2,i}} = \vec{P_{3,f}} \]
+
+
+
 
   \chapter{Termodinamica}
   Il \textbf{tempo} non riveste un ruolo importante come in meccanica. La durata delle trasformazione non è essenziale alla descrizione
