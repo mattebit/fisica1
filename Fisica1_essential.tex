@@ -30,15 +30,37 @@
   Il vettore risultante ha direzione e verso dati dalla regola della mano destra, col pollice sul primo vettore a e indice sul secondo vettore b.
 
   \chapter{Cinematica del punto}
+  Parte della fisica che ha a che fare con la descrizione matematica del movimento dei corpi.
+
+  \section{Concetto di movimento e moto}
+  Possiamo descriverlo come la successione di posizioni nel tempo di un punto materiale. La linea rappresentata da questi punti viene chiamata \textbf{traiettoria}. Noi vogliamo descrivere matematicamente questo fenomeno.
+  Per definire la posizione dobbiamo introdurre un sistema di riferimento.
+  Chiamiamo \textbf{spostamento} in 1-Dimensione la distanza $$\Delta_x = x_a -x_b$$ tra due coordinate spaziali.\\
+  Ad ogni evento fisico, ad esempio la posizione di un punto materiale, possiamo assegnare un tempo. Il "collegamento" tra la matematica dello spazio e la matematica del tempo è connessa dalla fisica.\\
+  La rappresentazione del \textbf{moto} si effettua mettendo in relazione lo spazio con il tempo.\\
+  La \textbf{cinematica} avviene quando da $x$ passo a $x(t)$ ossia $x$ in funzione del tempo. Anche: $$(t,x) \rightarrow (t, x(t))$$ ossia la coppia tempo,spazio viene mappata a tempo e spazio in funzione del tempo. Quindi non abbiamo più un campionamento di posizioni, ma abbiamo una funzione del tempo che descrive le posizioni
+
+  \section{Unità di misura e grandezze fisiche}
+  La \textbf{misura} è il \textbf{rapporto} tra la grandezza che sto considerando e una grandezza di riferimento che chiamo \textbf{unità di misura}
+  Il concetto di definizione di unità di misura differisce da quello dell'analisi dimensionale, in quanto le u.d.m. che posso scegliere sono molteplici, a differenza dell'univoca grandezza fisica.
+  Per esempio possiamo dire che:
+  $$[\Delta x] = [x] = [L]$$
+  e possiamo dire che
+  $$u.d.m(\Delta x) = u.d.m.(x) = 1m (cm, mm, km, ..)$$
+
   \section{Moto rettilineo}
   \subsection{Velocità media}
   La velocità media $v_m$ del punto è il rapporto tra spostamento e tempo:
   \[ v_m = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1} \]
   Essa coincide con la definizione matematica di valor medio di una funzione in un dato intervallo
   \[ v_m = \frac{1}{t-t_0} \int_{t_0}^t v(t) dt \]
+  Notiamo che $$[\Delta x] = [x] = [L]$$ cioè la lunghezza $L$. e \\
+  $$ [\Delta t] = [t] = [T]$$ segue quindi
+  $$ [v] = ... = [\frac{L}{T}]$$
+  Dove le parentesi quadre sono la misura delle dimensioni che in output fornisce la grandezza fisica fondamentale a cui può essere ricondotta la grandezza fisica che abbiamo dato in input.
   \subsection{Velocità istantanea}
-  La velocità istantanea  rappresenta la rapidità di variazione temporale della posizione nell'istante $t$ considerato. è data dalla derivata dello spazio rispetto al tempo
-  \[ v = \frac{dx}{dt} \]
+  La velocità istantanea  rappresenta la rapidità di variazione temporale della posizione nell'istante $t$ considerato. è data dalla derivata dello spazio rispetto al tempo. Semplicemente vogliamo considerare un piccolo intervallo di misurazione per avere la velocità istantanea. è importante che la funzione della velocità sia derivabile e continua
+  \[ v(t) = \frac{dx}{dt} \]
   \subsection{Leggi orarie}
   è la relazione generale che permette il calcolo dello spazio percorso nel moto rettilineo, qualunque sia il tipo di moto
   \[ x(t) = x_0 + \int_{t_0}^t v(t) dt \]
@@ -48,33 +70,39 @@
   \[ v(t) = v_0 + \int_{t_0}^t a(t) dt\]
 
   \subsection{Moto Rettilineo Uniforme}
-  Nel MRU la velocità $v$ è costante
+  Il MRU è rettilineo, avviene lungo una retta. Nel MRU la velocità $v = \frac{dx}{dt}$ è costante
   \[ x(t) = x_0 + v(t-t_0)\]
 
   \subsection{Accellerazione media}
-  Se tra gli istanti di tempo $t_1$ e $t_2$ la velocità varia da $v_1$ a $v_2$, si definisce \textbf{accellerazione media} del punto, il rapporto tra la variazione di velocità e l'intervallo di tempo
+  Se tra gli istanti di tempo $t_1$ e $t_2$ la velocità varia da $v_1$ a $v_2$, si definisce \textbf{accellerazione media} del punto, il rapporto tra la variazione di velocità e l'intervallo di tempo. Quindi l'accellerazione è la variazione di velocità nelt tempo
   \[ a_m = \frac{v_2-v_1}{t_2-t_1} = \frac{\Delta v}{\Delta t} \]
+  L'analisi dimensionale dell'accellerazione è
+  $$[a] = [\frac{\Delta v}{\Delta t}] = [\frac{v}{t}] = [\frac{\frac{L}{T}}{T}] = [\frac{L}{T^2}]$$
+  e $$u.d.m.(a) = 1m/s^2$$ cioè un metro su secondo quadro
 
   \subsection{Accellerazione istantanea}
   \[ a = \frac{dv}{dt} = \frac{d^2x}{dt^2} \]
 
   \subsection{Moto rettilineo uniformemente accellerato}
-  Se l'accellerazione di un moto è costante, questo si dice uniformemente accellerato, e la dipenmdenza della velocità dal tempo è lineare
-
+  Se l'accellerazione di un moto è costante, questo si dice uniformemente accellerato, e la dipenmdenza della velocità dal tempo è lineare.
+  $$ a = const$$
   \[ v(t) = v_0 + a(t-t_0) \]
   \[ x(t) = x_0 + v_0(t-t_0) + \frac{1}{2} a(t-t_0)^2  \]
+  $t_0$ sarebbe l'istante temporale iniziale del moto. Invece $x_0$ sarebbe l'origine dell'asse di riferimento (tipo un offset)
 
   \section{Moto armonico semplice}
+  Il moto armonico si definisce come un oscillazione sinusoidale. Possiamo immaginare il modo di una molla lasciata "rimbalzare" senza ostacoli e attriti.
   Un punto segue un moto armonico semplice quando la legge oraria è definita dalla relazione
-  \[ x(t) = A sen(\omega t + \phi) \]
-    Dove $A, \omega, \phi$ sono grandezze costanti: $A$ è detta \textbf{ampiezza del moto}, $\omega t + \phi$ \textbf{fase del moto}, $\phi$ \textbf{fase iniziale}, $\omega$ \textbf{pulsazione}.
+  \[ x(t) = x_0 + A sin(\omega t + \phi) \]
+  Dove $A, \omega, \phi$ sono grandezze costanti: $A$ è detta \textbf{ampiezza del moto} cioè la ampiezza di massima oscillazione, cioè la distanza tra il punto di partenza e il punto di massima oscillazione, $\omega t + \phi$ \textbf{fase del moto}, $\phi$ \textbf{fase iniziale}, $\omega$ \textbf{pulsazione}.
+  $x_0$ è il punto di inizio. Il moto descritto è un moto periodico.
 
-    Il MAS è quindi un moto vario, dove tutte le grandezze cinematiche che lo descrivono $(x(t), v(t), a(t))$ variano nel tempo.
-    Il periodo $T$ è
-    \[ T = \frac{2\pi}{\omega} \]
+  Il MAS è quindi un moto vario, dove tutte le grandezze cinematiche che lo descrivono $(x(t), v(t), a(t))$ variano nel tempo.
+  Il periodo $T$ è
+  \[ T = \frac{2\pi}{\omega} \]
 
-    Si definisce \textbf{frequenza} $\nu$ del moto, il numero di oscillazioni in un secondo
-    \[ \nu = \frac{1}{T}=\frac{\omega}{2\pi} \]
+  Si definisce \textbf{frequenza} $\nu$ del moto, il numero di oscillazioni in un secondo. La frequenza è l'inverso del periodo
+  \[ \nu = \frac{1}{T}=\frac{\omega}{2\pi} \]
   \subsubsection{Velocità nel MAS}
   La velocità del punto che si muove con moto armonico si ottiene derivando $x(t)$:
   \[ v(t)=\frac{dx}{dt} = \omega A cos(\omega t + \phi) \]
@@ -85,27 +113,57 @@
   La condizione necessaria e sufficiente perchè un moto sia armonico è data dall'equazione
   \[ \frac{d^2 x(t)}{dt^2} + \omega^2 x(t) = 0 \]
 
+  \section{Moti piani}
+  Un vettore è una "freccia" che parte dal punto di applicazione. Il verso del vettore è dato dalla punta della freccia e la direzione dal gambo.
+  Esistiono \textbf{grandezze fisiche scalari} o \textbf{grandezze fisiche vettoriali}.
+  Le grandezze fisiche vettoriali sono ad esempio la posizione,
+  $$ (\vec{x})$$
+  Cioè il vettore che indica la posizione di un punto nel piano.
+  Per definire lo \textbf{spostamento} non abbiamo più la differenza tra due punti, ma la differenza tra due vettori.
+  $$\Delta x \rightarrow \Delta \vec{x}$$
+  Da notare che il tempo non è una grandezza vettorizzabile, in quanto è rappresentato da un asse unidimensionale.\\
+  La velocità sarà definita come:
+  $$\vec{v} = \frac{d\vec{x}}{dt}$$.
+  Stessa cosa per l'Accelerazione
+  $$\vec{a} = \frac{d\vec{v}}{dt}$$
+  Nella definizione di problemi in spazi multidimensionali, la differenza di un vettore può essere non solo nell suo modulo (intensità) ma anche nella sua direzione. Ad esempio l'accelerazione puo derivare da uno spostamento del vettore velocità.
+  Le operazioni tra vettori sono la somma (metodo del parallelogramma o del punto-coda), il prodotto per uno scalare (vettore per numero il risultato è un vettore), la differenza tra vettori
+
+
   \section{Moto Rettilineo Smorzato Esponenzialmente}
   Velocità del punto
   \[ v(t) = v_0 e^{-kt} \]
   Legge oraria
   \[ x(t) = \frac{v_0}{k} (1-e^{-kt}) \]
 
-  \section{Moto Circolare}
 
+  \section{Moto Circolare}
   \subsection{Moto Circolare Uniforme}
+  Si dice circolare uniforme perchè la traiettoria è circolare, e uniforme perchè il modulo della velocità $|d\vec{v}|$ è costante.
   La \textbf{velocità angolare istantanea}, che è il rapporto tra la differenza dell'angolo e la differenza di tempo, è
   \[ \omega = \frac{d\theta}{dt} \]
   \[ \omega = \frac{v}{R} \]
   Nel MCU essa è costante. Le leggi orarie per il MCU sono:
   \[ x(t) =x_0 + vt\]
   \[ \theta(t) = \theta_0 + \omega t\]
-  Il MCU è un moto accellerato con accelerazione costane, \textbf{ortogonale alla traiettoria}
-  \[ a= a_N = \frac{v^2}{R} = \omega^2 R \]
+  Il MCU è un moto accellerato con accelerazione costane, \textbf{ortogonale alla traiettoria}, l'accelerazione si chiama centripeta
+  \[ a= a_N = \frac{v^2}{R} = \omega^2 R\]
   Si tratta in oltre di un \textbf{moto periodico}, con periodo
   \[ T=\frac{2\pi R}{v} = \frac{2\pi}{\omega} \]
   La velocità tangenziale ha Modulo
   \[ v(t) = R \cdot \omega \]
+  Essendo un moto periodico possiamo definire la frequenza sulla base del periodo:
+  $$ f = \frac{1}{T}$$
+  \subsubsection{Grandezze angolari}
+  Il movimento lungo la circonferenza si può descrivere sia dalla traiettoria lungo la circonferenza, sia dall'angolo individuato dalle varie posizioni. Quindi invece di parlare di spostamento lungo la circonferenza possiamo parlare di spostamento angolare
+  $$ s \rightarrow \alpha$$
+  $$ \Delta s \rightarrow \Delta \alpha$$
+  $$ \frac{ds}{dt} = v \rightarrow \omega = \frac{d\alpha}{dt}$$
+  $$[w] = [\frac{d\alpha}{dt}] = [\frac{1}{T}]$$
+  $$ u.d.m.(\omega) = \frac{1 rad}{1 sec}$$
+  Il legame tra le grandezze angolari e quelle "normail" è
+  $$\frac{C}{C_g} = R$$
+  Ossia, il rapporto tra la circonferenza e l'anglo giro è uguale al raggio
 
   \subsection{Moto Circolare non Uniforme}
   La velocità angolare istantanea è
@@ -122,11 +180,16 @@
   \[ \vec{F_c} = ma_C =  -m\frac{v_T^2}{R} \cdot \hat{n}\]
 
   \subsection{Forza Centrifuga}
-
   \[ F_{centrif} = - F_{centripeta} \]
 
 
-
+  \section{Moto parabolico}
+  L'esempio più semplice è quello del lancio di un oggetto tenendo conto dell'accelerazione di gravità. Abbiamo una velocità iniziale $\vec{v_0}$, l'angolo di alzo $\alpha$ che è individuato dalla linea dell'orizzonte fino al vettore velocità $\vec{v_0}$, la gittata è il punto in cui il corpo lanciato ritorna a toccare il suolo (orizzonte).\\
+  Si scompone il moto in base agli assi $x$ e $y$. Abbiamo che sull'asse delle $x$ non agisce acceleraziome quindi è un moto rettilineo uniforme (l'ungo quell'asse), l'unica accelerazione che abbiamo è quella nell'asse $y$.
+  Per l'asse $y$ abbiamo che il moto è uniformemente accellerato (o decelerato) perchè l'unica accelerazione che agisce sul corpo è quella di gravità.
+  Bisogna quindi scomporre la velocità iniziale nelle sue componenti $x$ e $y$: Ossia
+  $$v_{0x} = v_0 cos\alpha$$
+  $$v_{0y} = v_0 sin\alpha$$
 
 
   \chapter{Sistemi di riferimento}
@@ -142,14 +205,13 @@
   Le \textbf{forze apparenti} sono una conseguenza del sistema di riferimento (relativo) scelto
 
 
-
-
-
   \chapter{Dinamica del punto}
+
   \section{Const}
   \begin{itemize}
     \item Accelerazione gravitazionale $g = 9,80665 \frac{m}{s^2}$
   \end{itemize}
+
 
   \section{Legge di gravitazione universale}
   Due punti materiali si attraggono con una forza di intensità direttamente proporzionale al prodotto delle masse dei singoli corpi e inversamente proporzionale al quadrato della loro distanza:
@@ -159,15 +221,18 @@
 
   \section{Leggi di Newton}
   \subsection{Prima legge di Newton o Legge di inerzia}
-  La prima legge di Newton (o legge di Inerzia) afferma che un corpo permane nel suo stato di quiete, o di moto rettilineo uniforme a meno che non intervenga una forza esterna a modificarne tale stato.
-
+  La prima legge di Newton (o legge di Inerzia) afferma che un corpo permane nel suo stato di quiete, o di moto rettilineo uniforme a meno che non intervenga una forza esterna a modificarne tale stato.\\
+  Un sistema di riferimento si dice \textbf{inerziale} se in esso vale la legge di inerzia.
 
   \subsection{Seconda legge di Newton}
-  Esprime la legge fondamentale della dinamica del punto
+  Esprime la legge fondamentale della dinamica del punto. Definisce il concetto di forza.
   \[ \vec{F} = m\vec{a} \]
-  \[ u.d.m.[F] = u.d.m[M \frac{L}{T^2}] = 1Kg \frac{m}{s^2} = 1N\]
+  Dove $m$ è una costante, chiamata \textbf{massa inerziale}.
+  \[ [F] = [M \frac{L}{T^2}]\]
+  $$ u.d.m.(m) = 1Kg$$
+  $$ u.d.m.(F) = 1 Kg \frac{m}{s^2} = 1N$$
 
-  \subsection{Terza legge di Newton}
+  \subsection{Terza legge di Newton o Legge di Azione Reazione}
   Anche chiamato principio di azione e reazione delle forze
   \[ \vec{F}_{A \rightarrow B} = -\vec{F}_{B \rightarrow A} \]
 
@@ -495,8 +560,8 @@
     & $\Delta V = 0$ & $\Delta p = 0$ & $\Delta T = 0$ & -\\
    \hline
    $\Delta U$ & $n c_V \Delta T$ & $n c_V \Delta T$ & $n c_V \Delta T = 0$ & $n c_V \Delta T$ \\
-   $Q$ & $n c_V \Delta T$ & $n c_p \Delta T$ & $nR T ln(\frac{v_f}{v_i})$ & $0$\\
-   $W$ & $0$ & $p_B(\Delta V)$ & $nR T ln(\frac{v_f}{v_i})$ & $-n c_V \Delta T$ \\
+   $Q$ & $n c_V \Delta T$ & $n c_p \Delta T$ & $nRTln(\frac{v_f}{v_i})$ & $0$\\
+   $W$ & $0$ & $ nR\Delta T \quad p_B(\Delta V)$ & $nRTln(\frac{v_f}{v_i})$ & $-n c_V \Delta T$ \\
    \hline
   \end{tabular}
   \end{center}
@@ -662,21 +727,17 @@
   \section{Const}
   \begin{itemize}
     \item Costante magnetica $K_m = 10^{-7} T\cdot m = \frac{\mu_0}{4\pi}$
+    \item Costante $K = 8,99 \cdot 10^9 \quad \frac{N\cdot m^2}{C^2} = \frac{1}{4\pi \epsilon_0}$
+    \item Costante dielettrica del vuoto $\epsilon_0 = 8,85 \cdot 10^{-12} \frac{C^2}{N \cdot m^2} [= \frac{C^2}{J \cdot m}]$
+    \item $1nC = 1 \cdot 10^{-9} C $
   \end{itemize}
-
-
   Conduttori: materiali che non si elettrizzano \\
   Isolanti: si elettrizzano, gli isolanti che possono essere:
   \begin{itemize}
     \item Vetri e affini (carica $+$)
     \item Plastiche (carica $-$ )
   \end{itemize}
-  Forza di attrazione tra due materiali (uno vetro e uno plastica) "strofinati"
-  \[ F = K\frac{q_1 q_2}{r_{12}^2} \]
-  Dove $q$ è la carica elettrica, e $r_{12}$ la distanza tra i due oggetti. La forza agisce sempre lungo la congiungente delle due cariche
-  \[u.d.m[q] = [I\cdot T] = 1C (culomb)\]
-  oppure
-  \[ K = \frac{1}{4 \pi \epsilon_0} \quad \Rightarrow \quad \epsilon_0 = 8,85\cdot 10^{-12} \frac{C^2}{N\cdot m^2}\]
+
   Dove $\epsilon_0$ è la \textbf{costante dielettrica del vuoto}
   \subsubsection{La carica elementare}
   è $e = 1,602 \cdot 10^{-19} C$
@@ -686,14 +747,27 @@
     \item la carica $q$ del \textbf{neutrone} è $0$, la sua massa è circa uguale a quella del protone
   \end{itemize}
 
+  \subsection{Campo elettrico in una piana infinita}
+  Il campomagnetico $\vec{E}$ di una piana infinita è sempre prerpendicolare alla piana, e vale
+  \[ \vec{E} = \frac{\sigma}{2\epsilon_0} \]
+  Dove $\sigma$ è la densità di carica
+
+  \section{Forza di attrazione tra due cariche puntiformi}
+  Date due cariche $q_1$ e $q_2$ la forza che $q_1$ applica a $q_2$ è pari a
+  \[ F_{1 \rightarrow 2} = K \frac{q_1 q_2}{r_{12}^2} \]
+  $r_{12}$ è la distanza tra i due oggetti. La forza agisce sempre lungo la congiungente delle due cariche.
+  \[u.d.m[q] = [I\cdot T] = 1C (culomb)\]
+
   \section{Principio di sovrapposizione}
   Date $n$ cariche, che interagiscono su una carica, l'effetto totale sulla carica di prova, è dato dalla sovrapposizione degli effetti delle singole cariche
 
   \section{Campo elettrico o elettrostatico}
+  Il campo elettrico è il rapporto fra la forza che muove la carica e la carica stessa
   \[\vec{E} = \frac{\vec{F}}{q_0} = \frac{K Q}{r^2} \hat{r}\]
   Dove $\vec{E}$ è il campo elettrico, $\vec{F}$ è la forza subita dalla carica, e $q_0$ la carica\\
   Il campo elettrico è \textbf{uscente} se la carica che lo genera $Q$ è $>0$\\
   Il campo elettrico è \textbf{entrante} se la carica che lo genera è $Q<0$
+  \[ u.d.m.[E] = [\frac{1N}{C}]\]
 
   \begin{itemize}
     \item Campo elettrostatico: è generato da altre cariche elettriche ferme
@@ -709,13 +783,21 @@
 
   \subsection{caso Elettrostatico}
   \[ W_{AB} = - \Delta U_{AB}\]
-  \[ U_{AB} = \frac{KQ}{r} + const \]
-  Vale per la carica puntiforme. La circuitazione del campo elettrostatico è $=0$
+  \[ U_{A} = \frac{KQ}{r_A} + const \]
+  Dove $U_{AB}$ è l'energia potenziale elettrostatica. Le forze, almeno per la singola carica sono forze conservative e quindi, vale per la carica puntiforme: La circuitazione del campo elettrostatico è $=0$
   \[ \oint \vec{E} \cdot d\vec{s} = 0 \]
+  che è equivalente alla conservatività del campo elettrostatico.\\
+  Si introduce \textbf{il potenziale} $\Delta V$, definito come la differenza di energia potenziale diviso la carica
   \[ \Delta U \longrightarrow \Delta V = \frac{\Delta U}{q} \]
   Il potenziale elettrostatico si definisce come:
   \[ V_A = \frac{KQ}{r_A} + const^{'}\]
   Dove $const'$ è una costante arbitraria
+
+  \section{Forza Elettrica}
+  Se una carica $q$ è in movimento, cè una forza non nulla che la muove, questa forza può essere
+  \begin{itemize}
+    \item Determinata da altre cariche elettriche, in questo caso si chiama \textbf{forza elettrostatica}
+  \end{itemize}
 
   \section{Linee di forza}
   Dato un campo vettoriale $\vec{v}$, può essere rappresentato graficamente tramite le linee di forza. In ogni punto le linee di forza hanno una tangente, che coincide con la direzione del vettore $\vec{v}$ nel punto $P$
@@ -729,7 +811,7 @@
   Data una grandezza vettoriale $\vec{v}$,  definiamo come flusso della grandezza vettoriale in questione, attraverso una superficie infinitesima $d \Sigma$\\
   Il flusso $d \Phi$ è
   \[ d \Phi = \vec{v}\cdot \hat{n} d \Sigma \]
-  dove $\cap{n}$ è il vettore normale alla superficie.\\
+  dove $\hat{n}$ è il vettore normale alla superficie.\\
   Più in generale per una superficie non infinitesima, si ha la somma di tante superfici infinitesime
   \[ \Phi = \int_\Sigma d\Phi = \int_\Sigma \vec{v} \cdot \hat{n} d\Sigma \]
 
@@ -739,8 +821,14 @@
   dove $S$ è la superficie "di taglio" sempre ortogonale
 
   \section{teorema di Gauss}
-  Il flusso del campo elettrico attraverso una superficie chiuse è uguale alla somma delle cariche interne a tale superficie diviso $\epsilon_0$
-  \[ \Phi_{\Sigma} = \sum_i \frac{q_i}{\epsilon_0} \]
+  Nel caso in cui le cariche siano \textbf{interne:}
+  Il flusso del campo elettrico attraverso una superficie chiusa è uguale alla somma delle cariche interne a tale superficie diviso $\epsilon_0$
+  \[ \Phi_{\Sigma} = \oint \vec{E} \cdot \hat{n} d\Epsilon = \sum_i \frac{q_i}{\epsilon_0} \]
+  \paragraph{Nel caso di cariche esterne}
+  Si ha che il flusso è nullo
+  \[ d\Phi_{d\omega} = 0\]
+  Per il flusso tramite la superficie $\omega$
+
 
   \section{Conduttori}
   I conduttori si definiscono tali, perchè al loro interno contengono cariche libere. Una carica si definisce libera, quando, sotto l'azione di un campo elettromagnetico esterno essa si muove più o meno liberamente
@@ -772,17 +860,30 @@
   Una perturbazione esterna che redistribuisce $q_{EF}$ non sarà percepibile all'interno del conduttore e quindi su tutti i conduttori interni.\\
   Ogni perturbazione interna non sarà misurabile all'esterno
 
+  \section{Capacità del conduttore}
+  è il rapporto tra la carica $q$ depositata tra la superficie del conduttore, e il potenziale $V$ in cui il conduttore va, per effetto di questa carica. descrive la capacità di un conduttore di ospitare le cariche e di portarsi ad un certo potenziale
+  \[ \mathbb{C} = \frac{q}{V} \]
+  \[u.d.m.[\mathbb{C}] = \frac{1C}{V} = 1F\]
+  dove $ F $ è il Farad
+
   \section{Condensatori}
-  Quando due conduttori sono ininduzione completa, si chiamano condensatore
+  Quando due conduttori sono ininduzione completa, si chiamano condensatore ($R_1$ e $R_2$ sono i raggi del condensatore sferico)
 
   \[ \Delta V = Kq (\frac{1}{R_1} - \frac{1}{R_2}) \]
 
-  La capacità di un condensatore
+  \subsection{Capacità di un condensatore}
   \[ C= \frac{q}{\Delta V} = 4 \pi \epsilon_0 \frac{R_1 R_2}{R_2 - R_1} \]
 
   Se le superfici delle armature sono abbastanza vicine, la capacità è
-  \[C = \epsilon_0 \frac{4 \pi R_1^2}{h} = \epsilon_0 \frac{S}{h}\]
+  \[C = \epsilon_0 \frac{S}{h}\]
   Dove $S$ è la superficie, $h$ è pari a $R_2 = R_1 + h$ con $h<<R_1$
+
+  \subsection{Energia elettrostatica nel condensatore}
+  \[ \Delta U = W_{TOT} = \frac{Q^2}{2C} = \frac{1}{2} C \Delta V^2 = \frac{1}{2} Q \Delta V \]
+
+  \Subsection{Campo elettrico nel condensatore}
+  \[ |\vec{E}| = \frac{\sigma}{\epsilon_0} \]
+  dove $\sigma$ è la densità superficiale di carica
 
   \subsection{Induzione Completa}
   Quando, tutte le linee di campo elettrico nascono da un conduttore e muoiono nell'altro conduttore. Cioè non esiste una linea di campo elettrico che parte da un conduttore che non vada a finire nell'altro.
@@ -792,8 +893,10 @@
   Il campo elettrico è pari a \( E = \frac{\sigma}{2\epsilon_0} \)
   La somma dei vettori dei due campi elettrici è pari a $0$ all'esterno delle due armature, mentre all'interno è pari a $E$
   \[ C = \epsilon_0 \frac{S}{h} \]
+
   \subsubsection{Effetti di bordo}
   Al limite delle armature ci sono delle linee che saranno curvate, trascurate per la debole intensità.
+
   \subsection{Sistemi di condensatori}
   Dati due condensatori, $C_1$ e $C_2$ collegati a una differenza di potenziale $\Delta V$,
   \[ \Delta V = \Delta V_1 + \Delta V_2 \]
@@ -810,16 +913,18 @@
   \subsection{Energia nel condensatore}
   L'energia elettrostatica all'interno del condensatore è
   \[ \Delta U_{el} = \frac{1}{2} \epsilon_0 E^2 \tau \]
+  Dove $\tau$ è il volume tra le due armature\\
   La densità volumica di energia è
   \[ u = \frac{\Delta U_{el}}{h} = \frac{1}{2} \epsilon_0 E^2 \]
 
   \subsection{Forza tra le armature}
   La forza tra le due armature del condensatore è definita come
   \[ F = -\frac{dU}{dS} \]
+  \[ F = -\frac{d}{dS}[\frac{1}{2} \epsilon_0 E^2 \tau] \]
 
   \subsection{Pressione elettrostatica}
-  Indipendente dal fatto che il condensatore sia isolato o connesso a un generatore, non dipende dalla geometria del condensatore è un equazione valida in "generale", coincide con la definizione di densità elettrostatica associata al campo elettrico
-  \[ \frac{1}{2} \epsilon_0 E^2 \]
+  Indipendente dal fatto che il condensatore sia isolato o connesso a un generatore, non dipende dalla geometria del condensatore è un equazione valida in "generale", \textbf{coincide con la definizione di densità elettrostatica associata al campo elettrico}
+  \[ \frac{1}{2} \epsilon_0 E^2 (=u) \]
 
   \subsubsection{Condensatore isolato}
   La pressione elettrostatica tra due armature di un condensatore coincide con la densità volumica di energia
@@ -877,6 +982,11 @@
   \subsection{Effetto Joule}
   La potenza, $P$
   \[ P=\frac{dW}{dt} = \frac{dq\Delta V}{dt} = \Delta V \cdot i\]
+
+  \paragraph{Per circuiti dove vale la legge di OHM}
+  Si ha
+  \[ P = R I^2 \]
+
 
   \subsection{Resistenze in serie}
   Consideriamo $R_1$ e $R_2$ in serie, la corrente $i$ che le attraversa è la stessa, quindi
@@ -953,8 +1063,8 @@
 
   \section{Legge di Biot-Savart}
   Il campo magnetico $\vec{B}$ generato a distanza $R$, da un filo indefinito percorso dalla corrente $i$ è
-  \[ \vec{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{theta} \]
-  Dove $\hat{theta}$ è il versore del campo magnetico
+  \[ \vec{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{\theta} \]
+  Dove $\hat{\theta}$ è il versore del campo magnetico
 
   \section{Legge di Ampere}
   \[ \Tau_C (\vec{B}) = \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C \]
