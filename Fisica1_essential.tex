@@ -25,8 +25,8 @@
 
   \section*{General}
   \subsection{Prodotto tra vettori}
-  \[ \vec{a} \times \vec{b} = \vec{c} \]
-  \[ |\vec{c}| = |\vec{a}||vec{b}| sin \theta_{ab} \]
+  $$ \vec{a} \times \vec{b} = \vec{c} $$
+  $$ |\vec{c}| = |\vec{a}||vec{b}| sin \theta_{ab} $$
   Il vettore risultante ha direzione e verso dati dalla regola della mano destra, col pollice sul primo vettore a e indice sul secondo vettore b.
 
   \chapter{Cinematica del punto}
@@ -51,67 +51,67 @@
   \section{Moto rettilineo}
   \subsection{Velocità media}
   La velocità media $v_m$ del punto è il rapporto tra spostamento e tempo:
-  \[ v_m = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1} \]
+  $$ v_m = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1} $$
   Essa coincide con la definizione matematica di valor medio di una funzione in un dato intervallo
-  \[ v_m = \frac{1}{t-t_0} \int_{t_0}^t v(t) dt \]
+  $$ v_m = \frac{1}{t-t_0} \int_{t_0}^t v(t) dt $$
   Notiamo che $$[\Delta x] = [x] = [L]$$ cioè la lunghezza $L$. e \\
   $$ [\Delta t] = [t] = [T]$$ segue quindi
   $$ [v] = ... = [\frac{L}{T}]$$
   Dove le parentesi quadre sono la misura delle dimensioni che in output fornisce la grandezza fisica fondamentale a cui può essere ricondotta la grandezza fisica che abbiamo dato in input.
   \subsection{Velocità istantanea}
   La velocità istantanea  rappresenta la rapidità di variazione temporale della posizione nell'istante $t$ considerato. è data dalla derivata dello spazio rispetto al tempo. Semplicemente vogliamo considerare un piccolo intervallo di misurazione per avere la velocità istantanea. è importante che la funzione della velocità sia derivabile e continua
-  \[ v(t) = \frac{dx}{dt} \]
+  $$ v(t) = \frac{dx}{dt} $$
   \subsection{Leggi orarie}
   è la relazione generale che permette il calcolo dello spazio percorso nel moto rettilineo, qualunque sia il tipo di moto
-  \[ x(t) = x_0 + \int_{t_0}^t v(t) dt \]
+  $$ x(t) = x_0 + \int_{t_0}^t v(t) dt $$
   $x_0$ rappresenta la posizione iniziale del punto, occupata nell'istante $t_0$
   \\
     Data l'accelerazione $a(t)$ si può ottenere la velocità $v(t)$ cioè vale la relazione
-  \[ v(t) = v_0 + \int_{t_0}^t a(t) dt\]
+  $$ v(t) = v_0 + \int_{t_0}^t a(t) dt$$
 
   \subsection{Moto Rettilineo Uniforme}
   Il MRU è rettilineo, avviene lungo una retta. Nel MRU la velocità $v = \frac{dx}{dt}$ è costante
-  \[ x(t) = x_0 + v(t-t_0)\]
+  $$ x(t) = x_0 + v(t-t_0)$$
 
   \subsection{Accellerazione media}
   Se tra gli istanti di tempo $t_1$ e $t_2$ la velocità varia da $v_1$ a $v_2$, si definisce \textbf{accellerazione media} del punto, il rapporto tra la variazione di velocità e l'intervallo di tempo. Quindi l'accellerazione è la variazione di velocità nelt tempo
-  \[ a_m = \frac{v_2-v_1}{t_2-t_1} = \frac{\Delta v}{\Delta t} \]
+  $$ a_m = \frac{v_2-v_1}{t_2-t_1} = \frac{\Delta v}{\Delta t} $$
   L'analisi dimensionale dell'accellerazione è
   $$[a] = [\frac{\Delta v}{\Delta t}] = [\frac{v}{t}] = [\frac{\frac{L}{T}}{T}] = [\frac{L}{T^2}]$$
   e $$u.d.m.(a) = 1m/s^2$$ cioè un metro su secondo quadro
 
   \subsection{Accellerazione istantanea}
-  \[ a = \frac{dv}{dt} = \frac{d^2x}{dt^2} \]
+  $$ a = \frac{dv}{dt} = \frac{d^2x}{dt^2} $$
 
   \subsection{Moto rettilineo uniformemente accellerato}
   Se l'accellerazione di un moto è costante, questo si dice uniformemente accellerato, e la dipenmdenza della velocità dal tempo è lineare.
   $$ a = const$$
-  \[ v(t) = v_0 + a(t-t_0) \]
-  \[ x(t) = x_0 + v_0(t-t_0) + \frac{1}{2} a(t-t_0)^2  \]
+  $$ v(t) = v_0 + a(t-t_0) $$
+  $$ x(t) = x_0 + v_0(t-t_0) + \frac{1}{2} a(t-t_0)^2  $$
   $t_0$ sarebbe l'istante temporale iniziale del moto. Invece $x_0$ sarebbe l'origine dell'asse di riferimento (tipo un offset)
 
   \section{Moto armonico semplice}
   Il moto armonico si definisce come un oscillazione sinusoidale. Possiamo immaginare il modo di una molla lasciata "rimbalzare" senza ostacoli e attriti.
   Un punto segue un moto armonico semplice quando la legge oraria è definita dalla relazione
-  \[ x(t) = x_0 + A sin(\omega t + \phi) \]
+  $$ x(t) = x_0 + A sin(\omega t + \phi) $$
   Dove $A, \omega, \phi$ sono grandezze costanti: $A$ è detta \textbf{ampiezza del moto} cioè la ampiezza di massima oscillazione, cioè la distanza tra il punto di partenza e il punto di massima oscillazione, $\omega t + \phi$ \textbf{fase del moto}, $\phi$ \textbf{fase iniziale}, $\omega$ \textbf{pulsazione}.
   $x_0$ è il punto di inizio. Il moto descritto è un moto periodico.
 
   Il MAS è quindi un moto vario, dove tutte le grandezze cinematiche che lo descrivono $(x(t), v(t), a(t))$ variano nel tempo.
   Il periodo $T$ è
-  \[ T = \frac{2\pi}{\omega} \]
+  $$ T = \frac{2\pi}{\omega} $$
 
   Si definisce \textbf{frequenza} $\nu$ del moto, il numero di oscillazioni in un secondo. La frequenza è l'inverso del periodo
-  \[ \nu = \frac{1}{T}=\frac{\omega}{2\pi} \]
+  $$ \nu = \frac{1}{T}=\frac{\omega}{2\pi} $$
   \subsubsection{Velocità nel MAS}
   La velocità del punto che si muove con moto armonico si ottiene derivando $x(t)$:
-  \[ v(t)=\frac{dx}{dt} = \omega A cos(\omega t + \phi) \]
+  $$ v(t)=\frac{dx}{dt} = \omega A cos(\omega t + \phi) $$
   \subsubsection{Accellerazione nel MAS}
   Con un ulteriore derivazione si ottiene l'accelerazione del punto:
-  \[ a(t)=\frac{dv}{dt}=\frac{d^2 x}{dt^2} = -\omega^2 A sin(\omega t + \phi) = -\omega^2 x(t). \]
+  $$ a(t)=\frac{dv}{dt}=\frac{d^2 x}{dt^2} = -\omega^2 A sin(\omega t + \phi) = -\omega^2 x(t). $$
   \subsubsection{Eq. Differenziale del moto armonico}
   La condizione necessaria e sufficiente perchè un moto sia armonico è data dall'equazione
-  \[ \frac{d^2 x(t)}{dt^2} + \omega^2 x(t) = 0 \]
+  $$ \frac{d^2 x(t)}{dt^2} + \omega^2 x(t) = 0 $$
 
   \section{Moti piani}
   Un vettore è una "freccia" che parte dal punto di applicazione. Il verso del vettore è dato dalla punta della freccia e la direzione dal gambo.
@@ -132,26 +132,26 @@
 
   \section{Moto Rettilineo Smorzato Esponenzialmente}
   Velocità del punto
-  \[ v(t) = v_0 e^{-kt} \]
+  $$ v(t) = v_0 e^{-kt} $$
   Legge oraria
-  \[ x(t) = \frac{v_0}{k} (1-e^{-kt}) \]
+  $$ x(t) = \frac{v_0}{k} (1-e^{-kt}) $$
 
 
   \section{Moto Circolare}
   \subsection{Moto Circolare Uniforme}
   Si dice circolare uniforme perchè la traiettoria è circolare, e uniforme perchè il modulo della velocità $|d\vec{v}|$ è costante.
   La \textbf{velocità angolare istantanea}, che è il rapporto tra la differenza dell'angolo e la differenza di tempo, è
-  \[ \omega = \frac{d\theta}{dt} \]
-  \[ \omega = \frac{v}{R} \]
+  $$ \omega = \frac{d\theta}{dt} $$
+  $$ \omega = \frac{v}{R} $$
   Nel MCU essa è costante. Le leggi orarie per il MCU sono:
-  \[ x(t) =x_0 + vt\]
-  \[ \theta(t) = \theta_0 + \omega t\]
+  $$ x(t) =x_0 + vt$$
+  $$ \theta(t) = \theta_0 + \omega t$$
   Il MCU è un moto accellerato con accelerazione costane, \textbf{ortogonale alla traiettoria}, l'accelerazione si chiama centripeta
-  \[ a= a_N = \frac{v^2}{R} = \omega^2 R\]
+  $$ a= a_N = \frac{v^2}{R} = \omega^2 R$$
   Si tratta in oltre di un \textbf{moto periodico}, con periodo
-  \[ T=\frac{2\pi R}{v} = \frac{2\pi}{\omega} \]
+  $$ T=\frac{2\pi R}{v} = \frac{2\pi}{\omega} $$
   La velocità tangenziale ha Modulo
-  \[ v(t) = R \cdot \omega \]
+  $$ v(t) = R \cdot \omega $$
   Essendo un moto periodico possiamo definire la frequenza sulla base del periodo:
   $$ f = \frac{1}{T}$$
   \subsubsection{Grandezze angolari}
@@ -167,20 +167,20 @@
 
   \subsection{Moto Circolare non Uniforme}
   La velocità angolare istantanea è
-  \[ \alpha = \frac{d\omega}{dt} = \frac{a_T}{R} \]
+  $$ \alpha = \frac{d\omega}{dt} = \frac{a_T}{R} $$
   dove $a_T$ è l'accelerazione tangenziale\\
   Le leggi orarie diventano:
-  \[ w(t) = w_0 + \int_{t_0}^t \alpha(t) dt \]
-  \[ \theta(t) = \theta_0 + \int_{t_0}^t \omega(t) dt \]
+  $$ w(t) = w_0 + \int_{t_0}^t \alpha(t) dt $$
+  $$ \theta(t) = \theta_0 + \int_{t_0}^t \omega(t) dt $$
 
   \subsection{Forza (accelerazione) centripeta}
   Una forza è centripeta, se è ortogonale alla traiettoria descritta dal corpo su cui è applicata, ovvero se è ortogonale (normale) al vettore velocità
-  \[ \vec{a_n} = -\omega^2 R \cdot \hat{n} = -\frac{v_T^2}{R} \cdot \hat{n} \]
+  $$ \vec{a_n} = -\omega^2 R \cdot \hat{n} = -\frac{v_T^2}{R} \cdot \hat{n} $$
   di conseguenza, la Forza
-  \[ \vec{F_c} = ma_C =  -m\frac{v_T^2}{R} \cdot \hat{n}\]
+  $$ \vec{F_c} = ma_C =  -m\frac{v_T^2}{R} \cdot \hat{n}$$
 
   \subsection{Forza Centrifuga}
-  \[ F_{centrif} = - F_{centripeta} \]
+  $$ F_{centrif} = - F_{centripeta} $$
 
 
   \section{Moto parabolico}
@@ -197,7 +197,7 @@
   è un sistema di riferimento dove vale la prima legge della dinamica
   \subsection{Sistema di riferimento non Inerziale}
   La prima legge di Newton assume la forma
-  \[ \vec{F} = m(\vec{a^1} + \vec{a_t} + \vec{a_c}) \]
+  $$ \vec{F} = m(\vec{a^1} + \vec{a_t} + \vec{a_c}) $$
   è presente una accellerazione di un corpo anche senza forze esercitate su di esso
   \subsection{Forze vere e forze apparenti}
   Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale. \\
@@ -215,7 +215,7 @@
 
   \section{Legge di gravitazione universale}
   Due punti materiali si attraggono con una forza di intensità direttamente proporzionale al prodotto delle masse dei singoli corpi e inversamente proporzionale al quadrato della loro distanza:
-  \[ F = G \frac{m_1 m_2}{r^2} \]
+  $$ F = G \frac{m_1 m_2}{r^2} $$
   Dove G è la costante di gravitazione universale
 
 
@@ -226,23 +226,23 @@
 
   \subsection{Seconda legge di Newton}
   Esprime la legge fondamentale della dinamica del punto. Definisce il concetto di forza.
-  \[ \vec{F} = m\vec{a} \]
+  $$ \vec{F} = m\vec{a} $$
   Dove $m$ è una costante, chiamata \textbf{massa inerziale}.
-  \[ [F] = [M \frac{L}{T^2}]\]
+  $$ [F] = [M \frac{L}{T^2}]$$
   $$ u.d.m.(m) = 1Kg$$
   $$ u.d.m.(F) = 1 Kg \frac{m}{s^2} = 1N$$
 
   \subsection{Terza legge di Newton o Legge di Azione Reazione}
   Anche chiamato principio di azione e reazione delle forze
-  \[ \vec{F}_{A \rightarrow B} = -\vec{F}_{B \rightarrow A} \]
+  $$ \vec{F}_{A \rightarrow B} = -\vec{F}_{B \rightarrow A} $$
 
   \subsection{Quantità di moto}
   Si definisce quantità di moto di un punto materiale il vettore
-  \[ \vec{p} = m\vec{v} \]
+  $$ \vec{p} = m\vec{v} $$
   Che è il prodotto tra massa e velocità
 
   \subsection{Risultante delle forze}
-  \[ \vec{R} = \vec{F}_1 + \vec{F}_2 + ... +\vec{F}_n = \sum_i \vec{F}_i \]
+  $$ \vec{R} = \vec{F}_1 + \vec{F}_2 + ... +\vec{F}_n = \sum_i \vec{F}_i $$
 
   \subsubsection{Equilibrio statico}
   Se un corpo è in \textbf{equilibrio statico} la sua risultante $\vec{R} = 0$
@@ -250,124 +250,122 @@
   \subsection{Reazioni vincolari}
   Sono reazioni dell'ambiente circostante.\\
   Prendiamo il caso di una massa appoggiata su di un piano, ferma, allora esiste una forza vincolare
-  \[ \vec{N} \]
+  $$ \vec{N} $$
   normale alla superficie di appoggio, che bilancia la forza peso agente sulla massa.
 
   \subsection{Forza Peso}
   La forza peso è proporzionale alla massa
-  \[ \vec{P} = m\vec{g} \]
+  $$ \vec{P} = m\vec{g} $$
 
   \section{Quantità di moto}
   Si definisce quantità di moto di un punto materiale il vettore:
-  \[ \vec{p} = m \vec{v} \]
-  \[ [\vec{p}] = \frac{m}{s} kg \]
+  $$ \vec{p} = m \vec{v} $$
+  $$ [\vec{p}] = \frac{m}{s} kg $$
 
   \section{Risultante delle forze}
   La risultante delle forze è definita come la somma di tutte le forze applicate su un dato punto
-  \[ \vec{R} = F_1 + F_2 + ... + F_n = \sum_{i} \vec{F_i} \]
+  $$ \vec{R} = F_1 + F_2 + ... + F_n = \sum_{i} \vec{F_i} $$
 
   \section{Equilibrio statico}
   Se $R = 0$ (e il punto ha inizialmente velocità nulla) esso rimane in stato di quiete: sono realizzate le condizioni di \textbf{equilibrio statico} del punto.\\
   Devono quindi essere nulle le componenti della risultante, ovvero:
-  \[ R = 0 \Rightarrow R_x = R_y = R_z = 0 \]
+  $$ R = 0 \Rightarrow R_x = R_y = R_z = 0 $$
 
   \section{Reazione vincolare}
   Data la definizione di \textbf{equilibrio statico}, se un corpo soggetto all'azione di una forza, o della risultante non nulla di un insieme di forze, rimane fermo, dobbiamo dedurre che l'azione della forza provoca una reazione dell'ambiente circostante, detta \textbf{reazione vincolare}, che si esprime tramite una \textbf{eguale e contraria} alla forza, o alla risultante delle forze agenti.
 
   \section{Forza Peso}
-  \[ P = mg \]
+  $$ P = mg $$
 
   \section{Impulso}
   \subsection{Impulso della forza}
   Si definisce impulso $ \vec{J} $ l'integrale della forza nel tempo:
-  \[ \vec{J} = \int_0^t \vec{F} dt \]
-  \[ [J] = N  s \]
+  $$ \vec{J} = \int_0^t \vec{F} dt $$
+  $$ [J] = N  s $$
   Può anche essere scritto come differenza di quantità di moto:
-  \[\vec{P} = \vec{p_1} - \vec{p_0} = \int_{t_0}^t \vec{F} dt \]
+  $$\vec{P} = \vec{p_1} - \vec{p_0} = \int_{t_0}^t \vec{F} dt $$
 
   \subsection{Teorema dell'impulso}
-  \[ \vec{J} = \int_0^t \vec{F} dt \int_{\vec{p}_0}^{\vec{p}} d\vec{p} = \vec{p} - \vec{p_0} = \Delta \vec{p} \]
+  $$ \vec{J} = \int_0^t \vec{F} dt \int_{\vec{p}_0}^{\vec{p}} d\vec{p} = \vec{p} - \vec{p_0} = \Delta \vec{p} $$
   Se la massa $m$ è costante:
-  \[ \vec{J} = \Delta \vec{p} = m \Delta v \]
+  $$ \vec{J} = \Delta \vec{p} = m \Delta v $$
   Se la forza $F$ è costante:
-  \[ \vec{J} = \vec{F} \cdot t = \Delta p  \]
+  $$ \vec{J} = \vec{F} \cdot t = \Delta p  $$
 
   \section{Lavoro}
   Il lavoro è pari all'integrale da $a$ a $b$ delle forze totali agenti sul corpo scalare lo spostamento $ds$
-  \[ W = \int_{a}^{b} \vec{F_{tot}} \cdot \vec{ds} \]
+  $$ W = \int_{a}^{b} \vec{F_{tot}} \cdot \vec{ds} $$
   Anche definito come:
-  \[ W_{TOT} = E_{Kf} - E_{Ki} \]
+  $$ W_{TOT} = E_{Kf} - E_{Ki} $$
   cioè il lavoro dal punto $i$ iniziale, al punto $f$ finale è definito come la differenza dell'energia cinetica nel punto $f$ meno quella nel punto $i$. Vale solo se il lavoro è \textbf{totale}, cioè se comprende tutte le forze agenti nel sistema
   \subsection{Lavoro Totale}
-  \[ W_{TOT} = \sum_K W_K = \sum_K \int_i^f \vec{F}\cdot d\vec{s} \]
+  $$ W_{TOT} = \sum_K W_K = \sum_K \int_i^f \vec{F}\cdot d\vec{s} $$
   \subsection{Per forze non conservative}
-  \[ W = \Delta E_K + \Delta E_P = \Delta E_m \]
+  $$ W = \Delta E_K + \Delta E_P = \Delta E_m $$
 
 
   \section{Potenza}
   Mette in relazione il lavoro e il tempo durante il quale questo viene erogato
-  \[ P = \frac{dW}{dt} = \vec{F} \cdot \vec{v} \]
+  $$ P = \frac{dW}{dt} = \vec{F} \cdot \vec{v} $$
   è la potenza istantanea
-  \[ u.d.m.[p] = 1 \frac{J}{s} = 1W \]
+  $$ u.d.m.[p] = 1 \frac{J}{s} = 1W $$
   Dove $1W$ significa 1 Watt\\
   La potenza media, invece:
-  \[ \overbar{p} = \frac{W}{\Delta t} =  \]
+  $$ \overbar{p} = \frac{W}{\Delta t} =  $$
 
 
   \section{Forza conservativa}
   Una forza $\vec{F}$ è conservativa, se il lavoro compiuto lungo un percorso chiuso è nullo, indipendentemente dal percorso scelto
-  \[ W_{chius} = 0 \quad \oint \vec{F} \cdot \vec{ds} = 0 \]
+  $$ W_{chius} = 0 \quad \oint \vec{F} \cdot \vec{ds} = 0 $$
   \paragraph{Corollario}
-  \[ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot \vec{ds} \]
+  $$ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot \vec{ds} $$
   non dipende dal percorso scelto
 
   \section{Legge della conservazione della quantità di moto}
   Stabilisce che la quantità di moto di un sistema isolato è costante nel tempo (si conserva)
-  \[ p = m_1v_1 + m2_v2 ... + m_iv_i \]
+  $$ p = m_1v_1 + m2_v2 ... + m_iv_i $$
   oppure
-  \[ \frac{dp}{dt} = 0 \]
+  $$ \frac{dp}{dt} = 0 $$
 
 
 
   \section{Attrito}
   \subsection{Forza di attrito radente}
   E uguale a:
-  \[ F_a = \mu_s \cdot N\]
+  $$ F_a = \mu_s \cdot N$$
   Dove $\mu_s$ è il \textbf{coefficiente di attrito statico}, e $N$ è la normale del corpo sul piano. $N$ si può anche esprimere come la componente ortogonale al piano della risultante delle forze che agiscono sul punto materiale che stiamo analizzando.
   \\Si ha una situazione di quiete quando la forza applicata $F$ è:
-  \[ F \leq \mu_s N \]
+  $$ F \leq \mu_s N $$
   e una condizione di moto quando
-  \[ F > \mu_s N \]
+  $$ F > \mu_s N $$
   \paragraph{Coefficiente di attrito dinamico}
   Una volta "battuto" l'attrito statico, il moto continua ad essere rallentato dall'attrito radente, ma con un coefficiente di attrito diverso chiamato dinamico
-  \[ \mu_d \]
+  $$ \mu_d $$
 
 
   \section{Energia}
   \subsection{Energia Cinetica}
   è definita come
-  \[ E_K = \frac{1}{2}m v^2 \]
-  \[ dW = d[\frac{1}{2}m v^2] \]
+  $$ E_K = \frac{1}{2}m v^2 $$
+  $$ dW = d[\frac{1}{2}m v^2] $$
   l'energia cinetica è sempre positiva, dipende solo dalla velocità dell'oggetto (e quindi dal sistema di riferimento che stiamo usando)
-  \[ u.d.m.[E_K]= 1J = 1N\cdot M = 1 Kg \frac{m^2}{s^2}\]
+  $$ u.d.m.[E_K]= 1J = 1N\cdot M = 1 Kg \frac{m^2}{s^2}$$
 
   \subsection{Energia potenziale}
    l'energia potenziale di un oggetto è l'energia che esso possiede a causa della sua posizione.
    Se la forza è conservativa, si può sempre definire una funzione della posizione che si chiama energia potenziale.
    Possiamo, quindi, scrivere il lavoro compe
-  \[ W_{AB} = -(U_B - U_A) \]
+  $$ W_{AB} = -(U_B - U_A) $$
   \paragraph{Definizione}
-  \[ U(\vec{x_P}) = - \int_o^P \vec{F}\cdot \vec{ds} \]
+  $$ U(\vec{x_P}) = - \int_o^P \vec{F}\cdot \vec{ds} $$
   \paragraph{Lavoro e energia potenziale}
-  \[ W_{a\rigrarrow b} = -\Delta U \]
-
-
+  $$ W_{a\rightarrow b} = -\Delta U $$
 
   \subsubsection{Energia potenziale (spiegazione2)}
   Nel caso il campo di forze sia conservativo, il lavoro non dipende dal percorso scelto, ma solo dagli estremi del cammino. Il differenziale $dW$ è un diff. perfetto, quindi si ha:
-  \[W = \oint_a^b F \cdot dx = -[U(a) - U(b)] = -\Delta U\]
+  $$W = \oint_a^b F \cdot dx = -[U(a) - U(b)] = -\Delta U$$
   Nel caso più semplice, in cui il moto si svolge in una sola direzione:
-  \[ F(x) = -\frac{d}{dx}U(x) \]
+  $$ F(x) = -\frac{d}{dx}U(x) $$
   \begin{itemize}
     \item E.p. Elastica = \( U(x) = \frac{1}{2} K (x-x_0 )^2 \)
   \end{itemize}
@@ -375,11 +373,11 @@
   \subsection{Energia meccanica}
   è la somma di energia cinetica ed energia potenziale attinenti dallo stesso sistema.\\
   Per \textbf{forze conservative} è sempre la stessa durante l'evoluzione del moto
-  \[ E_m = E_K + E_P \]
+  $$ E_m = E_K + E_P $$
   Si definisce \textbf{Conservazione dell'energia meccanica}
   \paragraph{Lavoro di forze non conservative}
   Per forze non conservative
-  \[ W_{n.c.} = \Delta E_K + \Delta E_P = \Delta E_m \]
+  $$ W_{n.c.} = \Delta E_K + \Delta E_P = \Delta E_m $$
 
   \section{Forza apparente}
   In meccanica classica, un'interazione apparente, detta anche interazione fittizia o inerziale, è una forza, o un momento, che, anche se non vi viene applicata direttamente, agisce su un corpo al pari delle forze e dei momenti reali, o effettivi
@@ -390,9 +388,9 @@
   \subsection{Urto perfettamente anelastico}
   Due oggetti (masse)$m_1, m_2$ si scontrano, e ne risulta un unica particella $m_3$\\
   Dalla conservazione della quantità di moto abbiamo
-  \[ \vec{P_i} = \vec{P_f} \]
+  $$ \vec{P_i} = \vec{P_f} $$
   e quindi
-  \[ \vec{P_{1,i}} + \vec{P_{2,i}} = \vec{P_{3,f}} \]
+  $$ \vec{P_{1,i}} + \vec{P_{2,i}} = \vec{P_{3,f}} $$
 
 
 
@@ -417,7 +415,7 @@
   Quando sussiste un equilibrio \textbf{meccanico}, un equilibrio \textbf{dinamico} e un equilibrio \textbf{termico}
 
   \section{Primo principio della Termodinamica}
-  \[ \Delta U = Q - W \]
+  $$ \Delta U = Q - W $$
   Dove, $\Delta U$ è la variazione di energia interna al sistema, $Q$ è il calore ($>0$ assorbito, $<0$ ceduto), e $W$ è il lavoro, ($>0$ è compiuto, $<0$ è "ricevuto".\\
   Il lavoro $W$ e il calore $Q$ dipendono dal percorso, $\Delta U$ no.
 
@@ -434,12 +432,12 @@
     \item compressione adiabatica reversibile
   \end{itemize}
   Può essere rappresentato con solo due sorgenti. Si ha che per il rendimento in un ciclo di Carnot si ha
-  \[ \eta = 1 - \frac{T_1}{T_2}\]
+  $$ \eta = 1 - \frac{T_1}{T_2}$$
   Il risultato è vero anche per sistemi diversi dai gas ideali \\
   Vale inoltre
-  \[ T_1 < T_2 \Rightarrow \eta < 1 \]
+  $$ T_1 < T_2 \Rightarrow \eta < 1 $$
   e anche $Q_c$ calore assorbito, $Q_a$ calore ceduto,
-  \[ |Q_c| = Q_1 < Q_2 = Q_a \]
+  $$ |Q_c| = Q_1 < Q_2 = Q_a $$
 
   \subsection{Cicli irreversibile}
   Ciclo è irreversibile quando almeno un tratto del ciclo è irreversibile
@@ -452,22 +450,22 @@
   \end{itemize}
 
   \section{Calore specifico}
-  \[ Q = cm(T_f - T_i) \]
+  $$ Q = cm(T_f - T_i) $$
   Segue, c è il calore specifico del corpo
-  \[ c = \frac{1}{m} \cdot \frac{dQ}{dT} \]
+  $$ c = \frac{1}{m} \cdot \frac{dQ}{dT} $$
   Più precisamente, lungo il percorso $\gamma$
-  \[ c_\gamma = \frac{1}{m} [\frac{dQ}{dT}]_\gamma \]
-  \[ udm[c] = \frac{J}{kg\cdot K} \]
+  $$ c_\gamma = \frac{1}{m} [\frac{dQ}{dT}]_\gamma $$
+  $$ udm[c] = \frac{J}{kg\cdot K} $$
   è una grandezza \textbf{intensiva} (dipende dalla massa)\\
   Dove $c$ è una costante che dipende dal materiale, $m$ è la massa del materiale, e $T_f - T_i$ la differenza di temperatura
   \subsubsection{nota}
   Il calore specifico di un corpo è utile solo se $dT \neq 0$
   \subsubsection{nota 2}
-  \[ Q = \int_{a}^b dQ = \int_a^b m c_\gamma[T] dT \]
+  $$ Q = \int_{a}^b dQ = \int_a^b m c_\gamma[T] dT $$
   \subsection{Capacità termica}
-  \[ Q = C(T_f-T_i) \]
+  $$ Q = C(T_f-T_i) $$
   Dove $C = mc_\gamma$, quindi
-  \[ C_\lambda = [\frac{dQ}{dT}]_\gamma \]
+  $$ C_\lambda = [\frac{dQ}{dT}]_\gamma $$
   è una grandezza \textbf{estensiva}.
   \subsection{Calore specifico a volume costante}
   \begin{itemize}
@@ -475,7 +473,7 @@
     \item (alcuni) gas \textbf{biatomici} (ideali):  $c_V = \frac{5}{2}R$
   \end{itemize}
   \subsection{Calore specifico a pressione costante}
-  \[ c_p = R + c_V \]
+  $$ c_p = R + c_V $$
 
   \section{Cambi di fase}
   Gli stati di aggregazione della materia Sono
@@ -498,11 +496,11 @@
   è un punto che demarca la fine della linea di separazione delle fasi liquide e gassose, oltre questo punto non è più possibile distinguere la fase liquida da quella gassosa.
   \subsection{Calore latente}
   Nel cambio di fase fusione e evaporazione
-  \[ Q = \lambda m\]
+  $$ Q = \lambda m$$
   dove $\lambda$ è il calore latente.\\
   Per l'acqua
-  \[ \lambda_{fusione}^{H_2O} = 3,3 \cdot 10^5 \frac{J}{Kg} \quad @ 273,16 K \]
-  \[ \lambda_{fusione}^{H_2O} = 22,6 \cdot 10^5 \frac{J}{Kg} \quad @ 373,16K \]
+  $$ \lambda_{fusione}^{H_2O} = 3,3 \cdot 10^5 \frac{J}{Kg} \quad @ 273,16 K $$
+  $$ \lambda_{fusione}^{H_2O} = 22,6 \cdot 10^5 \frac{J}{Kg} \quad @ 373,16K $$
 
   \section{Trasmissione del calore}
   I modi di trasmissione del calore sono
@@ -512,47 +510,47 @@
     \item irraggiamento
   \end{itemize}
   \subsection{Conduzione}
-  \[ dQ = -K \frac{dT}{dZ} ds dt \]
+  $$ dQ = -K \frac{dT}{dZ} ds dt $$
   dove $K$ esprime la conducibilità del materiale
-  \[ udm[K] = \frac{J}{m\cdot sK} \]
+  $$ udm[K] = \frac{J}{m\cdot sK} $$
   \subsection{Convezione}
   Il calore si trasmette mediante lo spostamento delle parti calde del sistema (esempio: acqua)
   \subsection{Irraggiamento}
   Un sistema emette e assorbe onde elettromagnetiche, la legge che lega l'energia che viene emessa tramite onde elettromagnetiche e la temperatura del corpo è la legge di Stefan-Boltzmann
   \subsubsection{Legge di Stefan-Boltzmann}
   Dice che
-  \[\epsilon = \sigma e T^4\]
-  \[ udm[\epsilon] = [\frac{E}{L^2T}] \]
+  $$\epsilon = \sigma e T^4$$
+  $$ udm[\epsilon] = [\frac{E}{L^2T}] $$
   Dove $\epsilon$ è il potere emissivo del corpo, $e$ l'emissività del corpo (la capacità di un corpo di emettere onde) e $\sigma$ è la costante di Stefan-Boltzmann
-  \[ \sigma = 5,67 \cdot 10^{-8} \frac{J}{m^2sK^4} \]
+  $$ \sigma = 5,67 \cdot 10^{-8} \frac{J}{m^2sK^4} $$
   \subsubsection{nota}
   è improprio considerare l'irraggiamento uno scambio di calore
   \subsection{Vaso DEWAR}
   Ottimo recipiente isolante
 
   \section{Equazione di stato di Gas Ideali}
-  \[ pV = nRT \]
+  $$ pV = nRT $$
   \subsection{Isocora}
   Definita da Gay-Lussac, il volume $V$ è costante,
-  \[ p = p_0(1 + \beta t) \]
+  $$ p = p_0(1 + \beta t) $$
   \subsection{Isobara}
   Definita da Gay-Lussac, la pressione $p$ è costante,
-  \[ V = V_0(1 + \alpha t) \]
+  $$ V = V_0(1 + \alpha t) $$
   \subsection{Isoterma}
   Definita da Boyle, la temperatura $t$ è costante,
-  \[ p_i V_i = p_f V_f = cost\]
+  $$ p_i V_i = p_f V_f = cost$$
   \subsection{Lavoro nei Gas}
-  \[ W = \int_i^f p(V)dV \]
+  $$ W = \int_i^f p(V)dV $$
   \subsection{Energia interna nei Gas ideali}
   Sperimentalmente, per  un gas ideale,
-  \[ U = U(T) \]
+  $$ U = U(T) $$
   \subsection{Equazione di stato dei gas non ideali}
   Van der Wals
-  \[ f(p,V,T) = 0 \]
+  $$ f(p,V,T) = 0 $$
 
   \section{Trasformazioni dei gas ideali}
   Per gas ideali vale sempre
-  \[ dU = n c_V dT \]
+  $$ dU = n c_V dT $$
   \begin{center}
   \begin{tabular}{ |c|c|c|c|c| }
    \hline
@@ -567,39 +565,39 @@
   \end{center}
   \subsection{Trasformazione Isocora}
   Siccome il volume $V$ è costante, il lavoro $W = 0$, quindi
-  \[ dU=dQ \]
-  \[ dQ = nc_vdT = dU\]
+  $$ dU=dQ $$
+  $$ dQ = nc_vdT = dU$$
   Dove $c_v$ è il calore specifico a volume costante
   \subsection{Trasformazione Isobara}
-  \[ dU = dQ-dW \]
-  \[ n c_V dT = n c_p dT - nR dT \Rightarrow \quad c_p -c_V = R \]
+  $$ dU = dQ-dW $$
+  $$ n c_V dT = n c_p dT - nR dT \Rightarrow \quad c_p -c_V = R $$
   che è la relazione di Mayer. dove c $c_p$ è il calore specifico a pressione costante
   \subsection{Trasformazione Isoterma}
-  \[ \Delta U = 0 \quad \Rightarrow \quad Q-W =0 \]
+  $$ \Delta U = 0 \quad \Rightarrow \quad Q-W =0 $$
   Quindi
-  \[ Q = W = n R T ln(\frac{V_f}{V_i}) \]
+  $$ Q = W = n R T ln(\frac{V_f}{V_i}) $$
   \subsection{Trasformazione Adiabatica}
-  \[ p V^{\gamma} = cost \]
+  $$ p V^{\gamma} = cost $$
   con $\lambda$ che varia in base al tipo di gas
   \subsection{Trasformazione Generica}
-  \[ dQ = nc_V dT + dW \]
+  $$ dQ = nc_V dT + dW $$
 
   \section{Trasformazioni cicliche}
   Lo stato iniziale $A$ coincide con lo stato finale $B$
-  \[ \Delta U = \int_A^B dU = \oint dU = U_B - U_A = 0 \]
-  \[ Q = \int_A^B dQ = \oint_{A \rightarrow B} dQ = Q \]
-  \[ W = \int_A^B dW = \oint dW = W \]
-  \[ \Delta U = 0 \Rightarrow Q = W \]
-  \[ Q = Q_C + Q_A,  \quad Q_C < 0, \quad Q_A > 0 \]
+  $$ \Delta U = \int_A^B dU = \oint dU = U_B - U_A = 0 $$
+  $$ Q = \int_A^B dQ = \oint_{A \rightarrow B} dQ = Q $$
+  $$ W = \int_A^B dW = \oint dW = W $$
+  $$ \Delta U = 0 \Rightarrow Q = W $$
+  $$ Q = Q_C + Q_A,  \quad Q_C < 0, \quad Q_A > 0 $$
   Dove $Q_C$ è il calore ceduto, $Q_A$ quello assorbito.\\
   Stessa cosa per il lavoro,
-  \[ W = W_F + W_S, \quad W_F > 0  \quad W_S < 0 \]
+  $$ W = W_F + W_S, \quad W_F > 0  \quad W_S < 0 $$
   Dove $W_F$ è il lavoro fatto, e $W_S$ quello subito
   \subsection{Macchine termiche}
   il lavoro $W$ compiuto è $>0$,
-  \[ W>0 \quad \Rightarrow \quad Q > 0 \]
+  $$ W>0 \quad \Rightarrow \quad Q > 0 $$
   \subsection{Macchien Frigorifere}
-  \[ W<0 \quad \Rightarrow \quad Q < 0 \]
+  $$ W<0 \quad \Rightarrow \quad Q < 0 $$
 
   \subsection{Ciclo di Otto}
   Tipico del motore a scoppio. è caratterizzato da
@@ -611,39 +609,39 @@
     \item scarico
   \end{itemize}
   Il rendimento è pari a
-  \[ \eta = 1 - \frac{|T_a - T_d|}{T_c - T_b} \]
+  $$ \eta = 1 - \frac{|T_a - T_d|}{T_c - T_b} $$
 
   \subsection{Ciclo di Carnot Inverso}
   Verso di percorrenza inverso del Ciclo di Carnot, il lavoro è negativo \\
   Rendimento
-  \[ \xi = \frac{T_1}{T_1 - T_2} \]
+  $$ \xi = \frac{T_1}{T_1 - T_2} $$
 
   \section{Rendimento}
-  \[ \eta=\frac{W}{Q_A} \quad = 1- \frac{|Q_C|}{Q_A}\]
+  $$ \eta=\frac{W}{Q_A} \quad = 1- \frac{|Q_C|}{Q_A}$$
   \subsection{Macchine Termiche}
   Rendimento sempre compreso tra
-  \[0 \leq \eta < 1\]
+  $$0 \leq \eta < 1$$
   e quindi
-  \[0 \leq W < Q_A \]
+  $$0 \leq W < Q_A $$
   e quindi
-  \[ 0 < |Q_C| < Q_A \]
+  $$ 0 < |Q_C| < Q_A $$
   \subsection {Macchine Frigorifere}
   L'efficienza, o \textbf{Coefficiente di prestazione}
-  \[ \xi = \frac{Q_A}{|W_S|}  \]
+  $$ \xi = \frac{Q_A}{|W_S|}  $$
 
   \section{Legge di Avogadro}
   Volumi uguali, di gas diversi, alla stessa pressione e temperatura, contengono lo stesso numero di molecole $N$
-  \[ N = \frac{1}{K_B} \frac{pV}{T} \]
+  $$ N = \frac{1}{K_B} \frac{pV}{T} $$
   Il numero di \textbf{moli} $n$ è definito come
-  \[ n = \frac{N}{N_A} \]
+  $$ n = \frac{N}{N_A} $$
   Cioè si prende il numero di molecole $N$, e lo si divide per il numero di avogadro $N_A$,
-  \[ n = 1 \quad \Rightarrow \quad N = N_A = 6,022 \cdot 10^{23}\]
+  $$ n = 1 \quad \Rightarrow \quad N = N_A = 6,022 \cdot 10^{23}$$
   La legge di Avogadro espressa con le moli risulta
-  \[ n = \frac{1}{R} \frac{pV}{T} \]
+  $$ n = \frac{1}{R} \frac{pV}{T} $$
 
   Dove $K_B$ è la costante di $Boltzman$,
-  \[ K_B = 1,38 \cdot 10^{-23} \frac{J}{K}\]
-  \[ R = K_B N_A = 8,314 \frac{J}{K \cdot mol} \]
+  $$ K_B = 1,38 \cdot 10^{-23} \frac{J}{K}$$
+  $$ R = K_B N_A = 8,314 \frac{J}{K \cdot mol} $$
 
   \section{Secondo principio della Termodinamica}
   Il calore non fluisce \textbf{mai} spontaneamente da un corpo ad uno più caldo.
@@ -657,70 +655,70 @@
   Due macchine termiche, che lavorano a contatto con due sorgenti, $T_1$ e $T_2 > T_1$, una macchia \textbf{generica} $x$ estrae il calore $Q_2$ dalla sorgente $T_2$, restituisce il calore $Q_1$ a $T_1$, e produce del lavoro $W$. \\
   L'altra macchina $r$ è reversibile, ed estrae calore $Q_2'$ da $T_2$, restituisce calore $Q_1'$ a $T_1$ , il lavoro che essa compie è $W$\\
   Allora,
-  \[ \eta_{x(T_1, T_2)}  \leq \eta_{r(T_1, t_2)} \]
+  $$ \eta_{x(T_1, T_2)}  \leq \eta_{r(T_1, t_2)} $$
   Cioè il rendimento di una macchina termica qualsiasi che lavori tra la temperatura $T_1$ e $T_2$ è $\leq$ del rendimento di una macchina reversibile qualsiasi che lavori tra le medesime temperature.
   \subsubsection{Altra formazione}
-  \[ \frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0 \]
+  $$ \frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0 $$
 
   \subsubsection{Corollario}
   Tutte le macchine reversibili, che lavorano tra le stesse temperature hanno lo stesso rendimento
-  \[ \eta_{R_1(T_1, T_2)} = \eta_{R_2(T_1, T_2)} \]
+  $$ \eta_{R_1(T_1, T_2)} = \eta_{R_2(T_1, T_2)} $$
   \subsubsection{Osservazioni}
   Il rendimento massimo coincide con quello della macchina reversibile
-  \[ \eta_{MAX(T_1,T_2)} = \eta_{R(T_1,T_2)} = 1-\frac{T_1}{T_2} \]
+  $$ \eta_{MAX(T_1,T_2)} = \eta_{R(T_1,T_2)} = 1-\frac{T_1}{T_2} $$
 
   \section{Teorema di Clausius}
   Estende il Teorema di Carnot alle trasformazioni generiche
-  \[ \sum_{j=1}^N \frac{Q_j}{T_j} \leq 0 \]
+  $$ \sum_{j=1}^N \frac{Q_j}{T_j} \leq 0 $$
   Tutti gli scambi di calore con le $N$ sorgenti con cui il sistema è in contatto sommati, devono essere $\leq 0$. è $=0$ se il ciclo (la macchina) è reversibile
 
-  \[ \oint \frac{dQ}{T} \leq 0 \]
+  $$ \oint \frac{dQ}{T} \leq 0 $$
 
   \section{Entropia}
   Data una trasformazione ciclica da $A$ a $B$ nel tratto 1 e da $B$ a $A$ nel tratto 2, se il ciclo è reversibile si ha
-  \[ \oint \frac{dQ}{T} = \int_A^B (\frac{dQ}{T})_1 + \int_B^A (\frac{dQ}{T})_2 = 0\]
+  $$ \oint \frac{dQ}{T} = \int_A^B (\frac{dQ}{T})_1 + \int_B^A (\frac{dQ}{T})_2 = 0$$
   ma, visto che il ciclo è reversibile vale anche
-  \[ \int_A^B (\frac{dQ}{T})_1 - \int_A^B (\frac{dQ}{T})_2 = 0\]
+  $$ \int_A^B (\frac{dQ}{T})_1 - \int_A^B (\frac{dQ}{T})_2 = 0$$
   Quindi non dipende dal percorso scelto. Abbiamo quindi questa funzione, che si chiama $entropia$
-  \[ \int_A^B (\frac{dQ}{T})_{rev} = S(B) -S(A) \]
+  $$ \int_A^B (\frac{dQ}{T})_{rev} = S(B) -S(A) $$
   La variazione di entropia è una funzione di stato:
-  \[ \Delta S_{A \rightarrow B} = \int_A^B (\frac{dQ}{T})_{rev. qualsiasi} \]
+  $$ \Delta S_{A \rightarrow B} = \int_A^B (\frac{dQ}{T})_{rev. qualsiasi} $$
   \subsubsection{nota 1}
   Dati un sistema 1 e un sistema 2, il sistema 3 è $= sys1 \cup sys2$, l'entropia
-  \[ S_3 = S_1 + S_2 \]
+  $$ S_3 = S_1 + S_2 $$
   \subsubsection{nota 2}
   L'entropia è una grandezza estensiva
   \subsubsection{nota 3}
   Per il calcolo, occorre scegliere la reversibile più conveniente
   \subsection{Variazioni di Entropia per Tr. notevoli di Gas Ideali}
   \subsubsection{Isoterma}
-  \[ v_i \rightarrow v_f\]
-  \[ dQ = \frac{nRT}{V} dV \Rightarrow dS = \frac{dQ}{T} = nR\frac{dV}{V} \]
-  \[ \Delta S = nR ln(\frac{V_f}{V_i}) \]
+  $$ v_i \rightarrow v_f$$
+  $$ dQ = \frac{nRT}{V} dV \Rightarrow dS = \frac{dQ}{T} = nR\frac{dV}{V} $$
+  $$ \Delta S = nR ln(\frac{V_f}{V_i}) $$
 
   \subsubsection{Isocora}
-  \[ dS = nC_v\frac{dT}{T} \]
-  \[ \Delta S = \int_i^f dS = nC_v ln(\frac{T_f}{T_i}) \]
+  $$ dS = nC_v\frac{dT}{T} $$
+  $$ \Delta S = \int_i^f dS = nC_v ln(\frac{T_f}{T_i}) $$
 
   \subsubsection{Isobara}
-  \[ dS = nc_p\frac{dT}{T} \]
-  \[ \Delta S = \int_i^f dS = n c_p ln(\frac{T_f}{T_i})\]
+  $$ dS = nc_p\frac{dT}{T} $$
+  $$ \Delta S = \int_i^f dS = n c_p ln(\frac{T_f}{T_i})$$
 
   \subsubsection{Adiabatica}
-  \[ \Delta S = 0 \]
+  $$ \Delta S = 0 $$
 
   \subsubsection{Cambi di fase}
-  \[ dS = \frac{\lambda}{T} dm\]
-  \[ \Delta S = \frac{\lambda m}{T} \]
+  $$ dS = \frac{\lambda}{T} dm$$
+  $$ \Delta S = \frac{\lambda m}{T} $$
 
   \subsection{Diagrammi T-S}
   $T$ e $S$ sono variabili termo dinamiche, quanto lo sono $p$ e $v$
   \subsection{Teorema dell'entropia}
   Se il sistema è isolato
-  \[ dQ = 0 \quad \Rightarrow \quad \int_A^B(\frac{dQ}{T})_X = 0\]
+  $$ dQ = 0 \quad \Rightarrow \quad \int_A^B(\frac{dQ}{T})_X = 0$$
   Segue che
-  \[ S_B \geq S_A \]
-  \[ \Delta S \geq 0 \]
+  $$ S_B \geq S_A $$
+  $$ \Delta S \geq 0 $$
   e l'$=$ vale solo se la trasf. è reversibile
 
   \chapter{Elettricità}
@@ -749,25 +747,25 @@
 
   \subsection{Campo elettrico in una piana infinita}
   Il campomagnetico $\vec{E}$ di una piana infinita è sempre prerpendicolare alla piana, e vale
-  \[ \vec{E} = \frac{\sigma}{2\epsilon_0} \]
+  $$ \vec{E} = \frac{\sigma}{2\epsilon_0} $$
   Dove $\sigma$ è la densità di carica
 
   \section{Forza di attrazione tra due cariche puntiformi}
   Date due cariche $q_1$ e $q_2$ la forza che $q_1$ applica a $q_2$ è pari a
-  \[ F_{1 \rightarrow 2} = K \frac{q_1 q_2}{r_{12}^2} \]
+  $$ F_{1 \rightarrow 2} = K \frac{q_1 q_2}{r_{12}^2} $$
   $r_{12}$ è la distanza tra i due oggetti. La forza agisce sempre lungo la congiungente delle due cariche.
-  \[u.d.m[q] = [I\cdot T] = 1C (culomb)\]
+  $$u.d.m[q] = [I\cdot T] = 1C (culomb)$$
 
   \section{Principio di sovrapposizione}
   Date $n$ cariche, che interagiscono su una carica, l'effetto totale sulla carica di prova, è dato dalla sovrapposizione degli effetti delle singole cariche
 
   \section{Campo elettrico o elettrostatico}
   Il campo elettrico è il rapporto fra la forza che muove la carica e la carica stessa
-  \[\vec{E} = \frac{\vec{F}}{q_0} = \frac{K Q}{r^2} \hat{r}\]
+  $$\vec{E} = \frac{\vec{F}}{q_0} = \frac{K Q}{r^2} \hat{r}$$
   Dove $\vec{E}$ è il campo elettrico, $\vec{F}$ è la forza subita dalla carica, e $q_0$ la carica\\
   Il campo elettrico è \textbf{uscente} se la carica che lo genera $Q$ è $>0$\\
   Il campo elettrico è \textbf{entrante} se la carica che lo genera è $Q<0$
-  \[ u.d.m.[E] = [\frac{1N}{C}]\]
+  $$ u.d.m.[E] = [\frac{1N}{C}]$$
 
   \begin{itemize}
     \item Campo elettrostatico: è generato da altre cariche elettriche ferme
@@ -775,22 +773,22 @@
   \end{itemize}
 
   \subsection{lavoro di un campo elettrico}
-  \[ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot d\vec{s} = \int_a^b q \vec{E} \cdot d\vec{s} = q \int_a^b \vec{E}\cdot d\vec{s} \]
+  $$ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot d\vec{s} = \int_a^b q \vec{E} \cdot d\vec{s} = q \int_a^b \vec{E}\cdot d\vec{s} $$
 
   \subsection{Circuitazione del campo elettrico}
-  \[\oint \vec{E} \cdot d\vec{s} = f.e.m.\]
+  $$\oint \vec{E} \cdot d\vec{s} = f.e.m.$$
   dove $f.e.m$ è la forza \textbf{elettromotrice}, cioè è uguale alla forza che sta portando la carica dal punto a al punto b (stesso)
 
   \subsection{caso Elettrostatico}
-  \[ W_{AB} = - \Delta U_{AB}\]
-  \[ U_{A} = \frac{KQ}{r_A} + const \]
+  $$ W_{AB} = - \Delta U_{AB}$$
+  $$ U_{A} = \frac{KQ}{r_A} + const $$
   Dove $U_{AB}$ è l'energia potenziale elettrostatica. Le forze, almeno per la singola carica sono forze conservative e quindi, vale per la carica puntiforme: La circuitazione del campo elettrostatico è $=0$
-  \[ \oint \vec{E} \cdot d\vec{s} = 0 \]
+  $$ \oint \vec{E} \cdot d\vec{s} = 0 $$
   che è equivalente alla conservatività del campo elettrostatico.\\
   Si introduce \textbf{il potenziale} $\Delta V$, definito come la differenza di energia potenziale diviso la carica
-  \[ \Delta U \longrightarrow \Delta V = \frac{\Delta U}{q} \]
+  $$ \Delta U \longrightarrow \Delta V = \frac{\Delta U}{q} $$
   Il potenziale elettrostatico si definisce come:
-  \[ V_A = \frac{KQ}{r_A} + const^{'}\]
+  $$ V_A = \frac{KQ}{r_A} + const^{'}$$
   Dove $const'$ è una costante arbitraria
 
   \section{Forza Elettrica}
@@ -810,23 +808,23 @@
   \section{Flusso di un campo vettoriale}
   Data una grandezza vettoriale $\vec{v}$,  definiamo come flusso della grandezza vettoriale in questione, attraverso una superficie infinitesima $d \Sigma$\\
   Il flusso $d \Phi$ è
-  \[ d \Phi = \vec{v}\cdot \hat{n} d \Sigma \]
+  $$ d \Phi = \vec{v}\cdot \hat{n} d \Sigma $$
   dove $\hat{n}$ è il vettore normale alla superficie.\\
   Più in generale per una superficie non infinitesima, si ha la somma di tante superfici infinitesime
-  \[ \Phi = \int_\Sigma d\Phi = \int_\Sigma \vec{v} \cdot \hat{n} d\Sigma \]
+  $$ \Phi = \int_\Sigma d\Phi = \int_\Sigma \vec{v} \cdot \hat{n} d\Sigma $$
 
   \section{Angolo solido}
   Area della calotta sferica, normalizzata al quadrato del raggio della sfera, l'angolo solido è
-  \[ \omega = \frac{S}{R^2} \]
+  $$ \omega = \frac{S}{R^2} $$
   dove $S$ è la superficie "di taglio" sempre ortogonale
 
   \section{teorema di Gauss}
   Nel caso in cui le cariche siano \textbf{interne:}
   Il flusso del campo elettrico attraverso una superficie chiusa è uguale alla somma delle cariche interne a tale superficie diviso $\epsilon_0$
-  \[ \Phi_{\Sigma} = \oint \vec{E} \cdot \hat{n} d\Epsilon = \sum_i \frac{q_i}{\epsilon_0} \]
+  $$ \Phi_{\Sigma} = \oint \vec{E} \cdot \hat{n} d\Epsilon = \sum_i \frac{q_i}{\epsilon_0} $$
   \paragraph{Nel caso di cariche esterne}
   Si ha che il flusso è nullo
-  \[ d\Phi_{d\omega} = 0\]
+  $$ d\Phi_{d\omega} = 0$$
   Per il flusso tramite la superficie $\omega$
 
 
@@ -841,18 +839,18 @@
   \subsection{Conduttore in Equilibrio}
   Un conduttore si dice in equilibrio quando tutte le cariche al suo interno sono in equilibrio\\
   Cioè $\forall$ carica $q_i$
-  \[\vec{v_i} = \vec{0} \Rightarrow \vec{F_i} = \vec{0} \Rightarrow \vec{E_i} = \vec{0}\]
+  $$\vec{v_i} = \vec{0} \Rightarrow \vec{F_i} = \vec{0} \Rightarrow \vec{E_i} = \vec{0}$$
   Definizione "media". Il campo elettrico è nullo (perchè le cariche non si muovono)
 
   \subsubsection{Primo corollario}
   Per un conduttore in equilibrio vale $q_{intern} =0$. Se c'è una carica, si distribuisce sulla superficie del conduttore
   \subsubsection{Secondo corollario}
   Dati due punti $A, B$ all'interno del conduttore, la differenza di potenziale tra $A$ e $B$
-  \[V_A - V_B = \int_A^B \vec{E}\cdot d\vec{s}=0 \]
+  $$V_A - V_B = \int_A^B \vec{E}\cdot d\vec{s}=0 $$
   $\forall A,B$ interni al conduttore, $A=B$. Cioè tutti i punti di un conduttore in equilibrio sono allo stesso potenziale
   \subsubsection{terzo corollario}
   \( \vec{E} \neq \vec{0} \) solo appena fuori dalla superficie
-  \[ \vec{E}(\vec{r}) = \frac{\sigma(\vec{r})}{\epsilon_0} \hat{n} \]
+  $$ \vec{E}(\vec{r}) = \frac{\sigma(\vec{r})}{\epsilon_0} \hat{n} $$
   QUindi, il campo elettrico appena fuori dalla superficie di un conduttore, in una posizione $r$ è uguale alla densità di carica nella data posizione $r$ diviso $\epsilon_0$, e diretto normalmente alla superficie
 
   \subsection{Schermo elettrostatico}
@@ -862,27 +860,27 @@
 
   \section{Capacità del conduttore}
   è il rapporto tra la carica $q$ depositata tra la superficie del conduttore, e il potenziale $V$ in cui il conduttore va, per effetto di questa carica. descrive la capacità di un conduttore di ospitare le cariche e di portarsi ad un certo potenziale
-  \[ \mathbb{C} = \frac{q}{V} \]
-  \[u.d.m.[\mathbb{C}] = \frac{1C}{V} = 1F\]
+  $$ \mathbb{C} = \frac{q}{V} $$
+  $$u.d.m.[\mathbb{C}] = \frac{1C}{V} = 1F$$
   dove $ F $ è il Farad
 
   \section{Condensatori}
   Quando due conduttori sono ininduzione completa, si chiamano condensatore ($R_1$ e $R_2$ sono i raggi del condensatore sferico)
 
-  \[ \Delta V = Kq (\frac{1}{R_1} - \frac{1}{R_2}) \]
+  $$ \Delta V = Kq (\frac{1}{R_1} - \frac{1}{R_2}) $$
 
   \subsection{Capacità di un condensatore}
-  \[ C= \frac{q}{\Delta V} = 4 \pi \epsilon_0 \frac{R_1 R_2}{R_2 - R_1} \]
+  $$ C= \frac{q}{\Delta V} = 4 \pi \epsilon_0 \frac{R_1 R_2}{R_2 - R_1} $$
 
   Se le superfici delle armature sono abbastanza vicine, la capacità è
-  \[C = \epsilon_0 \frac{S}{h}\]
+  $$C = \epsilon_0 \frac{S}{h}$$
   Dove $S$ è la superficie, $h$ è pari a $R_2 = R_1 + h$ con $h<<R_1$
 
   \subsection{Energia elettrostatica nel condensatore}
-  \[ \Delta U = W_{TOT} = \frac{Q^2}{2C} = \frac{1}{2} C \Delta V^2 = \frac{1}{2} Q \Delta V \]
+  $$ \Delta U = W_{TOT} = \frac{Q^2}{2C} = \frac{1}{2} C \Delta V^2 = \frac{1}{2} Q \Delta V $$
 
-  \Subsection{Campo elettrico nel condensatore}
-  \[ |\vec{E}| = \frac{\sigma}{\epsilon_0} \]
+  \subsection{Campo elettrico nel condensatore}
+  $$ |\vec{E}| = \frac{\sigma}{\epsilon_0} $$
   dove $\sigma$ è la densità superficiale di carica
 
   \subsection{Induzione Completa}
@@ -892,123 +890,123 @@
   Due armature piane, parallele, con carica $+q$ e $-q$.
   Il campo elettrico è pari a \( E = \frac{\sigma}{2\epsilon_0} \)
   La somma dei vettori dei due campi elettrici è pari a $0$ all'esterno delle due armature, mentre all'interno è pari a $E$
-  \[ C = \epsilon_0 \frac{S}{h} \]
+  $$ C = \epsilon_0 \frac{S}{h} $$
 
   \subsubsection{Effetti di bordo}
   Al limite delle armature ci sono delle linee che saranno curvate, trascurate per la debole intensità.
 
   \subsection{Sistemi di condensatori}
   Dati due condensatori, $C_1$ e $C_2$ collegati a una differenza di potenziale $\Delta V$,
-  \[ \Delta V = \Delta V_1 + \Delta V_2 \]
-  \[ C_1 = \frac{q_1}{\Delta V_1} \]
-  \[ C_2 = \frac{q_2}{\Delta V_2} \]
+  $$ \Delta V = \Delta V_1 + \Delta V_2 $$
+  $$ C_1 = \frac{q_1}{\Delta V_1} $$
+  $$ C_2 = \frac{q_2}{\Delta V_2} $$
 
   \subsubsection{In serie}
   Il condensatore "risultante" sarà
-  \[ \frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2} \]
+  $$ \frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2} $$
 
   \subsubsection{In parallelo}
-  \[ C = C_1 + C_2 \]
+  $$ C = C_1 + C_2 $$
 
   \subsection{Energia nel condensatore}
   L'energia elettrostatica all'interno del condensatore è
-  \[ \Delta U_{el} = \frac{1}{2} \epsilon_0 E^2 \tau \]
+  $$ \Delta U_{el} = \frac{1}{2} \epsilon_0 E^2 \tau $$
   Dove $\tau$ è il volume tra le due armature\\
   La densità volumica di energia è
-  \[ u = \frac{\Delta U_{el}}{h} = \frac{1}{2} \epsilon_0 E^2 \]
+  $$ u = \frac{\Delta U_{el}}{h} = \frac{1}{2} \epsilon_0 E^2 $$
 
   \subsection{Forza tra le armature}
   La forza tra le due armature del condensatore è definita come
-  \[ F = -\frac{dU}{dS} \]
-  \[ F = -\frac{d}{dS}[\frac{1}{2} \epsilon_0 E^2 \tau] \]
+  $$ F = -\frac{dU}{dS} $$
+  $$ F = -\frac{d}{dS}[\frac{1}{2} \epsilon_0 E^2 \tau] $$
 
   \subsection{Pressione elettrostatica}
   Indipendente dal fatto che il condensatore sia isolato o connesso a un generatore, non dipende dalla geometria del condensatore è un equazione valida in "generale", \textbf{coincide con la definizione di densità elettrostatica associata al campo elettrico}
-  \[ \frac{1}{2} \epsilon_0 E^2 (=u) \]
+  $$ \frac{1}{2} \epsilon_0 E^2 (=u) $$
 
   \subsubsection{Condensatore isolato}
   La pressione elettrostatica tra due armature di un condensatore coincide con la densità volumica di energia
-  \[ P_{el} = \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 \]
+  $$ P_{el} = \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 $$
 
   \subsubsection{Condensatore e generatore}
-  \[ d(\Delta U_{el}) = -\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S dh \]
-  \[ d(\Delta U_{gen}) = \epsilon_0 (\frac{\Delta V}{h})^2 S dh \]
+  $$ d(\Delta U_{el}) = -\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S dh $$
+  $$ d(\Delta U_{gen}) = \epsilon_0 (\frac{\Delta V}{h})^2 S dh $$
   e quindi, la variazione totale sarà
-  \[ d(\Delta U) =\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S dh \]
-  \[ F = \frac{-d(\Delta U)}{dh} = -\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S \]
-  \[ P = \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 \]
+  $$ d(\Delta U) =\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S dh $$
+  $$ F = \frac{-d(\Delta U)}{dh} = -\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S $$
+  $$ P = \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 $$
 
   \section{Conduzione elettrica}
   Per esempio, il rame $Cu$ ha 1 elettrone "libero" per atomo. Calcoliamo quanti elettroni sono liberi per unità di volume
-  \[ n = \frac{N_A \rho}{ A} = 8,49 \cdot 10^{28} \frac{e^-}{m^3} \]
+  $$ n = \frac{N_A \rho}{ A} = 8,49 \cdot 10^{28} \frac{e^-}{m^3} $$
   Elettroni a metro cubo. la velocità media degli elettroni (per un volume abbastanza grande) è
-  \[\vec{v_m} = \vec{0}\]
+  $$\vec{v_m} = \vec{0}$$
   Se il conduttore è sottoposto ad un campo elettrico esterno, la velocità media degli elettroni passa a quella di "drift":
-  \[ \vec{v_m} = \vec{0} \longrightarrow \vec{v_m} = \vec{v_d} \]
+  $$ \vec{v_m} = \vec{0} \longrightarrow \vec{v_m} = \vec{v_d} $$
   Vettore densità di corrente elettrica, pari alla densità di cariche libere, per velocità di drift (o deriva), - la stessa cosa per le cariche negative
-  \[ \vec{J_e} = n_+ e \vec{v_{d+}} - n_- e \vec{v_{d-}}\]
+  $$ \vec{J_e} = n_+ e \vec{v_{d+}} - n_- e \vec{v_{d-}}$$
 
   \subsection{Corrente elettrica}
   Si definisce come l'integrale verso la sezione del vostro filo
-  \[ i = \int_S n e \vec{v} \cdot \hat{n} dS = \frac{dq}{qt}\]
-  \[ u.d.m[i]=\frac{1C}{1s}= 1A \]
+  $$ i = \int_S n e \vec{v} \cdot \hat{n} dS = \frac{dq}{qt}$$
+  $$ u.d.m[i]=\frac{1C}{1s}= 1A $$
 
   \subsection{Principio di conservazione della carica elettrica}
   Data una superficie chiusa, la carica totale che passa attraverso questa superficie, è uguale alla variazione delle cariche nella superficie nel tempo. (tanta corrente entri nel volume tanta ne esce)
-  \[ i_{tot} = \oint \vec{J} \cdot \hat{n} dS = -\frac{dq_{int}}{dt} \]
+  $$ i_{tot} = \oint \vec{J} \cdot \hat{n} dS = -\frac{dq_{int}}{dt} $$
 
   \subsection{Legge di OHM}
   La velocità di deriva, è proporzionale al campo elettrico
-  \[ \vec{v_d} = \alpha \vec{E} \]
+  $$ \vec{v_d} = \alpha \vec{E} $$
   Anche scritta
-  \[ \vec{J} = \frac{1}{\rho} \vec{E} \]
+  $$ \vec{J} = \frac{1}{\rho} \vec{E} $$
   La costante $\rho$ si chiama resistività, è una costante intensiva, e dipende dal materiale che stiamo utilizzando.
   La resistività cresce in proporzione alla temperatura
-  \[ \rho(t) = \rho{20}(1 + \alpha \Delta t) \]
+  $$ \rho(t) = \rho{20}(1 + \alpha \Delta t) $$
   Dove $\rho{20}$ è la resistività misurata a 20 gradi celsius\\
   Cioè la legge di OHM lega il campo elettrico alla corrente tramite la costante di resistività $\rho$
-  \[ \vec{E} = \rho \cdot \vec{J} \]
+  $$ \vec{E} = \rho \cdot \vec{J} $$
 
 
-  \[ i = \frac{ES}{\rho} = Eh \frac{S}{\rho h} = \Delta V \frac{1}{R} \]
+  $$ i = \frac{ES}{\rho} = Eh \frac{S}{\rho h} = \Delta V \frac{1}{R} $$
   $R$ Si chiama resistenza elettrica,
-  \[ R = \rho \frac{h}{S} \]
+  $$ R = \rho \frac{h}{S} $$
   Dove $h$ è la lunghezza, e $S$ la sezione
 
   La legge di OHM per i conduttori metallici sarà quindi
-  \[ i = \frac{\Delta V}{R} \]
-  \[ u.d.m[R] = \frac{1V}{1A} = 1 \Omega \]
+  $$ i = \frac{\Delta V}{R} $$
+  $$ u.d.m[R] = \frac{1V}{1A} = 1 \Omega $$
 
   \subsection{Effetto Joule}
   La potenza, $P$
-  \[ P=\frac{dW}{dt} = \frac{dq\Delta V}{dt} = \Delta V \cdot i\]
+  $$ P=\frac{dW}{dt} = \frac{dq\Delta V}{dt} = \Delta V \cdot i$$
 
   \paragraph{Per circuiti dove vale la legge di OHM}
   Si ha
-  \[ P = R I^2 \]
+  $$ P = R I^2 $$
 
 
   \subsection{Resistenze in serie}
   Consideriamo $R_1$ e $R_2$ in serie, la corrente $i$ che le attraversa è la stessa, quindi
-  \[ i R_1 = \Delta V_1 \]
-  \[ i R_2 = \Delta V_2 \]
+  $$ i R_1 = \Delta V_1 $$
+  $$ i R_2 = \Delta V_2 $$
   Dove $\Delta V_1$ è la differenza di potenziale ai capi di $R_1$, stessa cosa per $\Delta V_2$\\
   Quindi,
-  \[ i R^* = \Delta V \Rightarrow R^* = R_1 +R_2 \]
+  $$ i R^* = \Delta V \Rightarrow R^* = R_1 +R_2 $$
 
   \subsection{Resistenze in parallelo}
   Consideriamo $R_1$ e $R_2$ in parallelo, la corrente $i$ si divide nei due capi in $i_1$ e $i_2$. In questo caso, $\Delta V = \Delta V_1 = \Delta V_2$ quindi
-  \[ i_1 R_1 = \Delta V \]
-  \[ i_2 R_2 = \Delta V \]
+  $$ i_1 R_1 = \Delta V $$
+  $$ i_2 R_2 = \Delta V $$
   Quindi,
-  \[ \frac{1}{R*} = \frac{1}{R_1} + \frac{1}{R_2} \]
+  $$ \frac{1}{R*} = \frac{1}{R_1} + \frac{1}{R_2} $$
 
   \section{Forza Elettro Motrice}
-  \[ f.e.m. = \oint \vec{E} \cdot d\vec{s} = R_T i \Rightarrow i \neq 0 \iff f.e.m. \neq 0\]
+  $$ f.e.m. = \oint \vec{E} \cdot d\vec{s} = R_T i \Rightarrow i \neq 0 \iff f.e.m. \neq 0$$
   $R_T$ resistenza totale circuito\\
   Deve quindi esistere una resistenza interna al generatore tale che
-  \[ f.e.m. = R_T i = (R_{load} + r)i \]
-  \[ V_A - V_B = f.e.m. -ri \]
+  $$ f.e.m. = R_T i = (R_{load} + r)i $$
+  $$ V_A - V_B = f.e.m. -ri $$
   Dove $R_{load}$ è la resistenza del "circuito" senza il generatore, e $r$ è la resistenza del generatore
 
   \section{Interazione elettromagnetica}
@@ -1017,70 +1015,70 @@
   Ciascun magnete contiene sempre due poli opposti\\
   La magnetizzazione: si possono produrre magneti artificiali (calamite) tramite contatto coi magneti naturali.\\
   Il geomagnetismo: lasciato libero di muoversi, si orienta lungo direzioni secondo il meridiano terrestre locale. il polo che punta verso il nord è chiamato polo nord con carica positiva. il polo sud viceversa.\\
-  \[F = K_m \frac{q_{m1}q_{m2}}{r^2}\]
+  $$F = K_m \frac{q_{m1}q_{m2}}{r^2}$$
   Magnete spezzato: se spezziamo un magnete, non ottengo due oggetti con cariche opposte, ma ottengo due nuovi magneti. Questo fenomeno è valido per qualsiasi scala. Non esiste il monopolo magnetico\\
   Le correnti generano campi elettromagnetici
   \subsection{Induzione magnetica}
   $\vec{B}$ è l'induzione magnetica $udm[B] = 1T$ (un Tesla)
   \subsection{Campo magnetico}
-  \[ \oint_S \vec{B}\cdot \hat{n} d\Sigma = 0 \]
+  $$ \oint_S \vec{B}\cdot \hat{n} d\Sigma = 0 $$
   Campo magnetico solenoidale. (solenoidale quando il flusso del campo attraverso una qualsiasi superficie chiusa è uguale a 0)
 
   \section{Forza di Lorentz}
   è la forza che sperimenta una carica $q$, in moto con velocità $\vec{v}$, quando essa entra in una regione con campo magnetico $\vec{B}$
-  \[ \vec{F_L} = q\vec{v} \times \vec{B} \]
-  \[ |\vec{F}| = F_L = qvB sin\theta_{vB} \]
-  \[ [B] = [\frac{F}{Q\frac{L}{T}}] = [\frac{F\cdot L}{I\cdot L^2}] = [\frac{E}{I\cdot L^2}] \]
+  $$ \vec{F_L} = q\vec{v} \times \vec{B} $$
+  $$ |\vec{F}| = F_L = qvB sin\theta_{vB} $$
+  $$ [B] = [\frac{F}{Q\frac{L}{T}}] = [\frac{F\cdot L}{I\cdot L^2}] = [\frac{E}{I\cdot L^2}] $$
 
   \section{Forze che agiscono su una carica}
-  \[ \vec{F} = q(\vec{E} + \vec{v} \times \vec{B}) \]
+  $$ \vec{F} = q(\vec{E} + \vec{v} \times \vec{B}) $$
 
   \section{Forza su un tratto di filo percorso da cariche}
-  \[ dF = -e dN \vec{v_d} \times \vec{B}\]
+  $$ dF = -e dN \vec{v_d} \times \vec{B}$$
   dove $dN$ è il numero di elettroni. $dN = nd\tau$ che è la densità volumica\\
   La riedizione della forza di Lorentz, invece che per una carica puntiforme per un tratto di filo infinitesimo
-  \[ d\vec{F} = i d\vec{S} \times \vec{B} \]+++
+  $$ d\vec{F} = i d\vec{S} \times \vec{B} $$+++
   che è anche chiamata seconda legge elementare di Laplace
 
   \section{Principio di equivalenza di Ampere}
   Principio che pone l'equivalenza tra spire attraversate da corrente e magneti:
-  \[ \vec{m} = i \Sigma \hat{n} \]
+  $$ \vec{m} = i \Sigma \hat{n} $$
   è il momento magnetico della spira. Permette di pensare alla spira come ad un bipolo magnetico.\\
   Versione infinitesimale, che è anche il principio di equivalenza di ampere:
-  \[ d\vec{m} = id\Sigma \hat{n} \]
+  $$ d\vec{m} = id\Sigma \hat{n} $$
 
   \section{Prima legge elementare di Laplace}
   Le correnti possono generare campi magnetici.
   Si ha $id\vec{s}$ un tratto lungo un filo, mi interessa sapere qual'è il campo magnetico esercitato dal piccolo segmento $id\vec{s}$ nel punto $P$ generico. Si ha anche la congiungente $\hat{u}_r=\hat{r}$ dal punto di sorgente del campo magnetico al punto $P$.
-  \[ d\vec{B} = K_m \frac{id\vec{s} \times \hat{u}_r}{r^2} \]
+  $$ d\vec{B} = K_m \frac{id\vec{s} \times \hat{u}_r}{r^2} $$
   \subparagraph{Nota}
   La prima legge elementare di Laplace è uno strumento matematico, non ha senso fisico: è impossibile misurare il contributo di $id\vec{s}$ senza misurare il contributo di tutto il "circuito" in quanto la corrente non si può spezzare in più parti.
   \paragraph{Forma generale con conduttore filiforme}
-  \[ \vec{B}(P) = \oint_C d\vec{B} = \oint_C \frac{\mu_0}{4\pi} \frac{id\vec{s} \times \hat{u_r}}{r^2}\]
+  $$ \vec{B}(P) = \oint_C d\vec{B} = \oint_C \frac{\mu_0}{4\pi} \frac{id\vec{s} \times \hat{u_r}}{r^2}$$
   Dove $C$ è il filo
   \paragraph{Forma generale con conduttore non filiforme}
-  \[ \vec{B}(P) = \frac{\mu_0}{4\pi} \int_V \vec{J}\frac{\hat{u_\tau} \times \hat{u_r}}{r^2} d\tau \]
+  $$ \vec{B}(P) = \frac{\mu_0}{4\pi} \int_V \vec{J}\frac{\hat{u_\tau} \times \hat{u_r}}{r^2} d\tau $$
 
   \section{Legge di Biot-Savart}
   Il campo magnetico $\vec{B}$ generato a distanza $R$, da un filo indefinito percorso dalla corrente $i$ è
-  \[ \vec{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{\theta} \]
+  $$ \vec{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{\theta} $$
   Dove $\hat{\theta}$ è il versore del campo magnetico
 
   \section{Legge di Ampere}
-  \[ \Tau_C (\vec{B}) = \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C \]
+  $$ \Tau_C (\vec{B}) = \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C $$
   Dove $i_C$ sono le correnti concatenate (interne) al circuito
 
   \subsection{Equazioni di Maxwell}
   Per campi elettrici e magnetici statici (che non variano nel tempo)
-  \[ \oint_S \vec{E}\cdot \hat{n} dS = \frac{q_{int}}{\epsilon_0} \]
-  \[ \oint_S \vec{B}\cdot \hat{n} dS = 0 \]
-  \[ \oint_C \vec{E}\cdot d\vec{l} = 0 \]
-  \[ \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C \]
+  $$ \oint_S \vec{E}\cdot \hat{n} dS = \frac{q_{int}}{\epsilon_0} $$
+  $$ \oint_S \vec{B}\cdot \hat{n} dS = 0 $$
+  $$ \oint_C \vec{E}\cdot d\vec{l} = 0 $$
+  $$ \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C $$
 
   \section{Legge di Faraday-Neumann-Lenz}
   Ogni variazione del flusso nel tempo genera una f.e.m.
-  \[f.e.m = \quad -\frac{d\Phi(\vec{B})}{dt} \]
-  \[ i = -\frac{f.e.m.}{R} \]
+  $$f.e.m = \quad -\frac{d\Phi(\vec{B})}{dt} $$
+  $$ i = -\frac{f.e.m.}{R} $$
 
   L62
 L 143
