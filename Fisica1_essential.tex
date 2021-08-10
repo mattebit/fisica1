@@ -1,4 +1,4 @@
- \documentclass[a4paper]{report}
+\documentclass[a4paper]{report}
 
 \usepackage[top=25mm,bottom=25mm]{geometry}
 \usepackage[utf8]{inputenc}
@@ -28,6 +28,9 @@
   $$ \vec{a} \times \vec{b} = \vec{c} $$
   $$ |\vec{c}| = |\vec{a}||vec{b}| sin \theta_{ab} $$
   Il vettore risultante ha direzione e verso dati dalla regola della mano destra, col pollice sul primo vettore a e indice sul secondo vettore b.
+
+  \subsection{Proiezione di vettori}
+  Supponiamo di avere un piano inclinato di $\alpha$ gradi, e un oggetto soggetto alla Forza Peso sul piano, essa seguirà la direzione dell'accelerazione di gravità, quindi, per scomporre la forza sul piano e sull'ortogonale del piano usiamo il fatto che gli angoli interni al rettangolo che si viene a creare dal vettore della forza sulle proiezioni di questo vettore sul piano e sull'ortogonale saranno $\alpha$.
 
   \chapter{Cinematica del punto}
   Parte della fisica che ha a che fare con la descrizione matematica del movimento dei corpi.
@@ -214,10 +217,17 @@
 
 
   \section{Legge di gravitazione universale}
-  Due punti materiali si attraggono con una forza di intensità direttamente proporzionale al prodotto delle masse dei singoli corpi e inversamente proporzionale al quadrato della loro distanza:
+  Due punti materiali si attraggono con una forza di intensità d irettamente proporzionale al prodotto delle masse dei singoli corpi e inversamente proporzionale al quadrato della loro distanza:
   $$ F = G \frac{m_1 m_2}{r^2} $$
   Dove G è la costante di gravitazione universale
 
+  \section{Massa inerziale e gravitazionale}
+  Massa inerziale per variazione dello stato di moto, l'accelerazione di gravità è una costante, non dipende dal moto del corpo. La massa inerziale è la capacità del corpo ad opporsi a sollecitazioni esterne. La massa gravitazionale è una costante di proporzionalità tra l'accelerazione che è comune a tutti gli oggetti. Se un corpo è soggetto ad una forza gravitazionale, allora possiede una massa gravitazionale.
+  $$ m_i \vec{a} = m_G \vec{g} $$
+  Posso quindi assumere che le due accelerazioni coincidano
+  $$ \vec{a} = \vec{g} $$
+  E che la massa inerziale sia uguale a quella gravitazionale
+  $$ m_i = m_g$$
 
   \section{Leggi di Newton}
   \subsection{Prima legge di Newton o Legge di inerzia}
@@ -249,12 +259,12 @@
 
   \subsection{Reazioni vincolari}
   Sono reazioni dell'ambiente circostante.\\
-  Prendiamo il caso di una massa appoggiata su di un piano, ferma, allora esiste una forza vincolare
+  Prendiamo il caso di una massa appoggiata su di un piano, ferma , allora esiste una forza vincolare
   $$ \vec{N} $$
   normale alla superficie di appoggio, che bilancia la forza peso agente sulla massa.
 
   \subsection{Forza Peso}
-  La forza peso è proporzionale alla massa
+  La forza peso è proporzionale alla massa e all'acelerazione di gravità.
   $$ \vec{P} = m\vec{g} $$
 
   \section{Quantità di moto}
@@ -311,7 +321,7 @@
   $$ u.d.m.[p] = 1 \frac{J}{s} = 1W $$
   Dove $1W$ significa 1 Watt\\
   La potenza media, invece:
-  $$ \overbar{p} = \frac{W}{\Delta t} =  $$
+  $$ \overline{p} = \frac{W}{\Delta t} =  $$
 
 
   \section{Forza conservativa}
@@ -327,7 +337,19 @@
   oppure
   $$ \frac{dp}{dt} = 0 $$
 
-
+  \section{Forza elastica}
+  é la forza esercitata da una molla che si oppone ad una forza esterna. La forza elastica è proporzionale a quanto comprimo o allungo la molla $\Delta \vec{l}$
+  Quindi la forza elastica è
+  $$ \vec{F_{el}} = -K(\vec{l} - \vec{l_0}) = -K \Delta \vec{l} $$
+  $K$ è la costante elastica.
+  $$[K] = [\frac{F}{L}], \quad u.d.m.(K) = 1 \frac{N}{m}$$
+  Possiamo supporre un corpo attaccato ad una molla appoggiato su di iun piano, ignorando gli attriti fissiamo il sistema di riferimento sulla posizione del corpo con la molla a riposo. Quindi possiamo scrivere l'equazione del moto come:
+  $$x(t) = A sin(\omega t + \phi)$$
+  Dove $w^2$ nel nostro caso è uguale a
+  $$ w^2 = \frac{K}{m} $$
+  che derivando risulta
+  $$ v(t) = + A \omega cos(\omega t + \phi) $$
+  $$ a(t) = -A \omega^2 sin (\omega t + \phi) $$
 
   \section{Attrito}
   \subsection{Forza di attrito radente}
@@ -342,6 +364,16 @@
   Una volta "battuto" l'attrito statico, il moto continua ad essere rallentato dall'attrito radente, ma con un coefficiente di attrito diverso chiamato dinamico
   $$ \mu_d $$
 
+
+  \section{Pendolo semplice}
+  Supponiamo un pendolo che continui in moto perpetuo perchè privo di attriti. Le forze che agiscono sulla massa m attaccata al filo sono la massa stessa del peso e la tensione del filo. Il sistema di riferimento è basato sulla tangente alla traiettoria in concomitanza del punto e perpendicolare a questa tangente. Avremmo quindi la forza peso decomposta in base agli assi.
+  Abbiamo anche che lungo la tangente per definire la velocità con cui il corpo si muove posso usare la formula del moto circolare, avendo lunghezza (raggio) del pendolo costante
+  $$ v = \omega R$$
+  $$- |F_pparall| = - mg sin \theta = m a_T = m \frac{dv}{dt} = m \frac{d(l\omega)}{dt} = ml \frac{d^2 \Theta}{dt^2}$$
+  Semplificando le masse e spostando le cose
+  $$ \frac{d^2\Theta}{dt^2} + \frac{g}{l} sin \Theta = 0 $$
+  Come per la molla abbiamo che possiamo scrivere
+  $$ \frac{g}{l} = \omega^2$$
 
   \section{Energia}
   \subsection{Energia Cinetica}
@@ -821,7 +853,7 @@
   \section{teorema di Gauss}
   Nel caso in cui le cariche siano \textbf{interne:}
   Il flusso del campo elettrico attraverso una superficie chiusa è uguale alla somma delle cariche interne a tale superficie diviso $\epsilon_0$
-  $$ \Phi_{\Sigma} = \oint \vec{E} \cdot \hat{n} d\Epsilon = \sum_i \frac{q_i}{\epsilon_0} $$
+  $$ \Phi_{\Sigma} = \oint \vec{E} \cdot \hat{n} d\epsilon = \sum_i \frac{q_i}{\epsilon_0} $$
   \paragraph{Nel caso di cariche esterne}
   Si ha che il flusso è nullo
   $$ d\Phi_{d\omega} = 0$$
@@ -1065,7 +1097,7 @@
   Dove $\hat{\theta}$ è il versore del campo magnetico
 
   \section{Legge di Ampere}
-  $$ \Tau_C (\vec{B}) = \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C $$
+  $$ \tau_C (\vec{B}) = \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C $$
   Dove $i_C$ sono le correnti concatenate (interne) al circuito
 
   \subsection{Equazioni di Maxwell}
