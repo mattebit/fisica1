@@ -143,7 +143,7 @@
   \section{Moto Circolare}
   \subsection{Moto Circolare Uniforme}
   Si dice circolare uniforme perchè la traiettoria è circolare, e uniforme perchè il modulo della velocità $|d\vec{v}|$ è costante.
-  La \textbf{velocità angolare istantanea}, che è il rapporto tra la differenza dell'angolo e la differenza di tempo, è
+  La \textbf{velocità angolare istantanea}, che è il rapporto tra la differenza dell'angolo e la differenza di tempo (ossia quanto cambia l'angolo rispetto al tempo), è
   $$ \omega = \frac{d\theta}{dt} $$
   $$ \omega = \frac{v}{R} $$
   Nel MCU essa è costante. Le leggi orarie per il MCU sono:
@@ -198,15 +198,30 @@
 
   \chapter{Sistemi di riferimento}
   \subsection{Sistema di riferimento Inerziale}
-  è un sistema di riferimento dove vale la prima legge della dinamica
+  è un sistema di riferimento dove vale la prima legge della dinamica, cioè dove un corpo permane nel suo stato di moto (quiete) a meno dell'interazione con forze esterne.\\
+  Un esempio è quello delle stelle fisse, ad esempio l'origine nel sole e gli assi verso altre galassie ferme.
   \subsection{Sistema di riferimento non Inerziale}
   La prima legge di Newton assume la forma
-  $$ \vec{F} = m(\vec{a^1} + \vec{a_t} + \vec{a_c}) $$
+  $$ \vec{F} = m(\vec{a^'} + \vec{a_t} + \vec{a_c}) $$
   è presente una accellerazione di un corpo anche senza forze esercitate su di esso
+  \subsection{Principio di relatività galileiana}
+  Dice che è sempre possibile ottenere uno stato di quiete di un moto cambiano il sistema di riferimento che utilizzo purchè il cambiamento di moto sia esprimibile come velocità.
+  $$\vec{v_0^i} = \vec{v} \Rightarrow \vec{v^'} = \vec{0}$$
+
   \subsection{Forze vere e forze apparenti}
   Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale. \\
   Le \textbf{forze vere} sono riconducibili alle interazioni fondamentali.\\
   Le \textbf{forze apparenti} sono una conseguenza del sistema di riferimento (relativo) scelto
+  \subsection{Regola della vite}
+  Il vettore $\vec{\omega}$ è un vettore che rappresenta la rotazione. La direzione identificata da $\vec{\omega}$ è l'asse di rotazione, il suo modulo sarà $\omega$, il verso è quello di avanzamento della vite.\\
+  Usando la \textbf{formula di Poisson} possiamo concludere
+  $$\frac{d\vec{A}}{dt} = \vec{\omega} \time \vec{A}$$
+  \subsection{Teorema delle velocità relative}
+  Avendo due sistemi di rferimento differenti per descrivere il moto di un corpo, supponendo che uno dei due sistemi si muova anch'esso, possiamo ricavare la velocità del moto in base alla rappresentazione col primo sistema e la velocità di trascinamento$ \vec{v_{o'}} + \vec{\omega} \time \vec{r^'}$ che deriva dal fatto che la misura sul secondo sistema è influenzata dal fatto che esso si muove. La velocità di trascinamento si può anche definire come la velocità relativa tra i due sistemi di riferimento, non centra la velocità del moto.
+  $$ \vec{v} = \vec{v'} + \vec{v_{o'}} + \vec{\omega} \time \vec{r^'} = \vec{v'} + \vec{v_t}$$
+  \subsection{Teorema delle accelerazioni relative}
+  $$ \vec{a} = \vec{a'} + \vec{a_t} + \vec{a_c}$$
+  dove $\vec{a_t}$ è l'accelerazione di trascinamento tra i due sistemi di riferimento, $\vec{a_c}$ è l'accelerazione di coriolì.
 
 
   \chapter{Dinamica del punto}
@@ -224,11 +239,34 @@
     \item Forza debole, responsabile delle interazioni per cui i nuclei cambiano di natura, responsabile del decadimento dei nuclei.
   \end{itemize}
 
+  \section{Punto materiale}
+  è un'approssimazione di un corpo in un punto. Quindi è un punto in cui si trova tutta la massa del corpo che sto considerando.\\
+  Un \textbf{sistema di punti materiali} è un sistema che contiene vari punti materiali. Mi pongo il problema di differenziare le\\
+  \textbf{forze esterne} dalle \textbf{forze interne} al sistema.
+  Concentrandomi sul punto materiale $i$-esimo, posso scomporre la sua risultante delle forze in
+  $$\vec{R_i} = \vec{R_i^{E}} + \vec{R_i^{I}} =  m_i \vec{a_i}$$
+  Risultante delle forze esterne + risultante di quelle interne.\\
+  Definiamo la risultante delle forze esterne come
+  $$\vec{R} = M \frac{d^2\vec{x_{CM}}}{dt^2}$$
+  Dove $M$ è la massa totale del sistema, e $\vec{x_{CM}}$ il centro di massa del sistema
+
+  \section{Sistema isolato}
+  In un sistema isolato, la risultante delle forze esterne è 0
+  $$ \vec{R^E} = \vec{0}$$
+  Quindi $$M \vec{a_{CM}} = 0$$
+  Quindi la velocità del centro di massa è costante.\\
+  In un sistema isolato la \textbf{quantità di moto} si conserva
+  $$\vec{P} = M \vec{a_{CM}} = const$$
+  Questo si chiama \textbf{Principio della conservazione della quantità di moto}, cioè in un sistema isolato la quantità di moto TOTALE si conserva nel tempo
+  $$ \frac{d\vec{P}}{dt} = \vec{0}$$
+
 
   \section{Legge di gravitazione universale}
-  Due punti materiali si attraggono con una forza di intensità d irettamente proporzionale al prodotto delle masse dei singoli corpi e inversamente proporzionale al quadrato della loro distanza:
-  $$ F = G \frac{m_1 m_2}{r^2} $$
-  Dove G è la costante di gravitazione universale
+  Due punti materiali si attraggono con una forza di intensità indirettamente proporzionale al prodotto delle masse dei singoli corpi e inversamente proporzionale al quadrato della loro distanza:
+  $$ F = - G \frac{m_1 \cdot m_2}{r^2} \hat{r_{12}} $$
+  Dove G è la costante di gravitazione universale, e $\hat{r_{12}}$ è il versore che indica la congiungente dei due corpi. è importante dire che la forza in questione è sempre attrattiva, entrambi i corpi hanno questa forza che tende ad attrarli.\\
+  è possibile calcolare la massa della terra o l'accelerazione gravitazionale usando la formula sopra
+  $$g = \gamma \frac{M_T}{R^2}$$
 
   \section{Massa inerziale e gravitazionale}
   Massa inerziale per variazione dello stato di moto, l'accelerazione di gravità è una costante, non dipende dal moto del corpo. La massa inerziale è la capacità del corpo ad opporsi a sollecitazioni esterne. La massa gravitazionale è una costante di proporzionalità tra l'accelerazione che è comune a tutti gli oggetti. Se un corpo è soggetto ad una forza gravitazionale, allora possiede una massa gravitazionale.
@@ -280,6 +318,8 @@
   \subsection{Forza Peso}
   La forza peso è proporzionale alla massa e all'acelerazione di gravità.
   $$ \vec{P} = m\vec{g} $$
+  L'\textbf{Energia Potenziale} della forza peso per un punto $p$
+  $$ U (\vec{}) = mg \vec{p} $$
 
   \section{Quantità di moto}
   Si definisce quantità di moto di un punto materiale il vettore:
@@ -322,26 +362,40 @@
   $$ W = \int_{a}^{b} \vec{F_{tot}} \cdot \vec{ds} $$
   Anche definito come:
   $$ W_{TOT} = E_{Kf} - E_{Ki} $$
-  cioè il lavoro dal punto $i$ iniziale, al punto $f$ finale è definito come la differenza dell'energia cinetica nel punto $f$ meno quella nel punto $i$. Vale solo se il lavoro è \textbf{totale}, cioè se comprende tutte le forze agenti nel sistema
+  cioè il lavoro dal punto $i$ iniziale, al punto $f$ finale è definito come la differenza dell'energia cinetica nel punto $f$ meno quella nel punto $i$. Vale solo se il lavoro è \textbf{totale}, cioè se comprende tutte le forze agenti nel sistema\\
+  Il lavoro si dice \textbf{motore} se la forza per cui lo calcolo partecipa all'accelerazione nel verso della velocità\\
+  Il lavoro si dice \textbf{resistente} se la forza per cui lo calcolo partecipa alla decelerazione nel verso opposto della velocità
+  abbiamo\\
+  Il calcolo del lavoro è basato sul prodotto scalare $$\vec{a} \cdot \vec{b} = |\vec{a}| \ctdot |\vec{b}| \time cos \theta_{ab}$$
+
+  $$ [W] = [F \cdot L] = [M \frac{L}{T^2} \cdot L] = [M \cdot \frac{L^2}{T^2}] = [E] $$
+  $$ udm(W) = 1 Kg \frac{m^2}{s^2} = 1J$$
   \subsection{Lavoro Totale}
   $$ W_{TOT} = \sum_K W_K = \sum_K \int_i^f \vec{F}\cdot d\vec{s} $$
-  \subsection{Per forze non conservative}
+  \subsection{Energia meccanica}
   $$ W = \Delta E_K + \Delta E_P = \Delta E_m $$
-
+  Nel caso di forze conservative, l'energia meccanica è Costante, quindi
+  $$ E = E_K + U $$
+  $$ E_{k_i} + U_i = E_{k_f} + U_f$$
 
   \section{Potenza}
   Mette in relazione il lavoro e il tempo durante il quale questo viene erogato
   $$ P = \frac{dW}{dt} = \vec{F} \cdot \vec{v} $$
-  è la potenza istantanea
+  è il lavoro per l'unità di tempo, anche la potenza istantanea
   $$ u.d.m.[p] = 1 \frac{J}{s} = 1W $$
   Dove $1W$ significa 1 Watt\\
   La potenza media, invece:
   $$ \overline{p} = \frac{W}{\Delta t} =  $$
 
 
-  \section{Forza conservativa}
-  Una forza $\vec{F}$ è conservativa, se il lavoro compiuto lungo un percorso chiuso è nullo, indipendentemente dal percorso scelto
+  \section{Forze conservative}
+  Esstono delle forze, per cui il lavoro per andare dal punto iniziale a quello finale \textbf{non dipende dal percorso fatto}. Queste forze si dicono conservative\\
+  Quindi, indipendentemente dal percorso potrò calcolare il lavoro Come
+  $$ W_{i \rightarrow f} = \int_{p_i}^{p_f} \vec{F} \cdot d\vec{s} = U(p_f) - U(P_i)$$
+  Una forza $\vec{F}$ è conservativa, se il lavoro compiuto lungo un percorso chiuso è nullo (cioè se torno da dove sono partito), indipendentemente dal percorso scelto
   $$ W_{chius} = 0 \quad \oint \vec{F} \cdot \vec{ds} = 0 $$
+  Una forza si dice conservativa se si può scrivere come derivata di un altra funzione di energia potenziale (?)
+  $$ F= -\frac{dU}{dx} (\vec{F} = \frac{-\vec{d} U}{dx})$$
   \paragraph{Corollario}
   $$ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot \vec{ds} $$
   non dipende dal percorso scelto
@@ -365,6 +419,11 @@
   che derivando risulta
   $$ v(t) = + A \omega cos(\omega t + \phi) $$
   $$ a(t) = -A \omega^2 sin (\omega t + \phi) $$
+  Abbiamo anche che il \textbf{lavoro della forza elastica} sarà
+  $$ \int_i^f \vec{F_el} \cdot d\vec{r} = - \frac{1}{2} K (x_f^2 -x_i^2)$$
+  L'\textbf{Energia potenziale} della forza elastica in un certo punto $P$ è
+  $$ U_{el}(\vec{P}) = \frac{1}{2} K x^2$$
+
 
   \section{Attrito}
   \subsection{Forza di attrito radente}
@@ -375,6 +434,8 @@
   $$ F \leq \mu_s N $$
   e una condizione di moto quando
   $$ F > \mu_s N $$
+  Il \textbf{lavoro della forza di attrito} è sempre negativo,
+  $$ W = \int \vec{F_as} \cdot d\vec{r}$$
   \paragraph{Coefficiente di attrito dinamico}
   Una volta "battuto" l'attrito statico, il moto continua ad essere rallentato dall'attrito radente, ma con un coefficiente di attrito diverso chiamato dinamico
   $$ \mu_d $$
@@ -397,11 +458,12 @@
   $$ dW = d[\frac{1}{2}m v^2] $$
   l'energia cinetica è sempre positiva, dipende solo dalla velocità dell'oggetto (e quindi dal sistema di riferimento che stiamo usando)
   $$ u.d.m.[E_K]= 1J = 1N\cdot M = 1 Kg \frac{m^2}{s^2}$$
+  Se tengo in considerazione tutte le forze che determinano il mio movimento, e ho che vale la seconda legge della dinamica, allora il lavoro della risultante di queste forze è uguale alla differenza tra lo stato finale e quello iniziale di una certa quantità, che chiamo energia cinetica.
 
   \subsection{Energia potenziale}
    l'energia potenziale di un oggetto è l'energia che esso possiede a causa della sua posizione.
    Se la forza è conservativa, si può sempre definire una funzione della posizione che si chiama energia potenziale.
-   Possiamo, quindi, scrivere il lavoro compe
+   Possiamo, quindi, scrivere il lavoro come
   $$ W_{AB} = -(U_B - U_A) $$
   \paragraph{Definizione}
   $$ U(\vec{x_P}) = - \int_o^P \vec{F}\cdot \vec{ds} $$
@@ -422,6 +484,8 @@
   Per \textbf{forze conservative} è sempre la stessa durante l'evoluzione del moto
   $$ E_m = E_K + E_P $$
   Si definisce \textbf{Conservazione dell'energia meccanica}
+  $$ \Delta U = \Delta E_k$$
+  Cioè la differenza dell'energia potenziale finale meno iniziale  deve essere uguale alla differenza dell'engergia cinetica finale meno l'iniziale
   \paragraph{Lavoro di forze non conservative}
   Per forze non conservative
   $$ W_{n.c.} = \Delta E_K + \Delta E_P = \Delta E_m $$
@@ -430,14 +494,39 @@
   In meccanica classica, un'interazione apparente, detta anche interazione fittizia o inerziale, è una forza, o un momento, che, anche se non vi viene applicata direttamente, agisce su un corpo al pari delle forze e dei momenti reali, o effettivi
 
   \section{Urti}
-  Un urto è l'interazione dinamica tra due masse, vengono in contatto tra di loro e modificano il loro stato di moto.
-  L'urto trasferisce quantità di moto da una massa all'altra
+  Un urto è l'interazione d inamica tra due masse, vengono in contatto tra di loro e modificano il loro stato di moto.
+  L'urto trasferisce quantità di moto da una massa all'altra. Quello che succede nell'urto viene semplificato, supponendo che il tempo in cui accade è molto minore del tempo del moto delle masse.
+  L'urto generico è descritto come
+  $$ \vec{P_i} = \vec{P_f}$$
+  $$ \vec{P_{1i}} + \vec{P_{2i}} = \vec{P_{1f}} + \vec{P_{2f}}$$
+  QUindi
+  $$m_1 \vec{v_{1i}} + m_2 \vec{v_{2i}} = m_1 \vec{v_{1f}} + m2 \vec{v_{2f}}$$
   \subsection{Urto perfettamente anelastico}
   Due oggetti (masse)$m_1, m_2$ si scontrano, e ne risulta un unica particella $m_3$\\
   Dalla conservazione della quantità di moto abbiamo
   $$ \vec{P_i} = \vec{P_f} $$
   e quindi
   $$ \vec{P_{1,i}} + \vec{P_{2,i}} = \vec{P_{3,f}} $$
+
+  \subsection{Urto elastico}
+  Nell'urto elastico vale
+  $$\vec{P_i} = \vec{P_f}$$
+  Ma vale Anche
+  $$E_{ki} = E_{kf}$$
+
+
+
+
+  \section{Leggi di Keplero}
+  \subsection{Prima}
+  Dice che i moti dei pianeti avvengono su orbite ellittiche, in cui il sole occupa il fuoco dell'ellisse
+  \subsection{Seconda}
+  Dice che le orbite avvengono in modo che la velocità areolare sia Costante, la velocità areolare è l'area spazzata dall'orbita nel tempo dt, individuata con un "triangolo".
+  $$ \frac{dA}{dt} = const$$
+  \subsection{Terza}
+  Il rapporto tra il quadrato del periodo dell'orbita del pianeta e il cubo del semiasse maggiore dell'ellisse è costante.
+  $$ \frac{T^2}{a^3} = K $$
+
 
 
 
@@ -456,18 +545,68 @@
     \item Gas monoatomico: $\frac{3}{2}R$
     \item Gas diatomico: $\frac{5}{2}R$
     \item Gas poliatomico $3 R$
+
+    Tipi di grandezze:
+    \begin{itemize}
+      \item Grandezze \textbf{estensive}, sono grandezze che dipendono dall'estensione del sistema termodinamico (per esempio volume o massa)
+      \item Grandezze \textbf{intensive} non di pendono dall'estnesione del sistema termodinamico (ad esempio pressione, temperatura e densità)
+    \end{itemize}
+  \end{itemize}
+
+  \section{Tipi di scambi}
+  Ci possono essere diversi tipi di scambi tra un sistema termodinamico e l'ambiente. Lo scambio può essere definito come
+  \begin{itemize}
+    \item Aperto, se c'è sia scambio di materia che di energia (per esempio una pentola d'acqua che bolle senza coperchio)
+    \item Chiuso, se non c'è scambio di materia ma c'è di energia (per esempio pentola d'acqua che bolle con coperchio)
+    \item Isolato, se non scambia ne materia ne energia (per esempio contenitore esolato che contiene acqua)
+    \item Impossibile scambiare materia senza energia.
   \end{itemize}
 
   \section{Equilibrio Termodinamico}
-  Quando sussiste un equilibrio \textbf{meccanico}, un equilibrio \textbf{dinamico} e un equilibrio \textbf{termico}
+  Quando sussiste un equilibrio \textbf{meccanico}, un equilibrio \textbf{chimico} (no reazione chimica) e un equilibrio \textbf{termico} (no differenza di temperatura) all'interno di un sistema termodinamico.\\
+  Da notare che questo deve valere per ogni "parte" del mio sistema che prendo in considerazione.
+  \subsection{Principio zero della termodinamica}
+  se ho un sistema $T_A$ che è in equilibrio termico col sistema $T_B$..
+  $$T_A = T_B$$
+  e $$T_B = T_C$$
+  allora $$T_A = T_C$$
+
+
+  \section{temperatura}
+  Definita dalla media dell'energia cinetica dei componenti interni. La temperatura definisce varie esperienze nel mondo: espansione/contrazione liquidi e gas, variazione resistenza elettrica, ...\\
+  è definita su una scala avente come zero il punto triplo dell'acqua
+  $$T_0 = 273,16 K = 0 °C$$
+  Quindi si può dire che la temperatura in gradi centigradi
+  $$ t(°C) = T(K) - 273,16$$
+  E in gradi farenhait
+  $$ t(°F) = \frac{9}{5} t(°C) + 32$$
+  La temperatura è misurata col \textbf{termometro}, il quale trasforma i cambiamenti di temperatura in cambiamenti di spazio
+  $$\Delta T \rightarrow \Delta x$$
+
+
+  \section{Contatto termico}
+  Avendo dei corpi a contatto tra di loro, se essi hanno temperatura inziale diversa tra di loro, per un tempo $\Delta t$ atteso troveremo i corpi con temperatura uguale, indipendentemente dal tipo di contatto.\\
+  Tipi di Contatto
+  \begin{itemize}
+    \item Parete diatermica: Ottimo contatto tra i corpi, il calore si scambia facilmente
+    \item Pareti adiabatiche (isolate): non c'è scambio di calore (in un tempo limite)
+  \end{itemize}
+
+  \section{Legge di Joule}
+  Qualunque tipo di lavoro venga effettuato in un sistema, questo risulterà in un aumento di temperatura del sistema
+
 
   \section{Primo principio della Termodinamica}
   $$ \Delta U = Q - W $$
-  Dove, $\Delta U$ è la variazione di energia interna al sistema, $Q$ è il calore ($>0$ assorbito, $<0$ ceduto), e $W$ è il lavoro, ($>0$ è compiuto, $<0$ è "ricevuto".\\
+  Dove, $\Delta U$ è la variazione di energia interna al sistema, $Q$ è il calore ($>0$ assorbito/ricevuto, $<0$ ceduto), e $W$ è il lavoro, ($>0$ è compiuto, $<0$ è "ricevuto".\\
   Il lavoro $W$ e il calore $Q$ dipendono dal percorso, $\Delta U$ no.
 
-  \section{Trasformazioni quasi-statiche}
-  Sono passaggi da uno stado d'equilibrio, a un altro stato di equilibrio tramite uno stato di equilibrio.
+  \section{Trasformazioni termodinamiche}
+  una trasformazione è il passaggio di un sistema termodinamico da uno stato ad un altro. In genere durante una trasformazione il sistema termodinamico non è in equilibrio
+
+  \subsection{Trasformazioni quasi-statiche}
+  Sono passaggi da uno stado d'equilibrio ad un altro stato di equilibrio tramite uno stato di equilibrio. Posso immaginare che le cose siano fatte con una calma e dolcezza tale da non perturbare l'ambiente.\\
+  Se una trasformazione è quasi-statica (e non ci sono dissipazioni) allora è una trasformazione reversibile.
 
   \section{Trasformazioni cicliche}
   \subsection{Ciclo di Carnot}
@@ -496,7 +635,15 @@
     \item Non cisono dissipazioni
   \end{itemize}
 
-  \section{Calore specifico}
+  \section{Calore}
+  Il calore è qualcosa che determina un cambiamento di temperatura.
+  $$ \Delta T = \gamma Q$$
+  Il calore è anche proporzionale all'energia interna del sistema
+  $$ \Delta U = Q$$
+  Abbiamo anche che il calore è equivalente al lavoro che ho applicato al Sistema
+  $$Q = -W = \Delta U_{int}$$
+
+  \subsection{Calore specifico}
   $$ Q = cm(T_f - T_i) $$
   Segue, c è il calore specifico del corpo
   $$ c = \frac{1}{m} \cdot \frac{dQ}{dT} $$
