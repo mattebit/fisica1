@@ -599,14 +599,20 @@
   \section{Primo principio della Termodinamica}
   $$ \Delta U = Q - W $$
   Dove, $\Delta U$ è la variazione di energia interna al sistema, $Q$ è il calore ($>0$ assorbito/ricevuto, $<0$ ceduto), e $W$ è il lavoro, ($>0$ è compiuto, $<0$ è "ricevuto".\\
-  Il lavoro $W$ e il calore $Q$ dipendono dal percorso, $\Delta U$ no.
+  Il lavoro $W$ e il calore $Q$ dipendono dal percorso, $\Delta U$ no.\\
+  é anche vero che
+  $$\Delta U$$ dipende da $$\Delta T$$
 
   \section{Trasformazioni termodinamiche}
   una trasformazione è il passaggio di un sistema termodinamico da uno stato ad un altro. In genere durante una trasformazione il sistema termodinamico non è in equilibrio
 
   \subsection{Trasformazioni quasi-statiche}
-  Sono passaggi da uno stado d'equilibrio ad un altro stato di equilibrio tramite uno stato di equilibrio. Posso immaginare che le cose siano fatte con una calma e dolcezza tale da non perturbare l'ambiente.\\
+  Sono passaggi da uno stado d'equilibrio ad un altro stato di equilibrio tramite uno stato di equilibrio. Posso immaginare che le cose siano fatte con una calma e dolcezza tale da non perturbare l'ambiente e da rappresentare la transizione in infiniti stati di equilibrio.\\
   Se una trasformazione è quasi-statica (e non ci sono dissipazioni) allora è una trasformazione reversibile.
+
+  \subsection{Trasformazione reversibile}
+  Una trasformazione è reversibile se è possibile riportare allo stato iniziale sia il sistema sia l'ambiente esterno.\\
+  Gli esempi per cui una trasformazione sia irreversibile sono: gli attriti che disperdono calore
 
   \section{Trasformazioni cicliche}
   \subsection{Ciclo di Carnot}
@@ -645,10 +651,11 @@
 
   \subsection{Calore specifico}
   $$ Q = cm(T_f - T_i) $$
-  Segue, c è il calore specifico del corpo
+  Segue, c è il calore specifico del corpo, cioè una costante di proporzionalità.
   $$ c = \frac{1}{m} \cdot \frac{dQ}{dT} $$
-  Più precisamente, lungo il percorso $\gamma$
+  Più precisamente, calcolato lungo il percorso $\gamma$ della trasformazione
   $$ c_\gamma = \frac{1}{m} [\frac{dQ}{dT}]_\gamma $$
+  $$ [c] = [\frac{1}{m} \frac{E}{T}]$$
   $$ udm[c] = \frac{J}{kg\cdot K} $$
   è una grandezza \textbf{intensiva} (dipende dalla massa)\\
   Dove $c$ è una costante che dipende dal materiale, $m$ è la massa del materiale, e $T_f - T_i$ la differenza di temperatura
@@ -672,9 +679,9 @@
   \section{Cambi di fase}
   Gli stati di aggregazione della materia Sono
   \begin{itemize}
-    \item Solido: ha volume e forma propri
-    \item Liquido: ha volume proprio, ma non ha forma propria
-    \item Gassoso: non ha volume proprio e neanche forma propria
+    \item \textbf{Solido}: ha volume e forma propri
+    \item \textbf{Liquido}: ha volume proprio, ma non ha forma propria
+    \item \textbf{Gassoso} : non ha volume proprio e neanche forma propria
   \end{itemize}
   I passaggi sono:
   \begin{itemize}
@@ -691,7 +698,7 @@
   \subsection{Calore latente}
   Nel cambio di fase fusione e evaporazione
   $$ Q = \lambda m$$
-  dove $\lambda$ è il calore latente.\\
+  dove $\lambda$ è il calore latente, il calore necessario è proporzionale alla massa\\
   Per l'acqua
   $$ \lambda_{fusione}^{H_2O} = 3,3 \cdot 10^5 \frac{J}{Kg} \quad @ 273,16 K $$
   $$ \lambda_{fusione}^{H_2O} = 22,6 \cdot 10^5 \frac{J}{Kg} \quad @ 373,16K $$
@@ -704,15 +711,18 @@
     \item irraggiamento
   \end{itemize}
   \subsection{Conduzione}
+  Fenomeno per cui parti contigue di un corpo scambiano calore per contatto. Differenza di temperatura su unità di lunghezza (differenze infinitesimali di lunghezza) proporzionale alla superficie $ds$ e al tempo $dt$
   $$ dQ = -K \frac{dT}{dZ} ds dt $$
   dove $K$ esprime la conducibilità del materiale
   $$ udm[K] = \frac{J}{m\cdot sK} $$
   \subsection{Convezione}
   Il calore si trasmette mediante lo spostamento delle parti calde del sistema (esempio: acqua)
   \subsection{Irraggiamento}
-  Un sistema emette e assorbe onde elettromagnetiche, la legge che lega l'energia che viene emessa tramite onde elettromagnetiche e la temperatura del corpo è la legge di Stefan-Boltzmann
+  Un sistema emette e assorbe onde elettromagnetiche, la legge che lega l'energia che viene emessa tramite onde elettromagnetiche e la temperatura del corpo è la legge di Stefan-Boltzmann.\\
+  La \textbf{costante solare} è una costante di quanta energia irradiata arriva dal sole, è
+  $$c = 1,36 \frac{J}{m^2 s}= 1,36 \frac{W}{m^2}$$
   \subsubsection{Legge di Stefan-Boltzmann}
-  Dice che
+  Dice che il potere emissivo $\epsilon$ di un corpo che si trova ad una certa temperatura $T$. Con potere emissivo intendiamo quanta energia passa per un dato tempo in una data superficie. $e$ è l'emissività del corpo tra $[0,1]$
   $$\epsilon = \sigma e T^4$$
   $$ udm[\epsilon] = [\frac{E}{L^2T}] $$
   Dove $\epsilon$ è il potere emissivo del corpo, $e$ l'emissività del corpo (la capacità di un corpo di emettere onde) e $\sigma$ è la costante di Stefan-Boltzmann
@@ -722,36 +732,87 @@
   \subsection{Vaso DEWAR}
   Ottimo recipiente isolante
 
-  \section{Equazione di stato di Gas Ideali}
+  \section{Equazione di stato di Gas Ideali (perfetti)}
+  Usata per rappresentare i gas
   $$ pV = nRT $$
-  \subsection{Isocora}
-  Definita da Gay-Lussac, il volume $V$ è costante,
-  $$ p = p_0(1 + \beta t) $$
+  I gas ideali sono una buona approssimazione dei gas a bassa pressione.
+  \subsection{Pressione}
+  è la forza esercitata dal gas sul suo contenitore.
+  $$p = \frac{F_{perp}}{S}$$
+  $$[p]=[\frac{F}{L^2}]$$
+  La pressione è una media delle forze che sono impresse sul contenitore dalle particelle che si muovono. Dato che la massa del gas è molto minore di quella del suo contenitore, l'effetto degli urti sulle pareti non fanno muovere il contenitore.
+  \subsection{Equazione di Gay-Lussac (isocora)}
+  Se tengo a volume costante il gas, misuro la pressione a seconda della temperatura che si trova il gas, ottengo una retta.
+  $$ p = P_0 (1 + \beta t)$$
+  Cioè la pressione è uguale alla pressione a temperatura zero per uno più la tangente dell'angolo che la retta forma con l'origine. $\beta$ dipende dal gas\\
+  Possiamo riformularla come
+  $$ p = p_0 \beta T$$
+
   \subsection{Isobara}
   Definita da Gay-Lussac, la pressione $p$ è costante,
   $$ V = V_0(1 + \alpha t) $$
+  $\alpha$ dipende dal gas
+  Posso riformularla come
+  $$V = V_0 \alpha T$$
   \subsection{Isoterma}
   Definita da Boyle, la temperatura $t$ è costante,
   $$ p_i V_i = p_f V_f = cost$$
+  Posso riformularla Come
+  $$pV = \gamma $$
+  \subsection{Temperatura di zero}
+  Tutti i grafici delle trasformazioni sopra convergono nello stesso punto del grafico, a $t_0 = -273,16°C$. Se prendo questo punto come origine del mio sistema di riferimento delle temperatura, avrò la scala delle temperature \textbf{assolute}, dove:
+  $$0 K = -273,16 °C$$
+
+
   \subsection{Lavoro nei Gas}
+  Il lavoro di un gas è pari alla pressione del gas per la variazione infinitesima di volume del gas stesso.
+  $$ dW = p dV$$
+  La pressione, però, cambierà durante la trasformazione, quindi sarà in funzione del volume.
   $$ W = \int_i^f p(V)dV $$
   \subsection{Energia interna nei Gas ideali}
-  Sperimentalmente, per  un gas ideale,
+  Sperimentalmente, per  un gas ideale, la temperatura interna di un gas ideale dipende solo dalla temperatura.
   $$ U = U(T) $$
+  Osservato dall'esperimenti di espansione libera di Joule.
   \subsection{Equazione di stato dei gas non ideali}
   Van der Wals
   $$ f(p,V,T) = 0 $$
 
+  \section{Teoria cinetica dei gas}
+  Assumiamo che il gas sia composto da molecole di dimensione trascurabile di massa $m$ che si muovono di velocità casuale. Queste urtano le pareti del contenitore, e la massa $M$ della parete è molto maggiore $M>>m$ di quella delle molecole, quindi l'angolo di incidenza è anche uguale all'angolo di uscita. Gli urti risultano quindi elastici, e quindi:
+  $$ \Delta \vec{p} = \vec{p}_f - \vec{p}_i = 2 m\vec{v_X}$$
+  La forza esercitata sulla parete è uguale a
+  $$ \vec{F_x} = \frac{m \vec{V_x} v_x}{L_x}$$
+  Dove $L_x$ è la lunghezza del contenitore, cioè teniamo contor del tempo (lunghezza/velocità) in cui una particella percorre tutto il lato. Questa è la forza per una singola molecola, ma noi vogliamo la forza che tutte le molecole applicano alla superficie:
+  $$ F_x^{TOT} = \sum_{i=1}^N m_i \frac{v_{x,i}^2}{L_x}$$
+  quello che otteniamo è:
+  $$\frac{m}{L_x} \sum_{i=1}^N v_{x,i}^2 = \frac{m}{L_x} N \frac{\sum_{i=1}^N v_{x,i}^2}{N} = \frac{m}{L_x}N <v_x^2>$$
+  cioè otterremo la velocità quadratica media, e quindi, calcolando per tutte e 3 le dimensioni del contenitore:
+  $$p = N \frac{m <\vec{v^2}}{3V}$$
+  $$pV = \frac{2}{3} N <E_K>$$
+  La Temperatura non è che l'energia cinetica media del mio gas ideale
+  Concludiamo che
+  $$ U = l \frac{K_B T}{2} N$$
+  Cioè l'energia interna dipende dal numero dei gradi di libertà $l$ del gas
+
   \section{Trasformazioni dei gas ideali}
   Per gas ideali vale sempre
   $$ dU = n c_V dT $$
+  Perchè l'energia interna dipende solo dalla variazione di temperatura, QUindi
+  $$ \Delta U = f(T_B) -  f(T_A)$$
+  Nota bene che il calore specifico per i gas è il calore specifico molare.\\
+  Per i \textbf{gas monoatomici (ideali)}
+  $$c_V = \frac{3}{2}R$$
+  Per i \textbf{gas BIATOMICI (ideali)}
+  $$c_V = \frac{5}{2} R$$
+  Abbiamo anche la \textbf{relazione di Mayer} per i gas ideali:
+  $$c_p - c_v = R$$
   \begin{center}
   \begin{tabular}{ |c|c|c|c|c| }
    \hline
     & Isocora & Isobara & Isoterma & Adiabatica \\
     & $\Delta V = 0$ & $\Delta p = 0$ & $\Delta T = 0$ & -\\
    \hline
-   $\Delta U$ & $n c_V \Delta T$ & $n c_V \Delta T$ & $n c_V \Delta T = 0$ & $n c_V \Delta T$ \\
+   $\Delta U$ & $n c_V \Delta T$ & $n c_V \Delta T$ & $n c_V  \Delta T = 0$ & $n c_V \Delta T$ \\
    $Q$ & $n c_V \Delta T$ & $n c_p \Delta T$ & $nRTln(\frac{v_f}{v_i})$ & $0$\\
    $W$ & $0$ & $ nR\Delta T \quad p_B(\Delta V)$ & $nRTln(\frac{v_f}{v_i})$ & $-n c_V \Delta T$ \\
    \hline
@@ -764,7 +825,7 @@
   Dove $c_v$ è il calore specifico a volume costante
   \subsection{Trasformazione Isobara}
   $$ dU = dQ-dW $$
-  $$ n c_V dT = n c_p dT - nR dT \Rightarrow \quad c_p -c_V = R $$
+  $$ n  c_V dT = n c_p dT - nR dT \Rightarrow \quad c_p -c_V = R $$
   che è la relazione di Mayer. dove c $c_p$ è il calore specifico a pressione costante
   \subsection{Trasformazione Isoterma}
   $$ \Delta U = 0 \quad \Rightarrow \quad Q-W =0 $$
@@ -793,14 +854,31 @@
   \subsection{Macchien Frigorifere}
   $$ W<0 \quad \Rightarrow \quad Q < 0 $$
 
+  \subsection{Ciclo di carnot}
+  Composto da trasformazioni reversibili e coinvolge gas ideali.\\
+  \begin{itemize}
+    \item Espansione isoterma reversibile, volume aumenta, temp Costante
+    \item Espansione adiabatica reversibile
+    \item Compressione isoterma reversibile
+    \item Compressione adiabatica reversibile
+  \end{itemize}
+  Il lavoro totale della macchina è la somma dei lavori di tutte le trasformazioni, Cioè
+  $$ W= nRT_2 ln (\frac{V_B}{V_A}) + nR T_1 ln (\frac{V_D}{V_C})$$
+  Il calore assorbito è
+  $$ Q_A = nRT_2 ln(\frac{V_B}{V_A})$$
+  Il rendimento per il ciclo di carnot è pari a
+  $$\eta = \frac{W}{Q_A} = 1 - \frac{T_1}{T_2}$$
+
+
   \subsection{Ciclo di Otto}
   Tipico del motore a scoppio. è caratterizzato da
   \begin{itemize}
     \item espansione isobara
     \item compressione adiabatica
     \item accensione/combustione
-    \item decompressione
-    \item scarico
+    \item (Espansione) adiabatica, compio lavoro
+    \item decompressione (apro valvola)
+    \item scarico, gas esce
   \end{itemize}
   Il rendimento è pari a
   $$ \eta = 1 - \frac{|T_a - T_d|}{T_c - T_b} $$
@@ -811,7 +889,10 @@
   $$ \xi = \frac{T_1}{T_1 - T_2} $$
 
   \section{Rendimento}
+  SI definisce come il lavoro che la macchina compie diviso il calore che assorbe
   $$ \eta=\frac{W}{Q_A} \quad = 1- \frac{|Q_C|}{Q_A}$$
+  il rendimento è sempre
+  $$ 0 \leq \eta < 1$$
   \subsection{Macchine Termiche}
   Rendimento sempre compreso tra
   $$0 \leq \eta < 1$$
@@ -819,14 +900,15 @@
   $$0 \leq W < Q_A $$
   e quindi
   $$ 0 < |Q_C| < Q_A $$
-  \subsection {Macchine Frigorifere}
+  \subsection{Macchine Frigorifere}
   L'efficienza, o \textbf{Coefficiente di prestazione}
   $$ \xi = \frac{Q_A}{|W_S|}  $$
 
+
   \section{Legge di Avogadro}
-  Volumi uguali, di gas diversi, alla stessa pressione e temperatura, contengono lo stesso numero di molecole $N$
+  Volumi uguali, di gas diversi, alla stessa pressione e temperatura, contengono lo stesso numero di molecole $N$. \\Il numero di componenti del gas è proporzionale al prodotto pressione per volume diviso la temperatura per una costante.
   $$ N = \frac{1}{K_B} \frac{pV}{T} $$
-  Il numero di \textbf{moli} $n$ è definito come
+  Il numero di \textbf{moli} $n$ è definito come il numero totale di molecole $N$ diviso il numero di avogadro
   $$ n = \frac{N}{N_A} $$
   Cioè si prende il numero di molecole $N$, e lo si divide per il numero di avogadro $N_A$,
   $$ n = 1 \quad \Rightarrow \quad N = N_A = 6,022 \cdot 10^{23}$$
@@ -840,7 +922,7 @@
   \section{Secondo principio della Termodinamica}
   Il calore non fluisce \textbf{mai} spontaneamente da un corpo ad uno più caldo.
   Mette dei limiti alle possibili trasformazioni di calore in lavoro
-  \subsection{Enunciato kelvin-Planck}
+  \subsection{Enunciato -Planck}
   è \textbf{impossibile} realizzare un processo il cui unico risultato sia la trasformazione di calore in lavoro
   \subsection{Enunciato di Clausius}
   è \textbf{impossibile} realizzare un processo il cui unico risultato sia il passaggio di calore da un corpo a uno a temperatura maggiore
@@ -850,32 +932,37 @@
   L'altra macchina $r$ è reversibile, ed estrae calore $Q_2'$ da $T_2$, restituisce calore $Q_1'$ a $T_1$ , il lavoro che essa compie è $W$\\
   Allora,
   $$ \eta_{x(T_1, T_2)}  \leq \eta_{r(T_1, t_2)} $$
-  Cioè il rendimento di una macchina termica qualsiasi che lavori tra la temperatura $T_1$ e $T_2$ è $\leq$ del rendimento di una macchina reversibile qualsiasi che lavori tra le medesime temperature.
+  Cioè il rendimento di una macchina termica qualsiasi che lavori tra la temperatura $T_1$ e $T_2$ è $\leq$ del rendimento di una macchina reversibile qualsiasi che lavori tra le medesime temperature.\\
   \subsubsection{Altra formazione}
   $$ \frac{Q_1}{T_1} + \frac{Q_2}{T_2} = 0 $$
 
   \subsubsection{Corollario}
   Tutte le macchine reversibili, che lavorano tra le stesse temperature hanno lo stesso rendimento
   $$ \eta_{R_1(T_1, T_2)} = \eta_{R_2(T_1, T_2)} $$
+  Per calcolarlo usiamo la reversibile di carnot.
+
   \subsubsection{Osservazioni}
   Il rendimento massimo coincide con quello della macchina reversibile
   $$ \eta_{MAX(T_1,T_2)} = \eta_{R(T_1,T_2)} = 1-\frac{T_1}{T_2} $$
+  Per le trasformazioni reversibili
+  $$ \frac{|Q_C|}{T_1} = \frac{|Q_A|}{T_2}$$
 
   \section{Teorema di Clausius}
-  Estende il Teorema di Carnot alle trasformazioni generiche
+  Estende il Teorema di Carnot alle trasformazioni generiche, praticamente spezzetto il ciclo in tanti piccoli trattini, e calcolo i calori scambiati in ogni trattino.
   $$ \sum_{j=1}^N \frac{Q_j}{T_j} \leq 0 $$
   Tutti gli scambi di calore con le $N$ sorgenti con cui il sistema è in contatto sommati, devono essere $\leq 0$. è $=0$ se il ciclo (la macchina) è reversibile
-
+  Posso trasformare la sommatoria in integragle facendo puntare $N \rightarrow \infty$
   $$ \oint \frac{dQ}{T} \leq 0 $$
+  Questo integrale si chiama integrale di clausius
 
   \section{Entropia}
   Data una trasformazione ciclica da $A$ a $B$ nel tratto 1 e da $B$ a $A$ nel tratto 2, se il ciclo è reversibile si ha
   $$ \oint \frac{dQ}{T} = \int_A^B (\frac{dQ}{T})_1 + \int_B^A (\frac{dQ}{T})_2 = 0$$
   ma, visto che il ciclo è reversibile vale anche
   $$ \int_A^B (\frac{dQ}{T})_1 - \int_A^B (\frac{dQ}{T})_2 = 0$$
-  Quindi non dipende dal percorso scelto. Abbiamo quindi questa funzione, che si chiama $entropia$
+  Quindi non dipende dal percorso scelto. Abbiamo quindi questa funzione, che si chiama \textbf{entropia}
   $$ \int_A^B (\frac{dQ}{T})_{rev} = S(B) -S(A) $$
-  La variazione di entropia è una funzione di stato:
+  La \textbf{variazione di entropia} nel percorso da $A$ a $B$ per una trasformazione qualsiasi è una funzione di stato, l'integrale è calcolato su una \textbf{reversibile} qualsiasi:
   $$ \Delta S_{A \rightarrow B} = \int_A^B (\frac{dQ}{T})_{rev. qualsiasi} $$
   \subsubsection{nota 1}
   Dati un sistema 1 e un sistema 2, il sistema 3 è $= sys1 \cup sys2$, l'entropia
@@ -907,13 +994,19 @@
 
   \subsection{Diagrammi T-S}
   $T$ e $S$ sono variabili termo dinamiche, quanto lo sono $p$ e $v$
+
   \subsection{Teorema dell'entropia}
-  Se il sistema è isolato
-  $$ dQ = 0 \quad \Rightarrow \quad \int_A^B(\frac{dQ}{T})_X = 0$$
-  Segue che
+  Se il sistema è isolato e quindi non scambia calore con l'esterno,
+  $$ dQ = 0 \quad \Rightarrow \quad \int_A^B(\frac{dQ}{T})_{(X)} = 0$$
+  Segue che per la trasformazione,
   $$ S_B \geq S_A $$
   $$ \Delta S \geq 0 $$
   e l'$=$ vale solo se la trasf. è reversibile
+
+  \subsection{Energia inutilizzata}
+  Energia inutilizzata è la variazione di entropia dell'universo rispetto all'evento che osservo per la temperatura a cui avviene
+  $$E = T_0 \Delta S_u$$
+
 
   \chapter{Elettricità}
   \section{Const}
@@ -944,17 +1037,25 @@
   $$ \vec{E} = \frac{\sigma}{2\epsilon_0} $$
   Dove $\sigma$ è la densità di carica
 
-  \section{Forza di attrazione tra due cariche puntiformi}
+  \section{Introduzione}
+  Abbiamo due tipi di materiali:
+  \begin{itemize}
+    \item conduttori
+    \item isolanti: Vetri e affini (+) che si respingono tra di loro, plastiche (-) si respingono tra di loro. Plastica e vetro si attraggono
+  \end{itemize}
+
+  \section{Forza di attrazione tra due cariche puntiformi (forza di culomb)}
   Date due cariche $q_1$ e $q_2$ la forza che $q_1$ applica a $q_2$ è pari a
   $$ F_{1 \rightarrow 2} = K \frac{q_1 q_2}{r_{12}^2} $$
   $r_{12}$ è la distanza tra i due oggetti. La forza agisce sempre lungo la congiungente delle due cariche.
   $$u.d.m[q] = [I\cdot T] = 1C (culomb)$$
+  Cioè corrente elettrica per tempo
 
   \section{Principio di sovrapposizione}
-  Date $n$ cariche, che interagiscono su una carica, l'effetto totale sulla carica di prova, è dato dalla sovrapposizione degli effetti delle singole cariche
+  Date $n$ cariche, che interagiscono su una carica, l'effetto totale sulla carica di prova, è dato dalla sovrapposizione degli effetti delle singole cariche. Cioè si sommano i vettori delle forze applicate su una forza.
 
-  \section{Campo elettrico o elettrostatico}
-  Il campo elettrico è il rapporto fra la forza che muove la carica e la carica stessa
+  \section{Campo elettrico o elettrostatico (generato da carica puntiforme)}
+  Il campo elettrico è il rapporto fra la forza che muove la carica e la carica stessa. è anche definito come il rapporto tra la forza ricevuta sulla carica di prova e la carica della carica di prova.
   $$\vec{E} = \frac{\vec{F}}{q_0} = \frac{K Q}{r^2} \hat{r}$$
   Dove $\vec{E}$ è il campo elettrico, $\vec{F}$ è la forza subita dalla carica, e $q_0$ la carica\\
   Il campo elettrico è \textbf{uscente} se la carica che lo genera $Q$ è $>0$\\
@@ -968,22 +1069,46 @@
 
   \subsection{lavoro di un campo elettrico}
   $$ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot d\vec{s} = \int_a^b q \vec{E} \cdot d\vec{s} = q \int_a^b \vec{E}\cdot d\vec{s} $$
+  Il lavoro nel campo elettrico dipende dal percorso.
+
+  \subsection{Campo elettrico di un filo di lunghezza indefinita}
+  La quantità di carica per unità di lunghezza $\lambda = \frac{dq}{dl}$ definisce la densità di carica, se ha valore positivo, il campo è uscente dal filo. Il campo elettrico in un punto distante dal filo $r$ sarà
+  $$ E(r) = \frac{\lambda}{2\pi r \epsilon_0}$$
+
+  \subsection{Campo elettrico in una piana di carica infinita}
+  La densità superficiale di carica si indica con $\sigma = \frac{dq}{d\Sigma}$
+  Il campo elettrico di un punto distante dal piano è pari a
+  $$E(x) =  \frac{\sigma}{2 \epsilon_0} $$
+  In una piana di carica infinita l'intensità del campo elettrico non dipende dalla distanza
+
+  \subsection{Attraversamento di uno stato di carica}
+  Per un circuito su una piana infinita la circuitazione ci dice che è uguale a 0\\
+  Quando attraverso una distribuzione superficiale di carica, il campo subisce una discontinuità nella componente normale alla superficie stessa. La discontinuità è proporzione nella distribuzione superficiale di carica nel punto dove sto guardando\\
+  $$ E_{1n} - E_{2n} = \frac{\sigma}{\epsilon_0} \cdot \hat{n}$$
+
 
   \subsection{Circuitazione del campo elettrico}
   $$\oint \vec{E} \cdot d\vec{s} = f.e.m.$$
-  dove $f.e.m$ è la forza \textbf{elettromotrice}, cioè è uguale alla forza che sta portando la carica dal punto a al punto b (stesso)
+  dove $f.e.m$ è la forza \textbf{elettromotrice}, cioè è uguale alla forza che sta portando la carica dal punto a al punto b (stesso).
+  Nella circuitazione, si crea un percorso chiuso. Possiamo definire la $f.e.m.$ come il lavoro lungo il circuito del campo elettrico.\\
+  Nella circuitazione per forze conservative è uguale a zero
 
   \subsection{caso Elettrostatico}
-  $$ W_{AB} = - \Delta U_{AB}$$
+  Abbiamo due cariche ferme $Q$ e $q$ a distanza $r$
+  $$ W_{AB} = - \Delta U_{AB} = -q \Delta V_{AB}$$
+  questo vale per le forze conservative
   $$ U_{A} = \frac{KQ}{r_A} + const $$
   Dove $U_{AB}$ è l'energia potenziale elettrostatica. Le forze, almeno per la singola carica sono forze conservative e quindi, vale per la carica puntiforme: La circuitazione del campo elettrostatico è $=0$
   $$ \oint \vec{E} \cdot d\vec{s} = 0 $$
   che è equivalente alla conservatività del campo elettrostatico.\\
-  Si introduce \textbf{il potenziale} $\Delta V$, definito come la differenza di energia potenziale diviso la carica
+  Si introduce \textbf{il potenziale} $\Delta V$, definito come la differenza di energia potenziale diviso la carica di prova
   $$ \Delta U \longrightarrow \Delta V = \frac{\Delta U}{q} $$
   Il potenziale elettrostatico si definisce come:
   $$ V_A = \frac{KQ}{r_A} + const^{'}$$
-  Dove $const'$ è una costante arbitraria
+  Dove $const'$ è una costante arbitraria.\\
+  Potenziale elettico o Elettrostatico
+  $$ [V] = [\frac{U}{q}]$$
+  $$u.d.m.[V] = \frac{1J}{1C} = 1V$$
 
   \section{Forza Elettrica}
   Se una carica $q$ è in movimento, cè una forza non nulla che la muove, questa forza può essere
@@ -993,6 +1118,7 @@
 
   \section{Linee di forza}
   Dato un campo vettoriale $\vec{v}$, può essere rappresentato graficamente tramite le linee di forza. In ogni punto le linee di forza hanno una tangente, che coincide con la direzione del vettore $\vec{v}$ nel punto $P$
+  La linea di campo (o di forza) è definita come la congiungente dei punti di applicazione di tutti i vettori che si incontrano seguendo la direzione tangente ai vettori nei punti di applicazione stessi.
   \begin{itemize}
     \item direzione($\vec{v_P}$) = tangente alle linee di forza nel punto $P$
     \item Verso($\vec{v_P}$) = verso di percorrenza delle linee nel punto $P$
@@ -1007,19 +1133,31 @@
   Più in generale per una superficie non infinitesima, si ha la somma di tante superfici infinitesime
   $$ \Phi = \int_\Sigma d\Phi = \int_\Sigma \vec{v} \cdot \hat{n} d\Sigma $$
 
+
   \section{Angolo solido}
-  Area della calotta sferica, normalizzata al quadrato del raggio della sfera, l'angolo solido è
-  $$ \omega = \frac{S}{R^2} $$
-  dove $S$ è la superficie "di taglio" sempre ortogonale
+  Nell'angolo piano (2D) abbiamo l'angolo dello "spicchio" che è $\alpha$ che è uguale a
+  $$\alpha = \frac{a}{R}$$
+  Dove $a$ è la calotta dello spicchio, e $R$ il raggio\\
+  per l'angolo solido (3D)
+  L'angolo solido è l'area di taglio della calotta, cioè
+  $$ \omega = \frac{S_{ORT}}{R^2} $$
+  dove $S$ è la superficie "di taglio" sempre ortogonale al centro.\\
+  Noi rappresentiamo le superfici con un versore $\hat{n}$
+
 
   \section{teorema di Gauss}
   Nel caso in cui le cariche siano \textbf{interne:}
   Il flusso del campo elettrico attraverso una superficie chiusa è uguale alla somma delle cariche interne a tale superficie diviso $\epsilon_0$
-  $$ \Phi_{\Sigma} = \oint \vec{E} \cdot \hat{n} d\epsilon = \sum_i \frac{q_i}{\epsilon_0} $$
+  $$ \Phi_{\Sigma} = \oint \vec{E} \cdot \hat{n} dS = \sum_i \frac{q_i}{\epsilon_0} $$
   \paragraph{Nel caso di cariche esterne}
   Si ha che il flusso è nullo
   $$ d\Phi_{d\omega} = 0$$
   Per il flusso tramite la superficie $\omega$
+  \paragraph{Nel caso di più cariche interne}
+  Il campo elettrico totale, è la somma di tutti i campi elettrici genreati da ogni carica
+  $$E_{TOT} = E_1 + E_2 + ...$$
+  Il flusso totale è pari alla somma di tutte le cariche interne diviso $\epsilon_0$
+  $$ \Phi_{\Sigma} = \sum_i \frac{q_i}{\epsilon_0} $$
 
 
   \section{Conduttori}
@@ -1030,13 +1168,15 @@
     \item metalli
   \end{itemize}
 
-  \subsection{Conduttore in Equilibrio}
-  Un conduttore si dice in equilibrio quando tutte le cariche al suo interno sono in equilibrio\\
+  \subsection{Conduttore in Equilibrio elettrostatico}
+  Un conduttore si dice in equilibrio quando tutte le cariche al suo interno sono ferme\\
   Cioè $\forall$ carica $q_i$
   $$\vec{v_i} = \vec{0} \Rightarrow \vec{F_i} = \vec{0} \Rightarrow \vec{E_i} = \vec{0}$$
   Definizione "media". Il campo elettrico è nullo (perchè le cariche non si muovono)
 
   \subsubsection{Primo corollario}
+  In conduttore in equilibrio, le cariche interne sono pari a $0$.
+  Se deposito una carica su un conduttore in equilibrio, le cariche si distribuiranno solo sulla superficie
   Per un conduttore in equilibrio vale $q_{intern} =0$. Se c'è una carica, si distribuisce sulla superficie del conduttore
   \subsubsection{Secondo corollario}
   Dati due punti $A, B$ all'interno del conduttore, la differenza di potenziale tra $A$ e $B$
@@ -1052,6 +1192,9 @@
   Una perturbazione esterna che redistribuisce $q_{EF}$ non sarà percepibile all'interno del conduttore e quindi su tutti i conduttori interni.\\
   Ogni perturbazione interna non sarà misurabile all'esterno
 
+  \section{Distribuzione di carica indotta (induzione)}
+  La distribuzione della carica di un conduttore è influenzata da un campo elettrico esterno, questo fenomeno si chiama induzione.
+
   \section{Capacità del conduttore}
   è il rapporto tra la carica $q$ depositata tra la superficie del conduttore, e il potenziale $V$ in cui il conduttore va, per effetto di questa carica. descrive la capacità di un conduttore di ospitare le cariche e di portarsi ad un certo potenziale
   $$ \mathbb{C} = \frac{q}{V} $$
@@ -1059,8 +1202,7 @@
   dove $ F $ è il Farad
 
   \section{Condensatori}
-  Quando due conduttori sono ininduzione completa, si chiamano condensatore ($R_1$ e $R_2$ sono i raggi del condensatore sferico)
-
+  Quando due conduttori sono ininduzione completa, si chiamano condensatore ($R_1$ e $R_2$ sono i raggi del condensatore sferico). Conduzione completa significa che tutte le linee di campo generate da un conduttore sono intercettate dall'altro
   $$ \Delta V = Kq (\frac{1}{R_1} - \frac{1}{R_2}) $$
 
   \subsection{Capacità di un condensatore}
@@ -1081,10 +1223,15 @@
   Quando, tutte le linee di campo elettrico nascono da un conduttore e muoiono nell'altro conduttore. Cioè non esiste una linea di campo elettrico che parte da un conduttore che non vada a finire nell'altro.
 
   \subsection{Condensatore piano}
+  Pensiamo una piana infinita con densità di carica positiva, sappiamo che il campo elettrico in questo caso non dipende dalla distanza, quindi $E= \frac{\sigma}{2\epsilon_0}$. Abbiamo un'altra piana infinita con densità di carica $-q$, in modulo il campo elettrico sarà uguale.
+  L'effetto combinato dei campi sulle due piane risulterà in campo nullo all'esterno delle piane, e tra le due piane abbiamo il campo $E$.\\
+  Nel caso reale abbiamo due piani così vicini per cui possiamo approssimarli infiniti, con campo uniforme.\\
   Due armature piane, parallele, con carica $+q$ e $-q$.
   Il campo elettrico è pari a \( E = \frac{\sigma}{2\epsilon_0} \)
-  La somma dei vettori dei due campi elettrici è pari a $0$ all'esterno delle due armature, mentre all'interno è pari a $E$
+  La somma dei vettori dei due campi elettrici è pari a $0$ all'esterno delle due armature, mentre all'interno è pari a $E$. La capacità del condensatore piano è pari a:
   $$ C = \epsilon_0 \frac{S}{h} $$
+  Dove $h$ è la distanza tra le armature e $S$ la loro superficie.\\
+  Abbiamo quindi che la capacità dipende solo dalla geometria e distanza dei conduttori.
 
   \subsubsection{Effetti di bordo}
   Al limite delle armature ci sono delle linee che saranno curvate, trascurate per la debole intensità.
@@ -1110,7 +1257,7 @@
   $$ u = \frac{\Delta U_{el}}{h} = \frac{1}{2} \epsilon_0 E^2 $$
 
   \subsection{Forza tra le armature}
-  La forza tra le due armature del condensatore è definita come
+  La forza tra le due armature del condensatore è definita come la variazione di energia potenziale sullo spazio (per forze conservative)
   $$ F = -\frac{dU}{dS} $$
   $$ F = -\frac{d}{dS}[\frac{1}{2} \epsilon_0 E^2 \tau] $$
 
@@ -1120,7 +1267,7 @@
 
   \subsubsection{Condensatore isolato}
   La pressione elettrostatica tra due armature di un condensatore coincide con la densità volumica di energia
-  $$ P_{el} = \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 $$
+  $$ P_{el} = - \frac{F}{S} = -\frac{1}{2} \epsilon_0 E^2 $$
 
   \subsubsection{Condensatore e generatore}
   $$ d(\Delta U_{el}) = -\frac{1}{2} \epsilon_0 (\frac{\Delta V}{h})^2 S dh $$
@@ -1133,21 +1280,31 @@
   \section{Conduzione elettrica}
   Per esempio, il rame $Cu$ ha 1 elettrone "libero" per atomo. Calcoliamo quanti elettroni sono liberi per unità di volume
   $$ n = \frac{N_A \rho}{ A} = 8,49 \cdot 10^{28} \frac{e^-}{m^3} $$
+  Dove $N_A$ è il numero di avogadro, $\rho$ è la densità del materiale, $A$ è il numero di massa(?).\\
   Elettroni a metro cubo. la velocità media degli elettroni (per un volume abbastanza grande) è
   $$\vec{v_m} = \vec{0}$$
   Se il conduttore è sottoposto ad un campo elettrico esterno, la velocità media degli elettroni passa a quella di "drift":
   $$ \vec{v_m} = \vec{0} \longrightarrow \vec{v_m} = \vec{v_d} $$
-  Vettore densità di corrente elettrica, pari alla densità di cariche libere, per velocità di drift (o deriva), - la stessa cosa per le cariche negative
+  Vettore densità di corrente elettrica, pari alla densità di cariche libere, per velocità di drift media (o deriva), - la stessa cosa per le cariche negative
   $$ \vec{J_e} = n_+ e \vec{v_{d+}} - n_- e \vec{v_{d-}}$$
+  Voglio assumere che la corrente sia data da cariche positive che si muovono in un certo senso, quindi prendo le negative con segno -
 
   \subsection{Corrente elettrica}
   Si definisce come l'integrale verso la sezione del vostro filo
-  $$ i = \int_S n e \vec{v} \cdot \hat{n} dS = \frac{dq}{qt}$$
+  $$ i = \int_S \vec{J_e} \cdot \hat{n} dS = \int_S n e \vec{v} \cdot \hat{n} dS = \frac{dq}{dt}$$
+  La corrente elettrica è una quantità scalare, è il flusso della densità di corrente attraverso una superficie
   $$ u.d.m[i]=\frac{1C}{1s}= 1A $$
 
   \subsection{Principio di conservazione della carica elettrica}
   Data una superficie chiusa, la carica totale che passa attraverso questa superficie, è uguale alla variazione delle cariche nella superficie nel tempo. (tanta corrente entri nel volume tanta ne esce)
   $$ i_{tot} = \oint \vec{J} \cdot \hat{n} dS = -\frac{dq_{int}}{dt} $$
+  \subsubsection{Variazione di carica interna = 0}
+  Se la corrente totale è zero,
+  $$\frac{dq_{int}}{dt} = 0$$
+  Significa che nel mio conduttore, la corrente entrante è uguale a quella uscente
+  \subsubsection{Variazione di carica interna > 0}
+  $$\frac{dq_{int}}{dt} > 0$$
+  In questo caso ci sono delle sorgenti o pozzi di carica che generano questa corrente.
 
   \subsection{Legge di OHM}
   La velocità di deriva, è proporzionale al campo elettrico
@@ -1160,10 +1317,8 @@
   Dove $\rho{20}$ è la resistività misurata a 20 gradi celsius\\
   Cioè la legge di OHM lega il campo elettrico alla corrente tramite la costante di resistività $\rho$
   $$ \vec{E} = \rho \cdot \vec{J} $$
-
-
-  $$ i = \frac{ES}{\rho} = Eh \frac{S}{\rho h} = \Delta V \frac{1}{R} $$
-  $R$ Si chiama resistenza elettrica,
+  $$ i = \frac{ES}{\rho} = Eh \frac{S}{\rho h} = \Delta V \frac{1}{R} = \Delta V \frac{S}{\rho h} $$
+  $R$ Si chiama resistenza elettrica, $h$ è la lunghezza che sto considerando del mio conduttore, $S$ la sua superficie, Il campo elettrico per la lunghezza $Eh$ diventa $\Delta V$.
   $$ R = \rho \frac{h}{S} $$
   Dove $h$ è la lunghezza, e $S$ la sezione
 
@@ -1173,12 +1328,7 @@
 
   \subsection{Effetto Joule}
   La potenza, $P$
-  $$ P=\frac{dW}{dt} = \frac{dq\Delta V}{dt} = \Delta V \cdot i$$
-
-  \paragraph{Per circuiti dove vale la legge di OHM}
-  Si ha
-  $$ P = R I^2 $$
-
+  $$ P=\frac{dW}{dt} = \frac{dq\Delta V}{dt} = \Delta V \cdot i = \frac{\Delta V^2}{R} = R*i^2$$
 
   \subsection{Resistenze in serie}
   Consideriamo $R_1$ e $R_2$ in serie, la corrente $i$ che le attraversa è la stessa, quindi
