@@ -202,11 +202,11 @@
   Un esempio è quello delle stelle fisse, ad esempio l'origine nel sole e gli assi verso altre galassie ferme.
   \subsection{Sistema di riferimento non Inerziale}
   La prima legge di Newton assume la forma
-  $$ \vec{F} = m(\vec{a^'} + \vec{a_t} + \vec{a_c}) $$
+  $$ \vec{F} = m(\vec{a'} + \vec{a_t} + \vec{a_c}) $$
   è presente una accellerazione di un corpo anche senza forze esercitate su di esso
   \subsection{Principio di relatività galileiana}
   Dice che è sempre possibile ottenere uno stato di quiete di un moto cambiano il sistema di riferimento che utilizzo purchè il cambiamento di moto sia esprimibile come velocità.
-  $$\vec{v_0^i} = \vec{v} \Rightarrow \vec{v^'} = \vec{0}$$
+  $$\vec{v_0^i} = \vec{v} \Rightarrow \vec{v'} = \vec{0}$$
 
   \subsection{Forze vere e forze apparenti}
   Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale. \\
@@ -215,10 +215,10 @@
   \subsection{Regola della vite}
   Il vettore $\vec{\omega}$ è un vettore che rappresenta la rotazione. La direzione identificata da $\vec{\omega}$ è l'asse di rotazione, il suo modulo sarà $\omega$, il verso è quello di avanzamento della vite.\\
   Usando la \textbf{formula di Poisson} possiamo concludere
-  $$\frac{d\vec{A}}{dt} = \vec{\omega} \time \vec{A}$$
+  $$\frac{d\vec{A}}{dt} = \vec{\omega} \times \vec{A}$$
   \subsection{Teorema delle velocità relative}
-  Avendo due sistemi di rferimento differenti per descrivere il moto di un corpo, supponendo che uno dei due sistemi si muova anch'esso, possiamo ricavare la velocità del moto in base alla rappresentazione col primo sistema e la velocità di trascinamento$ \vec{v_{o'}} + \vec{\omega} \time \vec{r^'}$ che deriva dal fatto che la misura sul secondo sistema è influenzata dal fatto che esso si muove. La velocità di trascinamento si può anche definire come la velocità relativa tra i due sistemi di riferimento, non centra la velocità del moto.
-  $$ \vec{v} = \vec{v'} + \vec{v_{o'}} + \vec{\omega} \time \vec{r^'} = \vec{v'} + \vec{v_t}$$
+  Avendo due sistemi di rferimento differenti per descrivere il moto di un corpo, supponendo che uno dei due sistemi si muova anch'esso, possiamo ricavare la velocità del moto in base alla rappresentazione col primo sistema e la velocità di trascinamento$ \vec{v_{o'}} + \vec{\omega} \times \vec{r'}$ che deriva dal fatto che la misura sul secondo sistema è influenzata dal fatto che esso si muove. La velocità di trascinamento si può anche definire come la velocità relativa tra i due sistemi di riferimento, non centra la velocità del moto.
+  $$ \vec{v} = \vec{v'} + \vec{v_{o'}} + \vec{\omega} \times \vec{r'} = \vec{v'} + \vec{v_t}$$
   \subsection{Teorema delle accelerazioni relative}
   $$ \vec{a} = \vec{a'} + \vec{a_t} + \vec{a_c}$$
   dove $\vec{a_t}$ è l'accelerazione di trascinamento tra i due sistemi di riferimento, $\vec{a_c}$ è l'accelerazione di coriolì.
@@ -366,7 +366,7 @@
   Il lavoro si dice \textbf{motore} se la forza per cui lo calcolo partecipa all'accelerazione nel verso della velocità\\
   Il lavoro si dice \textbf{resistente} se la forza per cui lo calcolo partecipa alla decelerazione nel verso opposto della velocità
   abbiamo\\
-  Il calcolo del lavoro è basato sul prodotto scalare $$\vec{a} \cdot \vec{b} = |\vec{a}| \ctdot |\vec{b}| \time cos \theta_{ab}$$
+  Il calcolo del lavoro è basato sul prodotto scalare $$\vec{a} \cdot \vec{b} = |\vec{a}| \cdot |\vec{b}| \times cos \theta_{ab}$$
 
   $$ [W] = [F \cdot L] = [M \frac{L}{T^2} \cdot L] = [M \cdot \frac{L^2}{T^2}] = [E] $$
   $$ udm(W) = 1 Kg \frac{m^2}{s^2} = 1J$$
@@ -537,8 +537,8 @@
   \section{Const}
   \begin{itemize}
     \item $T_0 = 273,16 K$ Punto triplo $H_2O$
-    \item $t(^\circ C)= T(K) - 273,16$
-    \item $t(^\circ F)= \frac{9}{5} t(^\circ C) + 32$
+    \item $t(^\circ  C)= T(K) - 273,16$
+    \item $t(^\circ  F)= \frac{9}{5} t(^\circ  C) + 32$
     \item $R = 8,314 \frac{J}{K \cdot mol}$
     \item $1 m^3 = 1000l$
     \item $1 atm = 101325Pa = 1,013 \cdot 10^{-5}$
@@ -575,11 +575,11 @@
   \section{temperatura}
   Definita dalla media dell'energia cinetica dei componenti interni. La temperatura definisce varie esperienze nel mondo: espansione/contrazione liquidi e gas, variazione resistenza elettrica, ...\\
   è definita su una scala avente come zero il punto triplo dell'acqua
-  $$T_0 = 273,16 K = 0 °C$$
+  $$T_0 = 273,16 K = 0 \circ C$$
   Quindi si può dire che la temperatura in gradi centigradi
-  $$ t(°C) = T(K) - 273,16$$
+  $$ t(\circ C) = T(K) - 273,16$$
   E in gradi farenhait
-  $$ t(°F) = \frac{9}{5} t(°C) + 32$$
+  $$ t(\circ F) = \frac{9}{5} t(\circ C) + 32$$
   La temperatura è misurata col \textbf{termometro}, il quale trasforma i cambiamenti di temperatura in cambiamenti di spazio
   $$\Delta T \rightarrow \Delta x$$
 
@@ -760,8 +760,8 @@
   Posso riformularla Come
   $$pV = \gamma $$
   \subsection{Temperatura di zero}
-  Tutti i grafici delle trasformazioni sopra convergono nello stesso punto del grafico, a $t_0 = -273,16°C$. Se prendo questo punto come origine del mio sistema di riferimento delle temperatura, avrò la scala delle temperature \textbf{assolute}, dove:
-  $$0 K = -273,16 °C$$
+  Tutti i grafici delle trasformazioni sopra convergono nello stesso punto del grafico, a $t_0 = -273,16\circ C$. Se prendo questo punto come origine del mio sistema di riferimento delle temperatura, avrò la scala delle temperature \textbf{assolute}, dove:
+  $$0 K = -273,16 \circ C$$
 
 
   \subsection{Lavoro nei Gas}
@@ -1424,6 +1424,4 @@
   $$f.e.m = \quad -\frac{d\Phi(\vec{B})}{dt} $$
   $$ i = -\frac{f.e.m.}{R} $$
 
-  L62
-L 143
 \end{document}
