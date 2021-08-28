@@ -1,15 +1,16 @@
 \documentclass[a4paper]{report}
 
 \usepackage[top=25mm,bottom=25mm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[italian]{babel}
-\usepackage[T1]{fontenc}
+\usepackage[e]{esvect}
+%\usepackage[utf8]{inputenc}
+%\usepackage[italian]{babel}
+%\usepackage[T1]{fontenc}
 
 \usepackage{amssymb}
 \usepackage{mathtools}
-\usepackage{graphicx}
+%\usepackage{graphicx}
 
-\usepackage{hyperref}
+%\usepackage{hyperref}
 
 \title{Dispense essenziali di Fisica 1}
 \author{Matteo Bitussi \\ Laurea in Informatica, Unitn}
@@ -25,8 +26,8 @@
 
   \section*{General}
   \subsection{Prodotto tra vettori}
-  $$ \vec{a} \times \vec{b} = \vec{c} $$
-  $$ |\vec{c}| = |\vec{a}||vec{b}| sin \theta_{ab} $$
+  $$ \vv{a} \times \vv{b} = \vv{c} $$
+  $$ |\vv{c}| = |\vv{a}||vec{b}| sin \theta_{ab} $$
   Il vettore risultante ha direzione e verso dati dalla regola della mano destra, col pollice sul primo vettore a e indice sul secondo vettore b.
 
   \subsection{Proiezione di vettori}
@@ -120,15 +121,15 @@
   Un vettore è una "freccia" che parte dal punto di applicazione. Il verso del vettore è dato dalla punta della freccia e la direzione dal gambo.
   Esistiono \textbf{grandezze fisiche scalari} o \textbf{grandezze fisiche vettoriali}.
   Le grandezze fisiche vettoriali sono ad esempio la posizione,
-  $$ (\vec{x})$$
+  $$ (\vv{x})$$
   Cioè il vettore che indica la posizione di un punto nel piano.
   Per definire lo \textbf{spostamento} non abbiamo più la differenza tra due punti, ma la differenza tra due vettori.
-  $$\Delta x \rightarrow \Delta \vec{x}$$
+  $$\Delta x \rightarrow \Delta \vv{x}$$
   Da notare che il tempo non è una grandezza vettorizzabile, in quanto è rappresentato da un asse unidimensionale.\\
   La velocità sarà definita come:
-  $$\vec{v} = \frac{d\vec{x}}{dt}$$.
+  $$\vv{v} = \frac{d\vv{x}}{dt}$$.
   Stessa cosa per l'Accelerazione
-  $$\vec{a} = \frac{d\vec{v}}{dt}$$
+  $$\vv{a} = \frac{d\vv{v}}{dt}$$
   Nella definizione di problemi in spazi multidimensionali, la differenza di un vettore può essere non solo nell suo modulo (intensità) ma anche nella sua direzione. Ad esempio l'accelerazione puo derivare da uno spostamento del vettore velocità.
   Le operazioni tra vettori sono la somma (metodo del parallelogramma o del punto-coda), il prodotto per uno scalare (vettore per numero il risultato è un vettore), la differenza tra vettori
 
@@ -142,7 +143,7 @@
 
   \section{Moto Circolare}
   \subsection{Moto Circolare Uniforme}
-  Si dice circolare uniforme perchè la traiettoria è circolare, e uniforme perchè il modulo della velocità $|d\vec{v}|$ è costante.
+  Si dice circolare uniforme perchè la traiettoria è circolare, e uniforme perchè il modulo della velocità $|d\vv{v}|$ è costante.
   La \textbf{velocità angolare istantanea}, che è il rapporto tra la differenza dell'angolo e la differenza di tempo (ossia quanto cambia l'angolo rispetto al tempo), è
   $$ \omega = \frac{d\theta}{dt} $$
   $$ \omega = \frac{v}{R} $$
@@ -179,16 +180,16 @@
 
   \subsection{Forza (accelerazione) centripeta}
   Una forza è centripeta, se è ortogonale alla traiettoria descritta dal corpo su cui è applicata, ovvero se è ortogonale (normale) al vettore velocità
-  $$ \vec{a_n} = -\omega^2 R \cdot \hat{n} = -\frac{v_T^2}{R} \cdot \hat{n} $$
+  $$ \vv{a_n} = -\omega^2 R \cdot \hat{n} = -\frac{v_T^2}{R} \cdot \hat{n} $$
   di conseguenza, la Forza
-  $$ \vec{F_c} = ma_C =  -m\frac{v_T^2}{R} \cdot \hat{n}$$
+  $$ \vv{F_c} = ma_C =  -m\frac{v_T^2}{R} \cdot \hat{n}$$
 
   \subsection{Forza Centrifuga}
   $$ F_{centrif} = - F_{centripeta} $$
 
 
   \section{Moto parabolico}
-  L'esempio più semplice è quello del lancio di un oggetto tenendo conto dell'accelerazione di gravità. Abbiamo una velocità iniziale $\vec{v_0}$, l'angolo di alzo $\alpha$ che è individuato dalla linea dell'orizzonte fino al vettore velocità $\vec{v_0}$, la gittata è il punto in cui il corpo lanciato ritorna a toccare il suolo (orizzonte).\\
+  L'esempio più semplice è quello del lancio di un oggetto tenendo conto dell'accelerazione di gravità. Abbiamo una velocità iniziale $\vv{v_0}$, l'angolo di alzo $\alpha$ che è individuato dalla linea dell'orizzonte fino al vettore velocità $\vv{v_0}$, la gittata è il punto in cui il corpo lanciato ritorna a toccare il suolo (orizzonte).\\
   Si scompone il moto in base agli assi $x$ e $y$. Abbiamo che sull'asse delle $x$ non agisce acceleraziome quindi è un moto rettilineo uniforme (l'ungo quell'asse), l'unica accelerazione che abbiamo è quella nell'asse $y$.
   Per l'asse $y$ abbiamo che il moto è uniformemente accellerato (o decelerato) perchè l'unica accelerazione che agisce sul corpo è quella di gravità.
   Bisogna quindi scomporre la velocità iniziale nelle sue componenti $x$ e $y$: Ossia
@@ -202,26 +203,26 @@
   Un esempio è quello delle stelle fisse, ad esempio l'origine nel sole e gli assi verso altre galassie ferme.
   \subsection{Sistema di riferimento non Inerziale}
   La prima legge di Newton assume la forma
-  $$ \vec{F} = m(\vec{a'} + \vec{a_t} + \vec{a_c}) $$
+  $$ \vv{F} = m(\vv{a'} + \vv{a_t} + \vv{a_c}) $$
   è presente una accellerazione di un corpo anche senza forze esercitate su di esso
   \subsection{Principio di relatività galileiana}
   Dice che è sempre possibile ottenere uno stato di quiete di un moto cambiano il sistema di riferimento che utilizzo purchè il cambiamento di moto sia esprimibile come velocità.
-  $$\vec{v_0^i} = \vec{v} \Rightarrow \vec{v'} = \vec{0}$$
+  $$\vv{v_0^i} = \vv{v} \Rightarrow \vv{v'} = \vv{0}$$
 
   \subsection{Forze vere e forze apparenti}
   Se ci sono forze apparenti, allora il sistema di riferimento non è Inerziale. \\
   Le \textbf{forze vere} sono riconducibili alle interazioni fondamentali.\\
   Le \textbf{forze apparenti} sono una conseguenza del sistema di riferimento (relativo) scelto
   \subsection{Regola della vite}
-  Il vettore $\vec{\omega}$ è un vettore che rappresenta la rotazione. La direzione identificata da $\vec{\omega}$ è l'asse di rotazione, il suo modulo sarà $\omega$, il verso è quello di avanzamento della vite.\\
+  Il vettore $\vv{\omega}$ è un vettore che rappresenta la rotazione. La direzione identificata da $\vv{\omega}$ è l'asse di rotazione, il suo modulo sarà $\omega$, il verso è quello di avanzamento della vite.\\
   Usando la \textbf{formula di Poisson} possiamo concludere
-  $$\frac{d\vec{A}}{dt} = \vec{\omega} \times \vec{A}$$
+  $$\frac{d\vv{A}}{dt} = \vv{\omega} \times \vv{A}$$
   \subsection{Teorema delle velocità relative}
-  Avendo due sistemi di rferimento differenti per descrivere il moto di un corpo, supponendo che uno dei due sistemi si muova anch'esso, possiamo ricavare la velocità del moto in base alla rappresentazione col primo sistema e la velocità di trascinamento$ \vec{v_{o'}} + \vec{\omega} \times \vec{r'}$ che deriva dal fatto che la misura sul secondo sistema è influenzata dal fatto che esso si muove. La velocità di trascinamento si può anche definire come la velocità relativa tra i due sistemi di riferimento, non centra la velocità del moto.
-  $$ \vec{v} = \vec{v'} + \vec{v_{o'}} + \vec{\omega} \times \vec{r'} = \vec{v'} + \vec{v_t}$$
+  Avendo due sistemi di rferimento differenti per descrivere il moto di un corpo, supponendo che uno dei due sistemi si muova anch'esso, possiamo ricavare la velocità del moto in base alla rappresentazione col primo sistema e la velocità di trascinamento$ \vv{v_{o'}} + \vv{\omega} \times \vv{r'}$ che deriva dal fatto che la misura sul secondo sistema è influenzata dal fatto che esso si muove. La velocità di trascinamento si può anche definire come la velocità relativa tra i due sistemi di riferimento, non centra la velocità del moto.
+  $$ \vv{v} = \vv{v'} + \vv{v_{o'}} + \vv{\omega} \times \vv{r'} = \vv{v'} + \vv{v_t}$$
   \subsection{Teorema delle accelerazioni relative}
-  $$ \vec{a} = \vec{a'} + \vec{a_t} + \vec{a_c}$$
-  dove $\vec{a_t}$ è l'accelerazione di trascinamento tra i due sistemi di riferimento, $\vec{a_c}$ è l'accelerazione di coriolì.
+  $$ \vv{a} = \vv{a'} + \vv{a_t} + \vv{a_c}$$
+  dove $\vv{a_t}$ è l'accelerazione di trascinamento tra i due sistemi di riferimento, $\vv{a_c}$ è l'accelerazione di coriolì.
 
 
   \chapter{Dinamica del punto}
@@ -244,21 +245,21 @@
   Un \textbf{sistema di punti materiali} è un sistema che contiene vari punti materiali. Mi pongo il problema di differenziare le\\
   \textbf{forze esterne} dalle \textbf{forze interne} al sistema.
   Concentrandomi sul punto materiale $i$-esimo, posso scomporre la sua risultante delle forze in
-  $$\vec{R_i} = \vec{R_i^{E}} + \vec{R_i^{I}} =  m_i \vec{a_i}$$
+  $$\vv{R_i} = \vv{R_i^{E}} + \vv{R_i^{I}} =  m_i \vv{a_i}$$
   Risultante delle forze esterne + risultante di quelle interne.\\
   Definiamo la risultante delle forze esterne come
-  $$\vec{R} = M \frac{d^2\vec{x_{CM}}}{dt^2}$$
-  Dove $M$ è la massa totale del sistema, e $\vec{x_{CM}}$ il centro di massa del sistema
+  $$\vv{R} = M \frac{d^2\vv{x_{CM}}}{dt^2}$$
+  Dove $M$ è la massa totale del sistema, e $\vv{x_{CM}}$ il centro di massa del sistema
 
   \section{Sistema isolato}
   In un sistema isolato, la risultante delle forze esterne è 0
-  $$ \vec{R^E} = \vec{0}$$
-  Quindi $$M \vec{a_{CM}} = 0$$
+  $$ \vv{R^E} = \vv{0}$$
+  Quindi $$M \vv{a_{CM}} = 0$$
   Quindi la velocità del centro di massa è costante.\\
   In un sistema isolato la \textbf{quantità di moto} si conserva
-  $$\vec{P} = M \vec{a_{CM}} = const$$
+  $$\vv{P} = M \vv{a_{CM}} = const$$
   Questo si chiama \textbf{Principio della conservazione della quantità di moto}, cioè in un sistema isolato la quantità di moto TOTALE si conserva nel tempo
-  $$ \frac{d\vec{P}}{dt} = \vec{0}$$
+  $$ \frac{d\vv{P}}{dt} = \vv{0}$$
 
 
   \section{Legge di gravitazione universale}
@@ -270,9 +271,9 @@
 
   \section{Massa inerziale e gravitazionale}
   Massa inerziale per variazione dello stato di moto, l'accelerazione di gravità è una costante, non dipende dal moto del corpo. La massa inerziale è la capacità del corpo ad opporsi a sollecitazioni esterne. La massa gravitazionale è una costante di proporzionalità tra l'accelerazione che è comune a tutti gli oggetti. Se un corpo è soggetto ad una forza gravitazionale, allora possiede una massa gravitazionale.
-  $$ m_i \vec{a} = m_G \vec{g} $$
+  $$ m_i \vv{a} = m_G \vv{g} $$
   Posso quindi assumere che le due accelerazioni coincidano
-  $$ \vec{a} = \vec{g} $$
+  $$ \vv{a} = \vv{g} $$
   E che la massa inerziale sia uguale a quella gravitazionale
   $$ m_i = m_g$$
 
@@ -284,51 +285,51 @@
 
   \subsection{Seconda legge di Newton}
   Esprime la legge fondamentale della dinamica del punto. Definisce il concetto di forza.
-  $$ \vec{F} = m\vec{a} $$
+  $$ \vv{F} = m\vv{a} $$
   Dove $m$ è una costante, chiamata \textbf{massa inerziale}.
   $$ [F] = [M \frac{L}{T^2}]$$
   $$ u.d.m.(m) = 1Kg$$
   $$ u.d.m.(F) = 1 Kg \frac{m}{s^2} = 1N$$
   \subsubsection{Formulazione con la quantità di moto}
   Possiamo riformulare la seconda legge della dinamica usando la quantità di moto, cioè la forza è proporzionale alla derivata della quantità di moto nel tempo.
-  $$ \vec{F} = \frac{d\vec{p}}{dt}$$
+  $$ \vv{F} = \frac{d\vv{p}}{dt}$$
 
   \subsection{Terza legge di Newton o Legge di Azione Reazione}
   Anche chiamato principio di azione e reazione delle forze
-  $$ \vec{F}_{A \rightarrow B} = -\vec{F}_{B \rightarrow A} $$
+  $$ \vv{F}_{A \rightarrow B} = -\vv{F}_{B \rightarrow A} $$
 
   \subsection{Quantità di moto}
   Si definisce quantità di moto di un punto materiale il vettore
-  $$ \vec{p} = m\vec{v} $$
+  $$ \vv{p} = m\vv{v} $$
   Che è il prodotto tra massa e velocità
 
   \subsection{Risultante delle forze}
   Potremmo avere una situazione dove più forze interagiscono sul nostro corpo, la forza risultante da tutte le forze è la somma di tutte le forze (la somma dei vettori).
-  $$ \vec{R} = \vec{F}_1 + \vec{F}_2 + ... +\vec{F}_n = \sum_i \vec{F}_i $$
+  $$ \vv{R} = \vv{F}_1 + \vv{F}_2 + ... +\vv{F}_n = \sum_i \vv{F}_i $$
 
   \subsubsection{Equilibrio statico}
-  Se un corpo è in \textbf{equilibrio statico} la sua risultante delle forze $\vec{R} = 0$
+  Se un corpo è in \textbf{equilibrio statico} la sua risultante delle forze $\vv{R} = 0$
 
   \subsection{Reazioni vincolari}
   Sono reazioni dell'ambiente circostante.\\
   Prendiamo il caso di una massa appoggiata su di un piano, ferma , allora esiste una forza vincolare
-  $$ \vec{N} $$
+  $$ \vv{N} $$
   normale alla superficie di appoggio, che bilancia la forza peso agente sulla massa.
 
   \subsection{Forza Peso}
   La forza peso è proporzionale alla massa e all'acelerazione di gravità.
-  $$ \vec{P} = m\vec{g} $$
+  $$ \vv{P} = m\vv{g} $$
   L'\textbf{Energia Potenziale} della forza peso per un punto $p$
-  $$ U (\vec{}) = mg \vec{p} $$
+  $$ U (\vv{}) = mg \vv{p} $$
 
   \section{Quantità di moto}
   Si definisce quantità di moto di un punto materiale il vettore:
-  $$ \vec{p} = m \vec{v} $$
-  $$ [\vec{p}] = \frac{m}{s} kg $$
+  $$ \vv{p} = m \vv{v} $$
+  $$ [\vv{p}] = \frac{m}{s} kg $$
 
   \section{Risultante delle forze}
   La risultante delle forze è definita come la somma di tutte le forze applicate su un dato punto
-  $$ \vec{R} = F_1 + F_2 + ... + F_n = \sum_{i} \vec{F_i} $$
+  $$ \vv{R} = F_1 + F_2 + ... + F_n = \sum_{i} \vv{F_i} $$
 
   \section{Equilibrio statico}
   Se $R = 0$ (e il punto ha inizialmente velocità nulla) esso rimane in stato di quiete: sono realizzate le condizioni di \textbf{equilibrio statico} del punto.\\
@@ -343,35 +344,35 @@
 
   \section{Impulso}
   \subsection{Impulso della forza}
-  Si definisce impulso $ \vec{J} $ l'integrale della forza nel tempo, cioè l'impulso è la variazione della quantità di moto nel tempo.
-  $$ \vec{J} = \frac{|\vec{p_f} - \vec{p_i}}{\Delta t}$$
-  $$ \vec{J} = \int_0^t \vec{F} dt $$
+  Si definisce impulso $ \vv{J} $ l'integrale della forza nel tempo, cioè l'impulso è la variazione della quantità di moto nel tempo.
+  $$ \vv{J} = \frac{|\vv{p_f} - \vv{p_i}}{\Delta t}$$
+  $$ \vv{J} = \int_0^t \vv{F} dt $$
   $$ [J] = N  s $$
   Può anche essere scritto come differenza di quantità di moto:
-  $$\vec{P} = \vec{p_1} - \vec{p_0} = \int_{t_0}^t \vec{F} dt $$
+  $$\vv{P} = \vv{p_1} - \vv{p_0} = \int_{t_0}^t \vv{F} dt $$
 
   \subsection{Teorema dell'impulso}
-  $$ \vec{J} = \int_0^t \vec{F} dt \int_{\vec{p}_0}^{\vec{p}} d\vec{p} = \vec{p} - \vec{p_0} = \Delta \vec{p} $$
+  $$ \vv{J} = \int_0^t \vv{F} dt \int_{\vv{p}_0}^{\vv{p}} d\vv{p} = \vv{p} - \vv{p_0} = \Delta \vv{p} $$
   Se la massa $m$ è costante:
-  $$ \vec{J} = \Delta \vec{p} = m \Delta v $$
+  $$ \vv{J} = \Delta \vv{p} = m \Delta v $$
   Se la forza $F$ è costante:
-  $$ \vec{J} = \vec{F} \cdot t = \Delta p  $$
+  $$ \vv{J} = \vv{F} \cdot t = \Delta p  $$
 
   \section{Lavoro}
   Il lavoro è pari all'integrale da $a$ a $b$ delle forze totali agenti sul corpo scalare lo spostamento $ds$
-  $$ W = \int_{a}^{b} \vec{F_{tot}} \cdot \vec{ds} $$
+  $$ W = \int_{a}^{b} \vv{F_{tot}} \cdot \vv{ds} $$
   Anche definito come:
   $$ W_{TOT} = E_{Kf} - E_{Ki} $$
   cioè il lavoro dal punto $i$ iniziale, al punto $f$ finale è definito come la differenza dell'energia cinetica nel punto $f$ meno quella nel punto $i$. Vale solo se il lavoro è \textbf{totale}, cioè se comprende tutte le forze agenti nel sistema\\
   Il lavoro si dice \textbf{motore} se la forza per cui lo calcolo partecipa all'accelerazione nel verso della velocità\\
   Il lavoro si dice \textbf{resistente} se la forza per cui lo calcolo partecipa alla decelerazione nel verso opposto della velocità
   abbiamo\\
-  Il calcolo del lavoro è basato sul prodotto scalare $$\vec{a} \cdot \vec{b} = |\vec{a}| \cdot |\vec{b}| \times cos \theta_{ab}$$
+  Il calcolo del lavoro è basato sul prodotto scalare $$\vv{a} \cdot \vv{b} = |\vv{a}| \cdot |\vv{b}| \times cos \theta_{ab}$$
 
   $$ [W] = [F \cdot L] = [M \frac{L}{T^2} \cdot L] = [M \cdot \frac{L^2}{T^2}] = [E] $$
   $$ udm(W) = 1 Kg \frac{m^2}{s^2} = 1J$$
   \subsection{Lavoro Totale}
-  $$ W_{TOT} = \sum_K W_K = \sum_K \int_i^f \vec{F}\cdot d\vec{s} $$
+  $$ W_{TOT} = \sum_K W_K = \sum_K \int_i^f \vv{F}\cdot d\vv{s} $$
   \subsection{Energia meccanica}
   $$ W = \Delta E_K + \Delta E_P = \Delta E_m $$
   Nel caso di forze conservative, l'energia meccanica è Costante, quindi
@@ -380,7 +381,7 @@
 
   \section{Potenza}
   Mette in relazione il lavoro e il tempo durante il quale questo viene erogato
-  $$ P = \frac{dW}{dt} = \vec{F} \cdot \vec{v} $$
+  $$ P = \frac{dW}{dt} = \vv{F} \cdot \vv{v} $$
   è il lavoro per l'unità di tempo, anche la potenza istantanea
   $$ u.d.m.[p] = 1 \frac{J}{s} = 1W $$
   Dove $1W$ significa 1 Watt\\
@@ -391,13 +392,13 @@
   \section{Forze conservative}
   Esstono delle forze, per cui il lavoro per andare dal punto iniziale a quello finale \textbf{non dipende dal percorso fatto}. Queste forze si dicono conservative\\
   Quindi, indipendentemente dal percorso potrò calcolare il lavoro Come
-  $$ W_{i \rightarrow f} = \int_{p_i}^{p_f} \vec{F} \cdot d\vec{s} = U(p_f) - U(P_i)$$
-  Una forza $\vec{F}$ è conservativa, se il lavoro compiuto lungo un percorso chiuso è nullo (cioè se torno da dove sono partito), indipendentemente dal percorso scelto
-  $$ W_{chius} = 0 \quad \oint \vec{F} \cdot \vec{ds} = 0 $$
+  $$ W_{i \rightarrow f} = \int_{p_i}^{p_f} \vv{F} \cdot d\vv{s} = U(p_f) - U(P_i)$$
+  Una forza $\vv{F}$ è conservativa, se il lavoro compiuto lungo un percorso chiuso è nullo (cioè se torno da dove sono partito), indipendentemente dal percorso scelto
+  $$ W_{chius} = 0 \quad \oint \vv{F} \cdot \vv{ds} = 0 $$
   Una forza si dice conservativa se si può scrivere come derivata di un altra funzione di energia potenziale (?)
-  $$ F= -\frac{dU}{dx} (\vec{F} = \frac{-\vec{d} U}{dx})$$
+  $$ F= -\frac{dU}{dx} (\vv{F} = \frac{-\vv{d} U}{dx})$$
   \paragraph{Corollario}
-  $$ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot \vec{ds} $$
+  $$ W_{a \rightarrow b} = \int_a^b \vv{F}\cdot \vv{ds} $$
   non dipende dal percorso scelto
 
   \section{Legge della conservazione della quantità di moto}
@@ -407,9 +408,9 @@
   $$ \frac{dp}{dt} = 0 $$
 
   \section{Forza elastica}
-  é la forza esercitata da una molla che si oppone ad una forza esterna. La forza elastica è proporzionale a quanto comprimo o allungo la molla $\Delta \vec{l}$
+  é la forza esercitata da una molla che si oppone ad una forza esterna. La forza elastica è proporzionale a quanto comprimo o allungo la molla $\Delta \vv{l}$
   Quindi la forza elastica è
-  $$ \vec{F_{el}} = -K(\vec{l} - \vec{l_0}) = -K \Delta \vec{l} $$
+  $$ \vv{F_{el}} = -K(\vv{l} - \vv{l_0}) = -K \Delta \vv{l} $$
   $K$ è la costante elastica.
   $$[K] = [\frac{F}{L}], \quad u.d.m.(K) = 1 \frac{N}{m}$$
   Possiamo supporre un corpo attaccato ad una molla appoggiato su di iun piano, ignorando gli attriti fissiamo il sistema di riferimento sulla posizione del corpo con la molla a riposo. Quindi possiamo scrivere l'equazione del moto come:
@@ -420,9 +421,9 @@
   $$ v(t) = + A \omega cos(\omega t + \phi) $$
   $$ a(t) = -A \omega^2 sin (\omega t + \phi) $$
   Abbiamo anche che il \textbf{lavoro della forza elastica} sarà
-  $$ \int_i^f \vec{F_el} \cdot d\vec{r} = - \frac{1}{2} K (x_f^2 -x_i^2)$$
+  $$ \int_i^f \vv{F_el} \cdot d\vv{r} = - \frac{1}{2} K (x_f^2 -x_i^2)$$
   L'\textbf{Energia potenziale} della forza elastica in un certo punto $P$ è
-  $$ U_{el}(\vec{P}) = \frac{1}{2} K x^2$$
+  $$ U_{el}(\vv{P}) = \frac{1}{2} K x^2$$
 
 
   \section{Attrito}
@@ -435,7 +436,7 @@
   e una condizione di moto quando
   $$ F > \mu_s N $$
   Il \textbf{lavoro della forza di attrito} è sempre negativo,
-  $$ W = \int \vec{F_as} \cdot d\vec{r}$$
+  $$ W = \int \vv{F_as} \cdot d\vv{r}$$
   \paragraph{Coefficiente di attrito dinamico}
   Una volta "battuto" l'attrito statico, il moto continua ad essere rallentato dall'attrito radente, ma con un coefficiente di attrito diverso chiamato dinamico
   $$ \mu_d $$
@@ -466,7 +467,7 @@
    Possiamo, quindi, scrivere il lavoro come
   $$ W_{AB} = -(U_B - U_A) $$
   \paragraph{Definizione}
-  $$ U(\vec{x_P}) = - \int_o^P \vec{F}\cdot \vec{ds} $$
+  $$ U(\vv{x_P}) = - \int_o^P \vv{F}\cdot \vv{ds} $$
   \paragraph{Lavoro e energia potenziale}
   $$ W_{a\rightarrow b} = -\Delta U $$
 
@@ -497,20 +498,20 @@
   Un urto è l'interazione d inamica tra due masse, vengono in contatto tra di loro e modificano il loro stato di moto.
   L'urto trasferisce quantità di moto da una massa all'altra. Quello che succede nell'urto viene semplificato, supponendo che il tempo in cui accade è molto minore del tempo del moto delle masse.
   L'urto generico è descritto come
-  $$ \vec{P_i} = \vec{P_f}$$
-  $$ \vec{P_{1i}} + \vec{P_{2i}} = \vec{P_{1f}} + \vec{P_{2f}}$$
+  $$ \vv{P_i} = \vv{P_f}$$
+  $$ \vv{P_{1i}} + \vv{P_{2i}} = \vv{P_{1f}} + \vv{P_{2f}}$$
   QUindi
-  $$m_1 \vec{v_{1i}} + m_2 \vec{v_{2i}} = m_1 \vec{v_{1f}} + m2 \vec{v_{2f}}$$
+  $$m_1 \vv{v_{1i}} + m_2 \vv{v_{2i}} = m_1 \vv{v_{1f}} + m2 \vv{v_{2f}}$$
   \subsection{Urto perfettamente anelastico}
   Due oggetti (masse)$m_1, m_2$ si scontrano, e ne risulta un unica particella $m_3$\\
   Dalla conservazione della quantità di moto abbiamo
-  $$ \vec{P_i} = \vec{P_f} $$
+  $$ \vv{P_i} = \vv{P_f} $$
   e quindi
-  $$ \vec{P_{1,i}} + \vec{P_{2,i}} = \vec{P_{3,f}} $$
+  $$ \vv{P_{1,i}} + \vv{P_{2,i}} = \vv{P_{3,f}} $$
 
   \subsection{Urto elastico}
   Nell'urto elastico vale
-  $$\vec{P_i} = \vec{P_f}$$
+  $$\vv{P_i} = \vv{P_f}$$
   Ma vale Anche
   $$E_{ki} = E_{kf}$$
 
@@ -779,15 +780,15 @@
 
   \section{Teoria cinetica dei gas}
   Assumiamo che il gas sia composto da molecole di dimensione trascurabile di massa $m$ che si muovono di velocità casuale. Queste urtano le pareti del contenitore, e la massa $M$ della parete è molto maggiore $M>>m$ di quella delle molecole, quindi l'angolo di incidenza è anche uguale all'angolo di uscita. Gli urti risultano quindi elastici, e quindi:
-  $$ \Delta \vec{p} = \vec{p}_f - \vec{p}_i = 2 m\vec{v_X}$$
+  $$ \Delta \vv{p} = \vv{p}_f - \vv{p}_i = 2 m\vv{v_X}$$
   La forza esercitata sulla parete è uguale a
-  $$ \vec{F_x} = \frac{m \vec{V_x} v_x}{L_x}$$
+  $$ \vv{F_x} = \frac{m \vv{V_x} v_x}{L_x}$$
   Dove $L_x$ è la lunghezza del contenitore, cioè teniamo contor del tempo (lunghezza/velocità) in cui una particella percorre tutto il lato. Questa è la forza per una singola molecola, ma noi vogliamo la forza che tutte le molecole applicano alla superficie:
   $$ F_x^{TOT} = \sum_{i=1}^N m_i \frac{v_{x,i}^2}{L_x}$$
   quello che otteniamo è:
   $$\frac{m}{L_x} \sum_{i=1}^N v_{x,i}^2 = \frac{m}{L_x} N \frac{\sum_{i=1}^N v_{x,i}^2}{N} = \frac{m}{L_x}N <v_x^2>$$
   cioè otterremo la velocità quadratica media, e quindi, calcolando per tutte e 3 le dimensioni del contenitore:
-  $$p = N \frac{m <\vec{v^2}}{3V}$$
+  $$p = N \frac{m <\vv{v^2}}{3V}$$
   $$pV = \frac{2}{3} N <E_K>$$
   La Temperatura non è che l'energia cinetica media del mio gas ideale
   Concludiamo che
@@ -1033,8 +1034,8 @@
   \end{itemize}
 
   \subsection{Campo elettrico in una piana infinita}
-  Il campomagnetico $\vec{E}$ di una piana infinita è sempre prerpendicolare alla piana, e vale
-  $$ \vec{E} = \frac{\sigma}{2\epsilon_0} $$
+  Il campomagnetico $\vv{E}$ di una piana infinita è sempre prerpendicolare alla piana, e vale
+  $$ \vv{E} = \frac{\sigma}{2\epsilon_0} $$
   Dove $\sigma$ è la densità di carica
 
   \section{Introduzione}
@@ -1056,8 +1057,8 @@
 
   \section{Campo elettrico o elettrostatico (generato da carica puntiforme)}
   Il campo elettrico è il rapporto fra la forza che muove la carica e la carica stessa. è anche definito come il rapporto tra la forza ricevuta sulla carica di prova e la carica della carica di prova.
-  $$\vec{E} = \frac{\vec{F}}{q_0} = \frac{K Q}{r^2} \hat{r}$$
-  Dove $\vec{E}$ è il campo elettrico, $\vec{F}$ è la forza subita dalla carica, e $q_0$ la carica\\
+  $$\vv{E} = \frac{\vv{F}}{q_0} = \frac{K Q}{r^2} \hat{r}$$
+  Dove $\vv{E}$ è il campo elettrico, $\vv{F}$ è la forza subita dalla carica, e $q_0$ la carica\\
   Il campo elettrico è \textbf{uscente} se la carica che lo genera $Q$ è $>0$\\
   Il campo elettrico è \textbf{entrante} se la carica che lo genera è $Q<0$
   $$ u.d.m.[E] = [\frac{1N}{C}]$$
@@ -1068,7 +1069,7 @@
   \end{itemize}
 
   \subsection{lavoro di un campo elettrico}
-  $$ W_{a \rightarrow b} = \int_a^b \vec{F}\cdot d\vec{s} = \int_a^b q \vec{E} \cdot d\vec{s} = q \int_a^b \vec{E}\cdot d\vec{s} $$
+  $$ W_{a \rightarrow b} = \int_a^b \vv{F}\cdot d\vv{s} = \int_a^b q \vv{E} \cdot d\vv{s} = q \int_a^b \vv{E}\cdot d\vv{s} $$
   Il lavoro nel campo elettrico dipende dal percorso.
 
   \subsection{Campo elettrico di un filo di lunghezza indefinita}
@@ -1088,7 +1089,7 @@
 
 
   \subsection{Circuitazione del campo elettrico}
-  $$\oint \vec{E} \cdot d\vec{s} = f.e.m.$$
+  $$\oint \vv{E} \cdot d\vv{s} = f.e.m.$$
   dove $f.e.m$ è la forza \textbf{elettromotrice}, cioè è uguale alla forza che sta portando la carica dal punto a al punto b (stesso).
   Nella circuitazione, si crea un percorso chiuso. Possiamo definire la $f.e.m.$ come il lavoro lungo il circuito del campo elettrico.\\
   Nella circuitazione per forze conservative è uguale a zero
@@ -1099,7 +1100,7 @@
   questo vale per le forze conservative
   $$ U_{A} = \frac{KQ}{r_A} + const $$
   Dove $U_{AB}$ è l'energia potenziale elettrostatica. Le forze, almeno per la singola carica sono forze conservative e quindi, vale per la carica puntiforme: La circuitazione del campo elettrostatico è $=0$
-  $$ \oint \vec{E} \cdot d\vec{s} = 0 $$
+  $$ \oint \vv{E} \cdot d\vv{s} = 0 $$
   che è equivalente alla conservatività del campo elettrostatico.\\
   Si introduce \textbf{il potenziale} $\Delta V$, definito come la differenza di energia potenziale diviso la carica di prova
   $$ \Delta U \longrightarrow \Delta V = \frac{\Delta U}{q} $$
@@ -1117,21 +1118,21 @@
   \end{itemize}
 
   \section{Linee di forza}
-  Dato un campo vettoriale $\vec{v}$, può essere rappresentato graficamente tramite le linee di forza. In ogni punto le linee di forza hanno una tangente, che coincide con la direzione del vettore $\vec{v}$ nel punto $P$
+  Dato un campo vettoriale $\vv{v}$, può essere rappresentato graficamente tramite le linee di forza. In ogni punto le linee di forza hanno una tangente, che coincide con la direzione del vettore $\vv{v}$ nel punto $P$
   La linea di campo (o di forza) è definita come la congiungente dei punti di applicazione di tutti i vettori che si incontrano seguendo la direzione tangente ai vettori nei punti di applicazione stessi.
   \begin{itemize}
-    \item direzione($\vec{v_P}$) = tangente alle linee di forza nel punto $P$
-    \item Verso($\vec{v_P}$) = verso di percorrenza delle linee nel punto $P$
-    \item Modulo($\vec{v_P}$) si rappresenta con la densità delle linee
+    \item direzione($\vv{v_P}$) = tangente alle linee di forza nel punto $P$
+    \item Verso($\vv{v_P}$) = verso di percorrenza delle linee nel punto $P$
+    \item Modulo($\vv{v_P}$) si rappresenta con la densità delle linee
   \end{itemize}
 
   \section{Flusso di un campo vettoriale}
-  Data una grandezza vettoriale $\vec{v}$,  definiamo come flusso della grandezza vettoriale in questione, attraverso una superficie infinitesima $d \Sigma$\\
+  Data una grandezza vettoriale $\vv{v}$,  definiamo come flusso della grandezza vettoriale in questione, attraverso una superficie infinitesima $d \Sigma$\\
   Il flusso $d \Phi$ è
-  $$ d \Phi = \vec{v}\cdot \hat{n} d \Sigma $$
+  $$ d \Phi = \vv{v}\cdot \hat{n} d \Sigma $$
   dove $\hat{n}$ è il vettore normale alla superficie.\\
   Più in generale per una superficie non infinitesima, si ha la somma di tante superfici infinitesime
-  $$ \Phi = \int_\Sigma d\Phi = \int_\Sigma \vec{v} \cdot \hat{n} d\Sigma $$
+  $$ \Phi = \int_\Sigma d\Phi = \int_\Sigma \vv{v} \cdot \hat{n} d\Sigma $$
 
 
   \section{Angolo solido}
@@ -1148,7 +1149,7 @@
   \section{teorema di Gauss}
   Nel caso in cui le cariche siano \textbf{interne:}
   Il flusso del campo elettrico attraverso una superficie chiusa è uguale alla somma delle cariche interne a tale superficie diviso $\epsilon_0$
-  $$ \Phi_{\Sigma} = \oint \vec{E} \cdot \hat{n} dS = \sum_i \frac{q_i}{\epsilon_0} $$
+  $$ \Phi_{\Sigma} = \oint \vv{E} \cdot \hat{n} dS = \sum_i \frac{q_i}{\epsilon_0} $$
   \paragraph{Nel caso di cariche esterne}
   Si ha che il flusso è nullo
   $$ d\Phi_{d\omega} = 0$$
@@ -1171,7 +1172,7 @@
   \subsection{Conduttore in Equilibrio elettrostatico}
   Un conduttore si dice in equilibrio quando tutte le cariche al suo interno sono ferme\\
   Cioè $\forall$ carica $q_i$
-  $$\vec{v_i} = \vec{0} \Rightarrow \vec{F_i} = \vec{0} \Rightarrow \vec{E_i} = \vec{0}$$
+  $$\vv{v_i} = \vv{0} \Rightarrow \vv{F_i} = \vv{0} \Rightarrow \vv{E_i} = \vv{0}$$
   Definizione "media". Il campo elettrico è nullo (perchè le cariche non si muovono)
 
   \subsubsection{Primo corollario}
@@ -1180,11 +1181,11 @@
   Per un conduttore in equilibrio vale $q_{intern} =0$. Se c'è una carica, si distribuisce sulla superficie del conduttore
   \subsubsection{Secondo corollario}
   Dati due punti $A, B$ all'interno del conduttore, la differenza di potenziale tra $A$ e $B$
-  $$V_A - V_B = \int_A^B \vec{E}\cdot d\vec{s}=0 $$
+  $$V_A - V_B = \int_A^B \vv{E}\cdot d\vv{s}=0 $$
   $\forall A,B$ interni al conduttore, $A=B$. Cioè tutti i punti di un conduttore in equilibrio sono allo stesso potenziale
   \subsubsection{terzo corollario}
-  \( \vec{E} \neq \vec{0} \) solo appena fuori dalla superficie
-  $$ \vec{E}(\vec{r}) = \frac{\sigma(\vec{r})}{\epsilon_0} \hat{n} $$
+  \( \vv{E} \neq \vv{0} \) solo appena fuori dalla superficie
+  $$ \vv{E}(\vv{r}) = \frac{\sigma(\vv{r})}{\epsilon_0} \hat{n} $$
   QUindi, il campo elettrico appena fuori dalla superficie di un conduttore, in una posizione $r$ è uguale alla densità di carica nella data posizione $r$ diviso $\epsilon_0$, e diretto normalmente alla superficie
 
   \subsection{Schermo elettrostatico}
@@ -1216,7 +1217,7 @@
   $$ \Delta U = W_{TOT} = \frac{Q^2}{2C} = \frac{1}{2} C \Delta V^2 = \frac{1}{2} Q \Delta V $$
 
   \subsection{Campo elettrico nel condensatore}
-  $$ |\vec{E}| = \frac{\sigma}{\epsilon_0} $$
+  $$ |\vv{E}| = \frac{\sigma}{\epsilon_0} $$
   dove $\sigma$ è la densità superficiale di carica
 
   \subsection{Induzione Completa}
@@ -1282,22 +1283,22 @@
   $$ n = \frac{N_A \rho}{ A} = 8,49 \cdot 10^{28} \frac{e^-}{m^3} $$
   Dove $N_A$ è il numero di avogadro, $\rho$ è la densità del materiale, $A$ è il numero di massa(?).\\
   Elettroni a metro cubo. la velocità media degli elettroni (per un volume abbastanza grande) è
-  $$\vec{v_m} = \vec{0}$$
+  $$\vv{v_m} = \vv{0}$$
   Se il conduttore è sottoposto ad un campo elettrico esterno, la velocità media degli elettroni passa a quella di "drift":
-  $$ \vec{v_m} = \vec{0} \longrightarrow \vec{v_m} = \vec{v_d} $$
+  $$ \vv{v_m} = \vv{0} \longrightarrow \vv{v_m} = \vv{v_d} $$
   Vettore densità di corrente elettrica, pari alla densità di cariche libere, per velocità di drift media (o deriva), - la stessa cosa per le cariche negative
-  $$ \vec{J_e} = n_+ e \vec{v_{d+}} - n_- e \vec{v_{d-}}$$
+  $$ \vv{J_e} = n_+ e \vv{v_{d+}} - n_- e \vv{v_{d-}}$$
   Voglio assumere che la corrente sia data da cariche positive che si muovono in un certo senso, quindi prendo le negative con segno -
 
   \subsection{Corrente elettrica}
   Si definisce come l'integrale verso la sezione del vostro filo
-  $$ i = \int_S \vec{J_e} \cdot \hat{n} dS = \int_S n e \vec{v} \cdot \hat{n} dS = \frac{dq}{dt}$$
+  $$ i = \int_S \vv{J_e} \cdot \hat{n} dS = \int_S n e \vv{v} \cdot \hat{n} dS = \frac{dq}{dt}$$
   La corrente elettrica è una quantità scalare, è il flusso della densità di corrente attraverso una superficie
   $$ u.d.m[i]=\frac{1C}{1s}= 1A $$
 
   \subsection{Principio di conservazione della carica elettrica}
   Data una superficie chiusa, la carica totale che passa attraverso questa superficie, è uguale alla variazione delle cariche nella superficie nel tempo. (tanta corrente entri nel volume tanta ne esce)
-  $$ i_{tot} = \oint \vec{J} \cdot \hat{n} dS = -\frac{dq_{int}}{dt} $$
+  $$ i_{tot} = \oint \vv{J} \cdot \hat{n} dS = -\frac{dq_{int}}{dt} $$
   \subsubsection{Variazione di carica interna = 0}
   Se la corrente totale è zero,
   $$\frac{dq_{int}}{dt} = 0$$
@@ -1308,15 +1309,15 @@
 
   \subsection{Legge di OHM}
   La velocità di deriva, è proporzionale al campo elettrico
-  $$ \vec{v_d} = \alpha \vec{E} $$
+  $$ \vv{v_d} = \alpha \vv{E} $$
   Anche scritta
-  $$ \vec{J} = \frac{1}{\rho} \vec{E} $$
+  $$ \vv{J} = \frac{1}{\rho} \vv{E} $$
   La costante $\rho$ si chiama resistività, è una costante intensiva, e dipende dal materiale che stiamo utilizzando.
   La resistività cresce in proporzione alla temperatura
   $$ \rho(t) = \rho{20}(1 + \alpha \Delta t) $$
   Dove $\rho{20}$ è la resistività misurata a 20 gradi celsius\\
   Cioè la legge di OHM lega il campo elettrico alla corrente tramite la costante di resistività $\rho$
-  $$ \vec{E} = \rho \cdot \vec{J} $$
+  $$ \vv{E} = \rho \cdot \vv{J} $$
   $$ i = \frac{ES}{\rho} = Eh \frac{S}{\rho h} = \Delta V \frac{1}{R} = \Delta V \frac{S}{\rho h} $$
   $R$ Si chiama resistenza elettrica, $h$ è la lunghezza che sto considerando del mio conduttore, $S$ la sua superficie, Il campo elettrico per la lunghezza $Eh$ diventa $\Delta V$.
   $$ R = \rho \frac{h}{S} $$
@@ -1346,7 +1347,7 @@
   $$ \frac{1}{R*} = \frac{1}{R_1} + \frac{1}{R_2} $$
 
   \section{Forza Elettro Motrice}
-  $$ f.e.m. = \oint \vec{E} \cdot d\vec{s} = R_T i \Rightarrow i \neq 0 \iff f.e.m. \neq 0$$
+  $$ f.e.m. = \oint \vv{E} \cdot d\vv{s} = R_T i \Rightarrow i \neq 0 \iff f.e.m. \neq 0$$
   $R_T$ resistenza totale circuito\\
   Deve quindi esistere una resistenza interna al generatore tale che
   $$ f.e.m. = R_T i = (R_{load} + r)i $$
@@ -1363,65 +1364,65 @@
   Magnete spezzato: se spezziamo un magnete, non ottengo due oggetti con cariche opposte, ma ottengo due nuovi magneti. Questo fenomeno è valido per qualsiasi scala. Non esiste il monopolo magnetico\\
   Le correnti generano campi elettromagnetici
   \subsection{Induzione magnetica}
-  $\vec{B}$ è l'induzione magnetica $udm[B] = 1T$ (un Tesla)
+  $\vv{B}$ è l'induzione magnetica $udm[B] = 1T$ (un Tesla)
   \subsection{Campo magnetico}
-  $$ \oint_S \vec{B}\cdot \hat{n} d\Sigma = 0 $$
+  $$ \oint_S \vv{B}\cdot \hat{n} d\Sigma = 0 $$
   Campo magnetico solenoidale. (solenoidale quando il flusso del campo attraverso una qualsiasi superficie chiusa è uguale a 0)
 
   \section{Forza di Lorentz}
-  è la forza che sperimenta una carica $q$, in moto con velocità $\vec{v}$, quando essa entra in una regione con campo magnetico $\vec{B}$
-  $$ \vec{F_L} = q\vec{v} \times \vec{B} $$
-  $$ |\vec{F}| = F_L = qvB sin\theta_{vB} $$
+  è la forza che sperimenta una carica $q$, in moto con velocità $\vv{v}$, quando essa entra in una regione con campo magnetico $\vv{B}$
+  $$ \vv{F_L} = q\vv{v} \times \vv{B} $$
+  $$ |\vv{F}| = F_L = qvB sin\theta_{vB} $$
   $$ [B] = [\frac{F}{Q\frac{L}{T}}] = [\frac{F\cdot L}{I\cdot L^2}] = [\frac{E}{I\cdot L^2}] $$
 
   \section{Forze che agiscono su una carica}
-  $$ \vec{F} = q(\vec{E} + \vec{v} \times \vec{B}) $$
+  $$ \vv{F} = q(\vv{E} + \vv{v} \times \vv{B}) $$
 
   \section{Forza su un tratto di filo percorso da cariche}
-  $$ dF = -e dN \vec{v_d} \times \vec{B}$$
+  $$ dF = -e dN \vv{v_d} \times \vv{B}$$
   dove $dN$ è il numero di elettroni. $dN = nd\tau$ che è la densità volumica\\
   La riedizione della forza di Lorentz, invece che per una carica puntiforme per un tratto di filo infinitesimo
-  $$ d\vec{F} = i d\vec{S} \times \vec{B} $$+++
+  $$ d\vv{F} = i d\vv{S} \times \vv{B} $$+++
   che è anche chiamata seconda legge elementare di Laplace
 
   \section{Principio di equivalenza di Ampere}
   Principio che pone l'equivalenza tra spire attraversate da corrente e magneti:
-  $$ \vec{m} = i \Sigma \hat{n} $$
+  $$ \vv{m} = i \Sigma \hat{n} $$
   è il momento magnetico della spira. Permette di pensare alla spira come ad un bipolo magnetico.\\
   Versione infinitesimale, che è anche il principio di equivalenza di ampere:
-  $$ d\vec{m} = id\Sigma \hat{n} $$
+  $$ d\vv{m} = id\Sigma \hat{n} $$
 
   \section{Prima legge elementare di Laplace}
   Le correnti possono generare campi magnetici.
-  Si ha $id\vec{s}$ un tratto lungo un filo, mi interessa sapere qual'è il campo magnetico esercitato dal piccolo segmento $id\vec{s}$ nel punto $P$ generico. Si ha anche la congiungente $\hat{u}_r=\hat{r}$ dal punto di sorgente del campo magnetico al punto $P$.
-  $$ d\vec{B} = K_m \frac{id\vec{s} \times \hat{u}_r}{r^2} $$
+  Si ha $id\vv{s}$ un tratto lungo un filo, mi interessa sapere qual'è il campo magnetico esercitato dal piccolo segmento $id\vv{s}$ nel punto $P$ generico. Si ha anche la congiungente $\hat{u}_r=\hat{r}$ dal punto di sorgente del campo magnetico al punto $P$.
+  $$ d\vv{B} = K_m \frac{id\vv{s} \times \hat{u}_r}{r^2} $$
   \subparagraph{Nota}
-  La prima legge elementare di Laplace è uno strumento matematico, non ha senso fisico: è impossibile misurare il contributo di $id\vec{s}$ senza misurare il contributo di tutto il "circuito" in quanto la corrente non si può spezzare in più parti.
+  La prima legge elementare di Laplace è uno strumento matematico, non ha senso fisico: è impossibile misurare il contributo di $id\vv{s}$ senza misurare il contributo di tutto il "circuito" in quanto la corrente non si può spezzare in più parti.
   \paragraph{Forma generale con conduttore filiforme}
-  $$ \vec{B}(P) = \oint_C d\vec{B} = \oint_C \frac{\mu_0}{4\pi} \frac{id\vec{s} \times \hat{u_r}}{r^2}$$
+  $$ \vv{B}(P) = \oint_C d\vv{B} = \oint_C \frac{\mu_0}{4\pi} \frac{id\vv{s} \times \hat{u_r}}{r^2}$$
   Dove $C$ è il filo
   \paragraph{Forma generale con conduttore non filiforme}
-  $$ \vec{B}(P) = \frac{\mu_0}{4\pi} \int_V \vec{J}\frac{\hat{u_\tau} \times \hat{u_r}}{r^2} d\tau $$
+  $$ \vv{B}(P) = \frac{\mu_0}{4\pi} \int_V \vv{J}\frac{\hat{u_\tau} \times \hat{u_r}}{r^2} d\tau $$
 
   \section{Legge di Biot-Savart}
-  Il campo magnetico $\vec{B}$ generato a distanza $R$, da un filo indefinito percorso dalla corrente $i$ è
-  $$ \vec{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{\theta} $$
+  Il campo magnetico $\vv{B}$ generato a distanza $R$, da un filo indefinito percorso dalla corrente $i$ è
+  $$ \vv{B}(R) = \frac{\mu_0 i}{2 \pi R} \hat{\theta} $$
   Dove $\hat{\theta}$ è il versore del campo magnetico
 
   \section{Legge di Ampere}
-  $$ \tau_C (\vec{B}) = \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C $$
+  $$ \tau_C (\vv{B}) = \oint_C \vv{B} \cdot d\vv{l} = \mu_0 i_C $$
   Dove $i_C$ sono le correnti concatenate (interne) al circuito
 
   \subsection{Equazioni di Maxwell}
   Per campi elettrici e magnetici statici (che non variano nel tempo)
-  $$ \oint_S \vec{E}\cdot \hat{n} dS = \frac{q_{int}}{\epsilon_0} $$
-  $$ \oint_S \vec{B}\cdot \hat{n} dS = 0 $$
-  $$ \oint_C \vec{E}\cdot d\vec{l} = 0 $$
-  $$ \oint_C \vec{B} \cdot d\vec{l} = \mu_0 i_C $$
+  $$ \oint_S \vv{E}\cdot \hat{n} dS = \frac{q_{int}}{\epsilon_0} $$
+  $$ \oint_S \vv{B}\cdot \hat{n} dS = 0 $$
+  $$ \oint_C \vv{E}\cdot d\vv{l} = 0 $$
+  $$ \oint_C \vv{B} \cdot d\vv{l} = \mu_0 i_C $$
 
   \section{Legge di Faraday-Neumann-Lenz}
   Ogni variazione del flusso nel tempo genera una f.e.m.
-  $$f.e.m = \quad -\frac{d\Phi(\vec{B})}{dt} $$
+  $$f.e.m = \quad -\frac{d\Phi(\vv{B})}{dt} $$
   $$ i = -\frac{f.e.m.}{R} $$
 
 \end{document}
