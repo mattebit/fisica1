@@ -152,11 +152,11 @@
   $$ \theta(t) = \theta_0 + \omega t$$
   Il MCU è un moto accellerato con accelerazione costane, \textbf{ortogonale alla traiettoria}, l'accelerazione si chiama centripeta
   $$ a= a_N = \frac{v^2}{R} = \omega^2 R$$
-  Si tratta in oltre di un \textbf{moto periodico}, con periodo
+  Si tratta in oltre di un \textbf{moto periodico} ossia il tempo che ci mette il corpo a fare un giro, con periodo
   $$ T=\frac{2\pi R}{v} = \frac{2\pi}{\omega} $$
   La velocità tangenziale ha Modulo
   $$ v(t) = R \cdot \omega $$
-  Essendo un moto periodico possiamo definire la frequenza sulla base del periodo:
+  Essendo un moto periodico possiamo definire la frequenza, che è il numero di giri che si fanno in un secondo, sulla base del periodo:
   $$ f = \frac{1}{T}$$
   Da notare che è possibile stimare l'accelerazione di un corpo nella sua traiettoria interpretandola in un piccolo intorno come un moto circolare uniforme.
   \subsubsection{Grandezze angolari}
@@ -179,7 +179,7 @@
   $$ \theta(t) = \theta_0 + \int_{t_0}^t \omega(t) dt $$
 
   \subsection{Forza (accelerazione) centripeta}
-  Una forza è centripeta, se è ortogonale alla traiettoria descritta dal corpo su cui è applicata, ovvero se è ortogonale (normale) al vettore velocità
+  Una forza è centripeta, se è ortogonale alla traiettoria descritta dal corpo su cui è applicata, ovvero se è ortogonale (normale) al vettore velocità. In altre parole, nel moto circolare uniforme la forza(accelerazione) centripeta è quella che fa mantenere il corpo a una certa distanza
   $$ \vv{a_n} = -\omega^2 R \cdot \hat{n} = -\frac{v_T^2}{R} \cdot \hat{n} $$
   di conseguenza, la Forza
   $$ \vv{F_c} = ma_C =  -m\frac{v_T^2}{R} \cdot \hat{n}$$
@@ -353,6 +353,7 @@
 
   \subsection{Teorema dell'impulso}
   $$ \vv{J} = \int_0^t \vv{F} dt = \int_{\vv{p}_0}^{\vv{p}} d\vv{p} = \vv{p} - \vv{p_0} = \Delta \vv{p} $$
+  La forza $F$ deve essere la somma delle forze che agiscono sul corpo 
   Se la massa $m$ è costante:
   $$ \vv{J} = \Delta \vv{p} = m \Delta v $$
   Se la forza $F$ è costante:
@@ -402,10 +403,13 @@
   non dipende dal percorso scelto
 
   \section{Legge della conservazione della quantità di moto}
-  Stabilisce che la quantità di moto di un sistema isolato è costante nel tempo (si conserva)
+  Stabilisce che la quantità di moto totale di un sistema isolato è costante nel tempo (si conserva)
   $$ p = m_1v_1 + m2_v2 ... + m_iv_i $$
   oppure
   $$ \frac{dp}{dt} = 0 $$
+  oppure
+  $$ \Delta \vec{P_{TOT}} = 0 $$
+  Un sistema è isolato se la risultante delle forze esterne che agiscono sul sistema è 0. Con forza esterna si intende una qualsiasi forza che non è prodotta dai corpi nel sistema.
 
   \section{Forza elastica}
   é la forza esercitata da una molla che si oppone ad una forza esterna. La forza elastica è proporzionale a quanto comprimo o allungo la molla $\Delta \vv{l}$
@@ -463,7 +467,7 @@
 
   \subsection{Energia potenziale}
    l'energia potenziale di un oggetto è l'energia che esso possiede a causa della sua posizione.
-   Se la forza è conservativa, si può sempre definire una funzione della posizione che si chiama energia potenziale.
+   \textbf{Se e solo se la forza è conservativa}, si può sempre definire una funzione della posizione che si chiama energia potenziale.
    Possiamo, quindi, scrivere il lavoro come
   $$ W_{AB} = -(U_B - U_A) $$
   \paragraph{Definizione}
@@ -508,12 +512,15 @@
   $$ \vv{P_i} = \vv{P_f} $$
   e quindi
   $$ \vv{P_{1,i}} + \vv{P_{2,i}} = \vv{P_{3,f}} $$
+  L'energia cinetica totale non si conserva
 
   \subsection{Urto elastico}
   Nell'urto elastico vale
   $$\vv{P_i} = \vv{P_f}$$
   Ma vale Anche
   $$E_{ki} = E_{kf}$$
+  ossia l'energia cinetica totale si conserva, per energia cinetica totale intendiamo la somma di tutte le energie cinetiche dei corpi nel sistema.
+  $$ \Delta k_i = 0$$
 
 
 
@@ -563,7 +570,7 @@
     \item Impossibile scambiare materia senza energia.
   \end{itemize}
 
-  \section{Equilibrio Termodinamico}
+  \section{Principio zero della termodinamica: Equilibrio Termodinamico}
   Quando sussiste un equilibrio \textbf{meccanico}, un equilibrio \textbf{chimico} (no reazione chimica) e un equilibrio \textbf{termico} (no differenza di temperatura) all'interno di un sistema termodinamico.\\
   Da notare che questo deve valere per ogni "parte" del mio sistema che prendo in considerazione.
   \subsection{Principio zero della termodinamica}
@@ -572,11 +579,11 @@
   e $$T_B = T_C$$
   allora $$T_A = T_C$$
 
-
   \section{temperatura}
-  Definita dalla media dell'energia cinetica dei componenti interni. La temperatura definisce varie esperienze nel mondo: espansione/contrazione liquidi e gas, variazione resistenza elettrica, ...\\
-  è definita su una scala avente come zero il punto triplo dell'acqua
+  Definita dalla media dell'energia cinetica dei componenti interni. è una misura dell'energia delle molecole. La temperatura definisce varie esperienze nel mondo: espansione/contrazione liquidi e gas, variazione resistenza elettrica, ...\\
+  è definita su una scala assoluta avente come zero il punto triplo dell'acqua
   $$T_0 = 273,16 K = 0 \circ C$$
+  La temperatura in Kelvin si basa su una scala assoluta, non è negativa. Lo $$0$$ equivale ad avere le molecole ferme.
   Quindi si può dire che la temperatura in gradi centigradi
   $$ t(\circ C) = T(K) - 273,16$$
   E in gradi farenhait
@@ -613,7 +620,8 @@
 
   \subsection{Trasformazione reversibile}
   Una trasformazione è reversibile se è possibile riportare allo stato iniziale sia il sistema sia l'ambiente esterno.\\
-  Gli esempi per cui una trasformazione sia irreversibile sono: gli attriti che disperdono calore
+  Gli esempi per cui una trasformazione sia irreversibile sono: gli attriti che disperdono calore.\\
+  Una macchina con trasformazioni reversibili è sempre meglio di una macchina con trasformazioni irreversibili
 
   \section{Trasformazioni cicliche}
   \subsection{Ciclo di Carnot}
@@ -664,9 +672,11 @@
   Il calore specifico di un corpo è utile solo se $dT \neq 0$
   \subsubsection{nota 2}
   $$ Q = \int_{a}^b dQ = \int_a^b m c_\gamma[T] dT $$
+
   \subsection{Capacità termica}
+  Misura di quanto velocemente varia la temperatura di un corpo che riceve o cede del calore.
   $$ Q = C(T_f-T_i) $$
-  Dove $C = mc_\gamma$, quindi
+  Dove $C = mc_\gamma$, è la capacità termica (se è bassa la temperatura varia in fretta) quindi
   $$ C_\lambda = [\frac{dQ}{dT}]_\gamma $$
   è una grandezza \textbf{estensiva}.
   \subsection{Calore specifico a volume costante}
@@ -699,7 +709,8 @@
   \subsection{Calore latente}
   Nel cambio di fase fusione e evaporazione
   $$ Q = \lambda m$$
-  dove $\lambda$ è il calore latente, il calore necessario è proporzionale alla massa\\
+  dove $\lambda$ è il calore latente, il calore necessario per fare cambiare fase al corpo. è proporzionale alla massa\\
+  Il calore fornito all'acqua per scaldarla è assorbito facendone salire la temperatura fino ai 100°C, tempo al quale l'acqua userà il calore per cambiare dalla fase liquida a gassosa invece di aumentare ancora di temperatura. Praticamente il calore serve a rompere i legami. Questo è il calore latente
   Per l'acqua
   $$ \lambda_{fusione}^{H_2O} = 3,3 \cdot 10^5 \frac{J}{Kg} \quad @ 273,16 K $$
   $$ \lambda_{fusione}^{H_2O} = 22,6 \cdot 10^5 \frac{J}{Kg} \quad @ 373,16K $$
@@ -736,7 +747,7 @@
   \section{Equazione di stato di Gas Ideali (perfetti)}
   Usata per rappresentare i gas
   $$ pV = nRT $$
-  I gas ideali sono una buona approssimazione dei gas a bassa pressione.
+  I gas ideali sono una buona approssimazione dei gas a bassa pressione. Sono gas che non sono densi, per evitare il più possibile il calcolo delle collisioni tra molecole.
   \subsection{Pressione}
   è la forza esercitata dal gas sul suo contenitore.
   $$p = \frac{F_{perp}}{S}$$
@@ -850,6 +861,7 @@
   $$ W = W_F + W_S, \quad W_F > 0  \quad W_S < 0 $$
   Dove $W_F$ è il lavoro fatto, e $W_S$ quello subito
   \subsection{Macchine termiche}
+  Una macchina termica è un sistema con un gas che fa trasformazioni cicliche.
   il lavoro $W$ compiuto è $>0$,
   $$ W>0 \quad \Rightarrow \quad Q > 0 $$
   \subsection{Macchien Frigorifere}
@@ -924,7 +936,7 @@
   Il calore non fluisce \textbf{mai} spontaneamente da un corpo ad uno più caldo.
   Mette dei limiti alle possibili trasformazioni di calore in lavoro
   \subsection{Enunciato -Planck}
-  è \textbf{impossibile} realizzare un processo il cui unico risultato sia la trasformazione di calore in lavoro
+  è \textbf{impossibile} realizzare un processo il cui unico risultato sia la trasformazione di calore in lavoro, cioè il calore ceduto sarà sempre diverso da 0
   \subsection{Enunciato di Clausius}
   è \textbf{impossibile} realizzare un processo il cui unico risultato sia il passaggio di calore da un corpo a uno a temperatura maggiore
 
@@ -957,6 +969,7 @@
   Questo integrale si chiama integrale di clausius
 
   \section{Entropia}
+  L'entropia è una misura del disordine di un sistema. La probabilità che l'entropia si riduca spontaneamente nei sistemi reali è quasi 0.
   Data una trasformazione ciclica da $A$ a $B$ nel tratto 1 e da $B$ a $A$ nel tratto 2, se il ciclo è reversibile si ha
   $$ \oint \frac{dQ}{T} = \int_A^B (\frac{dQ}{T})_1 + \int_B^A (\frac{dQ}{T})_2 = 0$$
   ma, visto che il ciclo è reversibile vale anche
@@ -965,6 +978,19 @@
   $$ \int_A^B (\frac{dQ}{T})_{rev} = S(B) -S(A) $$
   La \textbf{variazione di entropia} nel percorso da $A$ a $B$ per una trasformazione qualsiasi è una funzione di stato, l'integrale è calcolato su una \textbf{reversibile} qualsiasi:
   $$ \Delta S_{A \rightarrow B} = \int_A^B (\frac{dQ}{T})_{rev. qualsiasi} $$
+  L'entropia si può distinguere in quella:
+  \begin{itemize}
+    \item Del sistema $S_S$ per esempio il gas
+    \item Dell'ambiente $S_A$ per esempio il contenitore del gas
+    \item Dell'universo $S_U$ per esempio gas e contenitore
+  \end{itemize}
+
+  $$ S_U = S_S + S_A$$
+  Ogni trasformazione fa variare l'entropia in questo modo:
+  $$ \Delta S_U = \Delta S_S + \Delta S_A$$
+  L'unico caso per cui, in una trasformazione, la variazione di energia dell'universo $\Delta S_U$ è $0$ è se la trasformazione è \textbf{reversibile}. Nel caso in cui la trasformazione fosse irreversibile, abbiamo $\Delta S_U$ sempre $>0$\\
+  In un ciclo abbiamo che la variazione di entropia del sistema $\Delta S_S = 0$ 
+
   \subsubsection{nota 1}
   Dati un sistema 1 e un sistema 2, il sistema 3 è $= sys1 \cup sys2$, l'entropia
   $$ S_3 = S_1 + S_2 $$
@@ -1099,17 +1125,29 @@
   $$ W_{AB} = - \Delta U_{AB} = -q \Delta V_{AB}$$
   questo vale per le forze conservative
   $$ U_{A} = \frac{KQ}{r_A} + const $$
-  Dove $U_{AB}$ è l'energia potenziale elettrostatica. Le forze, almeno per la singola carica sono forze conservative e quindi, vale per la carica puntiforme: La circuitazione del campo elettrostatico è $=0$
+  Dove $U_{AB}$ è l'energia potenziale elettrostatica. Le forze, almeno per la singola carica sono forze conservative e quindi, vale per la carica puntiforme: La circuitazione del campo elettrostatico è $=0$.
+  L'energia potenziale della carica dipende dalla sua posizione.
   $$ \oint \vv{E} \cdot d\vv{s} = 0 $$
   che è equivalente alla conservatività del campo elettrostatico.\\
   Si introduce \textbf{il potenziale} $\Delta V$, definito come la differenza di energia potenziale diviso la carica di prova
   $$ \Delta U \longrightarrow \Delta V = \frac{\Delta U}{q} $$
-  Il potenziale elettrostatico si definisce come:
+  Il potenziale elettrostatico (tra due cariche puntiformi) si definisce come:
   $$ V_A = \frac{KQ}{r_A} + const^{'}$$
   Dove $const'$ è una costante arbitraria.\\
   Potenziale elettico o Elettrostatico
   $$ [V] = [\frac{U}{q}]$$
   $$u.d.m.[V] = \frac{1J}{1C} = 1V$$
+  \subsubsection{Potenziale elettrico sfera conduttrice carica}
+  Il potenziale elettrico di una sfera conduttrice carica è pari al potenziale di una carica puntiforme fuori dalla sfera, all'interno il potenziale ha valore costante, il valore della superficie.
+  \subsubsection{Potenziale elettrico piastra uniformemente carica}
+  Il potenziale a distanza $r$ dalla piastra è pari a
+  $$ V = - \frac{\sigma}{2 \epsilon_0 \cdot r + const'}$$
+  Dove $\sigma$ è la densità superficiale di carica.\\
+  Se le piastre sono due, in base al segno delle cariche che sono depositate sulla superficie si distinguono vari casi, il più comune è quello dove le due piastre sono cariche con segni opposti, e quindi il potenziale fuori dalle piastre è $0$, all'interno è il doppio.
+  \subsection{Potenziale del filo uniformemente carico}
+  $$ V = - \frac{1}{2\pi \epsilon_0} \cdot \lambda ln(r)$$
+  dove $\lambda$ è la densità lineare di carica.
+
 
   \section{Forza Elettrica}
   Se una carica $q$ è in movimento, cè una forza non nulla che la muove, questa forza può essere
@@ -1179,7 +1217,7 @@
   \subsubsection{Primo corollario}
   In conduttore in equilibrio, le cariche interne sono pari a $0$.
   Se deposito una carica su un conduttore in equilibrio, le cariche si distribuiranno solo sulla superficie
-  Per un conduttore in equilibrio vale $q_{intern} =0$. Se c'è una carica, si distribuisce sulla superficie del conduttore
+  Per un conduttore in equilibrio vale $q_{intern} =0$. Se c'è una carica, si distribuisce sulla superficie del conduttore, questa è una cosa che osserviamo da tutti i conduttori.
   \subsubsection{Secondo corollario}
   Dati due punti $A, B$ all'interno del conduttore, la differenza di potenziale tra $A$ e $B$
   $$V_A - V_B = \int_A^B \vv{E}\cdot d\vv{s}=0 $$
@@ -1198,7 +1236,7 @@
   La distribuzione della carica di un conduttore è influenzata da un campo elettrico esterno, questo fenomeno si chiama induzione.
 
   \section{Capacità del conduttore}
-  è il rapporto tra la carica $q$ depositata tra la superficie del conduttore, e il potenziale $V$ in cui il conduttore va, per effetto di questa carica. descrive la capacità di un conduttore di ospitare le cariche e di portarsi ad un certo potenziale
+  è il rapporto tra la carica $q$ depositata tra la superficie del conduttore, e il potenziale $V$ in cui il conduttore va, per effetto di questa carica. In altre parole, la capacità è la quantità di cariche che un conduttore può ospitare. descrive la capacità di un conduttore di ospitare le cariche e di portarsi ad un certo potenziale
   $$ \mathbb{C} = \frac{q}{V} $$
   $$u.d.m.[\mathbb{C}] = \frac{1C}{V} = 1F$$
   dove $ F $ è il Farad
@@ -1309,7 +1347,7 @@
   In questo caso ci sono delle sorgenti o pozzi di carica che generano questa corrente.
 
   \subsection{Legge di OHM}
-  La velocità di deriva, è proporzionale al campo elettrico
+  La velocità di deriva, cioè la velocità con cui si muovono gli elettroni in un conduttore è proporzionale al campo elettrico
   $$ \vv{v_d} = \alpha \vv{E} $$
   Anche scritta
   $$ \vv{J} = \frac{1}{\rho} \vv{E} $$
@@ -1329,6 +1367,8 @@
   $$ u.d.m[R] = \frac{1V}{1A} = 1 \Omega $$
 
   \subsection{Effetto Joule}
+  è una legge che ci dice che la corrente passante per un resistore genera del calore seguendo questa formula:
+  $$ Q = R \cdot i^2 \cdot \Delta t$$
   La potenza, $P$
   $$ P=\frac{dW}{dt} = \frac{dq\Delta V}{dt} = \Delta V \cdot i = \frac{\Delta V^2}{R} = R*i^2$$
 
@@ -1348,6 +1388,7 @@
   $$ \frac{1}{R*} = \frac{1}{R_1} + \frac{1}{R_2} $$
 
   \section{Forza Elettro Motrice}
+  La differenza di potenziale creata da un generatore si chiama f.e.m.
   $$ f.e.m. = \oint \vv{E} \cdot d\vv{s} = R_T i \Rightarrow i \neq 0 \iff f.e.m. \neq 0$$
   $R_T$ resistenza totale circuito\\
   Deve quindi esistere una resistenza interna al generatore tale che
