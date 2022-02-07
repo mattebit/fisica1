@@ -14,7 +14,10 @@
 
 \title{Dispense essenziali di Fisica 1}
 \author{Matteo Bitussi \\ Laurea in Informatica, Unitn}
-\date{Anno accademico 2019-2020}
+\date{Anno accademico \\
+2019-2020 + \\
+2020-2021 + \\
+2021-2022}
 
 \begin{document}
   \maketitle
@@ -27,7 +30,7 @@
   \section*{General}
   \subsection{Prodotto tra vettori}
   $$ \vv{a} \times \vv{b} = \vv{c} $$
-  $$ |\vv{c}| = |\vv{a}||vec{b}| sin \theta_{ab} $$
+  $$ |\vv{c}| = |\vv{a}||\vv{b}| sin \theta_{ab} $$
   Il vettore risultante ha direzione e verso dati dalla regola della mano destra, col pollice sul primo vettore a e indice sul secondo vettore b.
 
   \subsection{Proiezione di vettori}
@@ -392,9 +395,9 @@
 
   \section{Forze conservative}
   Esstono delle forze, per cui il lavoro per andare dal punto iniziale a quello finale \textbf{non dipende dal percorso fatto}. Queste forze si dicono conservative\\
-  Quindi, indipendentemente dal percorso potrò calcolare il lavoro Come
-  $$ W_{i \rightarrow f} = \int_{p_i}^{p_f} \vv{F} \cdot d\vv{s} = U(p_f) - U(P_i)$$
-  Una forza $\vv{F}$ è conservativa, se il lavoro compiuto lungo un percorso chiuso è nullo (cioè se torno da dove sono partito), indipendentemente dal percorso scelto
+  Quindi, indipendentemente dal percorso scelto potrò calcolare il lavoro Come
+  $$ W_{i \rightarrow f} = \int_{p_i}^{p_f} \vv{F} \cdot d\vv{s} = U(p_f) - U(p_i)$$
+  Una forza $\vv{F}$ è conservativa se il lavoro compiuto lungo un percorso chiuso è nullo, (cioè se torno da dove sono partito), indipendentemente dal percorso scelto
   $$ W_{chius} = 0 \quad \oint \vv{F} \cdot \vv{ds} = 0 $$
   Una forza si dice conservativa se si può scrivere come derivata di un altra funzione di energia potenziale (?)
   $$ F= -\frac{dU}{dx} (\vv{F} = \frac{-\vv{d} U}{dx})$$
@@ -417,7 +420,7 @@
   $$ \vv{F_{el}} = -K(\vv{l} - \vv{l_0}) = -K \Delta \vv{l} $$
   $K$ è la costante elastica.
   $$[K] = [\frac{F}{L}], \quad u.d.m.(K) = 1 \frac{N}{m}$$
-  Possiamo supporre un corpo attaccato ad una molla appoggiato su di iun piano, ignorando gli attriti fissiamo il sistema di riferimento sulla posizione del corpo con la molla a riposo. Quindi possiamo scrivere l'equazione del moto come:
+  Possiamo supporre un corpo attaccato ad una molla appoggiato su di un piano, ignorando gli attriti fissiamo il sistema di riferimento sulla posizione del corpo con la molla a riposo. Quindi possiamo scrivere l'equazione del moto come:
   $$x(t) = A sin(\omega t + \phi)$$
   Dove $w^2$ nel nostro caso è uguale a
   $$ w^2 = \frac{K}{m} $$
@@ -557,7 +560,7 @@
     Tipi di grandezze:
     \begin{itemize}
       \item Grandezze \textbf{estensive}, sono grandezze che dipendono dall'estensione del sistema termodinamico (per esempio volume o massa)
-      \item Grandezze \textbf{intensive} non di pendono dall'estnesione del sistema termodinamico (ad esempio pressione, temperatura e densità)
+      \item Grandezze \textbf{intensive} non dipendono dall'estnesione del sistema termodinamico (ad esempio pressione, temperatura e densità)
     \end{itemize}
   \end{itemize}
 
@@ -710,7 +713,7 @@
   Nel cambio di fase fusione e evaporazione
   $$ Q = \lambda m$$
   dove $\lambda$ è il calore latente, il calore necessario per fare cambiare fase al corpo. è proporzionale alla massa\\
-  Il calore fornito all'acqua per scaldarla è assorbito facendone salire la temperatura fino ai 100$C$, tempo al quale l'acqua userà il calore per cambiare dalla fase liquida a gassosa invece di aumentare ancora di temperatura. Praticamente il calore serve a rompere i legami. Questo è il calore latente
+  Il calore fornito all'acqua per scaldarla è assorbito facendone salire la temperatura fino ai 100$C$, tempo al quale l'acqua userà il calore per cambiare dalla fase liquida a gassosa invece di aumentare ancora di temperatura. Praticamente il calore serve a rompere i legami delle molecole. Questo è il calore latente
   Per l'acqua
   $$ \lambda_{fusione}^{H_2O} = 3,3 \cdot 10^5 \frac{J}{Kg} \quad @ 273,16 K $$
   $$ \lambda_{fusione}^{H_2O} = 22,6 \cdot 10^5 \frac{J}{Kg} \quad @ 373,16K $$
@@ -867,7 +870,7 @@
   \subsection{Macchien Frigorifere}
   $$ W<0 \quad \Rightarrow \quad Q < 0 $$
 
-  \subsection{Ciclo di carnot}
+  \subsection{Ciclo di Carnot}
   Composto da trasformazioni reversibili e coinvolge gas ideali.
   \begin{itemize}
     \item Espansione isoterma reversibile, volume aumenta, temp Costante
@@ -881,6 +884,9 @@
   $$ Q_A = nRT_2 ln(\frac{V_B}{V_A})$$
   Il rendimento per il ciclo di carnot è pari a
   $$\eta = \frac{W}{Q_A} = 1 - \frac{T_1}{T_2}$$
+  
+  \subsubsection{Teorema di Carnot}
+  non è possibile realizzare una macchina termica che abbia rendimento maggiore della macchina di Carnot.
 
 
   \subsection{Ciclo di Otto}
@@ -935,7 +941,7 @@
   \section{Secondo principio della Termodinamica}
   Il calore non fluisce \textbf{mai} spontaneamente da un corpo ad uno più caldo.
   Mette dei limiti alle possibili trasformazioni di calore in lavoro
-  \subsection{Enunciato -Planck}
+  \subsection{Enunciato Kelvin-Planck}
   è \textbf{impossibile} realizzare un processo il cui unico risultato sia la trasformazione di calore in lavoro, cioè il calore ceduto sarà sempre diverso da 0
   \subsection{Enunciato di Clausius}
   è \textbf{impossibile} realizzare un processo il cui unico risultato sia il passaggio di calore da un corpo a uno a temperatura maggiore
